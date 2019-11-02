@@ -126,7 +126,7 @@ const Menu = (props) => {
                   marginLeft: "auto",
                   marginRight: "auto",
                   // backgroundColor: "#00205b",
-                  backgroundColor: "#5b002c",
+                  backgroundColor: "#00205b",
                   width: "0px"
                 }}
               />

@@ -59,8 +59,8 @@ const questionsAndAnswers = [
 
 const linkCss = {
   textDecoration: "underline",
-  color: "#c81c2e",
-  fontWeight: "400"
+  color: "#00205b",
+  fontWeight: 500
 };
 
 const FAQs = () => (
@@ -71,11 +71,10 @@ const FAQs = () => (
           padding: "110px 0 114px 0",
           "@media(max-width: 780px)": {
             padding: "64px 0 120px 0"
-          },
-          color: "#ffffff"
+          }       
         }}
       >
-        <h1>Frequently Asked Questions</h1>
+        <h1 css ={{color:"white"}}>Frequently Asked Questions</h1>
         <div
           css={{
             paddingTop: "36px",
@@ -93,30 +92,32 @@ const FAQs = () => (
               css={{
                 padding: "0px 64px 40px 0px",
                 "@media(max-width: 780px)": {
-                  paddingRight: "24px"
+                  paddingRight: "24px",
+                  
                 }
               }}
             >
               <h2
                 css={{
                   paddingBottom: "10px",
-                  fontWeight: "500"
+                  fontWeight: "500",
+                  color:"white"
                 }}
               >
                 {question}
               </h2>
               <p
-                css={{ fontSize: "14px", color: "#000000", lineHeight: "20px" }}
+                css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}
               >
                 {answer}
               </p>
             </div>
           ))}
           <div css={{ paddingTop: "12px" }}>
-            <h2 css={{ paddingBottom: "10px", fontWeight: "500" }}>
+            <h2 css={{ paddingBottom: "10px", fontWeight: "500", color:"white" }}>
               Have additional questions?
             </h2>
-            <p css={{ fontSize: "14px", color: "#000000", lineHeight: "20px" }}>
+            <p css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}>
               Feel free to reach out to us at{" "}
               <a
                 rel="external noopener"
