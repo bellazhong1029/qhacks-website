@@ -11,7 +11,7 @@ import OpeningSummary from "../components/OpeningSummary";
 import SellingPoints from "../components/SellingPoints";
 import Speakers from "../components/Speakers";
 import FAQs from "../components/FAQs";
-
+import Footer from "../components/Footer"
 import favicon from "../assets/img/icons/favicon.ico";
 import sharingImage from "../assets/img/logo/sharingImage2020.png";
 
@@ -83,7 +83,7 @@ export default () => {
           <SellingPoints />
           <Speakers />
           <FAQs />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
   );
