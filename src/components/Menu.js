@@ -2,6 +2,7 @@ import React from "react";
 import ScrollSpy from "react-scrollspy";
 
 import colored from "../assets/img/logo/qhacksCrown-colored.svg";
+import { withClientState } from "apollo-link-state";
 
 const Menu = (props) => {
   return (
@@ -10,7 +11,8 @@ const Menu = (props) => {
         display: "grid",
         gridTemplateColumns: "min-content auto",
         overflow: "visible",
-        height: "84px"
+        height: "50px",
+        width:"100%"
       }}
     >
       <a
@@ -28,8 +30,8 @@ const Menu = (props) => {
       >
         <img
           css={{
-            paddingTop: "20px",
-            paddingBottom: "20px"
+            paddingTop: "2px",
+            paddingBottom: "10px"
           }}
           src={colored}
           alt="QHacks Crown"
@@ -63,7 +65,7 @@ const Menu = (props) => {
       <div
         align="right"
         css={{
-          paddingTop: "32px",
+          paddingTop: "16px",
           paddingBottom: "32px",
           height: "84px",
           display: "grid",
@@ -123,7 +125,8 @@ const Menu = (props) => {
                   transition: "0.5s",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  backgroundColor: "#00205b",
+                  // backgroundColor: "#00205b",
+                  backgroundColor: "#5b002c",
                   width: "0px"
                 }}
               />

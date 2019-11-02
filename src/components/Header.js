@@ -67,6 +67,7 @@ class Header extends Component {
 
     return (
       <div>
+      
         <div
           data-cy="mlh-banner"
           css={{
@@ -75,25 +76,26 @@ class Header extends Component {
             top: this.state.isHeaderVisible ? "0px" : "-100px",
             transition: "0.5s",
             backgroundColor: "#ffffff",
-            opacity: this.state.isMobileMenuVisible
-              ? "1.0"
-              : (this.state.isHeaderVisible && "0.95") || "0",
+            // opacity: this.state.isMobileMenuVisible
+            //   ? "1.0"
+            //   : (this.state.isHeaderVisible && "0.95") || "0",
             zIndex: "5",
-            "@media(min-width:860px)": {
-              backgroundColor: this.props.standaloneVersion
-                ? "#ffffff"
-                : this.state.isAtTheTop
-                  ? "rgba(0,0,0,0)"
-                  : "#ffffff"
-            }
+            // "@media(min-width:860px)": {
+            //   backgroundColor: this.props.standaloneVersion
+            //     ? "#ffffff"
+            //     : this.state.isAtTheTop
+            //       ? "rgba(0,0,0,0)"
+            //       : "#ffffff"
+            // }
           }}
         >
           <ContentWrapper>
             <div
               css={{
-                "@media(max-width:860px)": {
+                "@media(max-width:100%)": {
                   display: "grid",
-                  gridTemplateColumns: "auto auto"
+                  gridTemplateColumns: "auto auto",
+                 
                 }
               }}
             >
@@ -101,7 +103,7 @@ class Header extends Component {
                 menuItems={this.props.menuItems || menuItems}
                 imgCss={this.state.isLogoVisible}
                 standaloneVersion={this.props.standaloneVersion}
-              />
+                      />
               <MobileMenu
                 menuItems={this.props.menuItems || menuItems}
                 isMenuVisible={this.state.isMobileMenuVisible}
