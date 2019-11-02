@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 
 import ContentWrapper from "./ContentWrapper";
-import SignUpForm from "../components/SignUpForm";
+import SignUpForm from "./SignUpForm.js";
 
 import mail from "../assets/img/icons/socialMail.svg";
 import twitter from "../assets/img/icons/socialTwitter.svg";
