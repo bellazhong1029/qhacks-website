@@ -5,6 +5,7 @@ import Particles from 'react-particles-js';
 import backgroundGradient from "../assets/img/backgrounds/backgroundGradient.svg";
 
 
+
 import "./index.css";
 import Landing from "../components/Landing";
 import OpeningSummary from "../components/OpeningSummary";
@@ -16,7 +17,9 @@ import favicon from "../assets/img/icons/favicon.ico";
 import sharingImage from "../assets/img/logo/sharingImage2020.png";
 
 export default () => {
+ 
   return (
+   
       <div css={{ 
         background: `url(${backgroundGradient}) no-repeat center center`,
         backgroundSize: "cover",
@@ -84,7 +87,11 @@ export default () => {
           <Speakers />
           <FAQs />
           <Footer />
-        </div>
+       </div>
       </div>
+      
   );
 };
+
+
+

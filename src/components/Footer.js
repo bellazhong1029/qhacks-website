@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 
 import ContentWrapper from "./ContentWrapper";
-import SignUpForm from "./SignUpForm.js";
+// import SignUpForm from "./SignUpForm.js";
 
 import mail from "../assets/img/icons/socialMail.svg";
 import twitter from "../assets/img/icons/socialTwitter.svg";
@@ -14,8 +14,8 @@ import MediaQuery from "react-responsive";
 
 const navigateLinks = [
   {
-    label: "QHacks 2018",
-    url: "https://2018.qhacks.io",
+    label: "QHacks 2019",
+    url: "https://qhacks.io/",
     dataCy: "footer-2018-link"
   },
   {
@@ -28,11 +28,11 @@ const navigateLinks = [
     url: "https://medium.com/@qhacks",
     dataCy: "footer-blog-link"
   },
-  {
-    label: "QHacks Dashboard",
-    url: "https://app.qhacks.io",
-    dataCy: "footer-dashboard-link"
-  },
+  // {
+  //   label: "QHacks Dashboard",
+  //   url: "https://app.qhacks.io",
+  //   dataCy: "footer-dashboard-link"
+  // },
   {
     label: "MLH Code of Conduct",
     url: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf",
@@ -49,7 +49,7 @@ const socialLinks = [
   },
   {
     icon: twitter,
-    url: "https://twitter.com/qhacks19",
+    url: "https://twitter.com/qhacks2020",
     label: "Follow us on Twitter",
     dataCy: "footer-twitter-link"
   },
@@ -61,7 +61,7 @@ const socialLinks = [
   },
   {
     icon: instagram,
-    url: "https://instagram.com/qhacks19",
+    url: "https://www.instagram.com/q_hacks/",
     label: "Follow us on Instagram",
     dataCy: "footer-instagram-link"
   }
@@ -131,8 +131,8 @@ const Footer = () => (
             year we have been aggressively growing to become one of the biggest
             and most exciting hackathons in North America.
           </p>
-          <h3>Stay Connected</h3>
-          <p
+          {/* <h3>Stay Connected</h3> */}
+          {/* <p
             css={{
               fontSize: "12px",
               lineHeight: "20px",
@@ -141,7 +141,7 @@ const Footer = () => (
             }}
           >
             Sign up for our mailing list for the latest updates.
-          </p>
+          </p> */}
           <div
             css={{
               alignItems: "left",
@@ -156,21 +156,21 @@ const Footer = () => (
             }}
           >
             <MediaQuery query="screen and (max-width: 950px)">
-              <SignUpForm
+              {/* <SignUpForm
                 fontSize={14}
                 backgroundColor="#c81c2e"
                 foregroundColor="white"
                 dataCy="footer-signup-button"
                 center={true}
-              />
+              /> */}
             </MediaQuery>
             <MediaQuery query="screen and (min-width: 950px)">
-              <SignUpForm
+              {/* <SignUpForm
                 fontSize={14}
                 backgroundColor="#c81c2e"
                 foregroundColor="white"
                 dataCy="footer-signup-button"
-              />
+              /> */}
             </MediaQuery>
           </div>
           <div css={{ [smallScreens]: { display: "none" } }}>
