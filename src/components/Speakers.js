@@ -4,6 +4,7 @@ import SpeakerSlider from "./SpeakerSlider";
 import Mentors from "./Mentors";
 
 import plchldr from "../assets/img/logo/qhacksAppIcon.png";
+import pascal from "../assets/img/headshots/pascal_siakam.png";
 import cubes3png from "../assets/img/icons/cubes-3.png";
 import cubes3webp from "../assets/img/icons/cubes-3.webp";
 
@@ -15,21 +16,21 @@ const speakers = [
     title: "Co-Founder of X",
     description:
       "Speaker 1 is the best.",
-    image: plchldr
+    image: pascal
   },
   {
     name: "Speaker 2",
     title: "CEO at Y",
     description:
       "Speaker 2 is also pretty good.",
-    image: plchldr
+    image: pascal
   },
   {
     name: "Speaker 3",
     title: "Founder & CEO of Z",
     description:
       "Speaker 3 is also cool, but not as cool as 1 and 2.",
-    image: plchldr
+    image: pascal
   }
 ];
 
