@@ -15,7 +15,7 @@ import MediaQuery from "react-responsive";
 const navigateLinks = [
   {
     label: "QHacks 2019",
-    url: "https://qhacks.io/",
+    url: "https://2019.qhacks.io/",
     dataCy: "footer-2018-link"
   },
   {
@@ -79,7 +79,7 @@ const [smallScreens, mediumScreens, largeScreens] = [
 ];
 
 const Footer = () => (
-  <footer css={{ backgroundColor: "#11213f", color: "#ffffff" }}>
+  <footer css={{ backgroundColor: "#070b34", color: "#ffffff" }}>
     <ContentWrapper>
       <div
         css={{
