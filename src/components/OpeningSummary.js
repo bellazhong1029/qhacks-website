@@ -29,7 +29,7 @@ const BriefSummary = () => (
           background: "#ffffff",
           display: "grid",
           gridTemplateColumns: "auto auto",
-          padding: "80px 55px 80px 55px",
+          padding: "40px 55px 40px 55px",
           margin: "0 auto 0 auto",
           borderRadius: "8px",
           boxShadow: "4px 9px 40px 2px rgba(7, 16, 75, 0.1)",
@@ -76,9 +76,10 @@ const BriefSummary = () => (
             }
           }}
         >
+         
           <iframe
             title="2018 QHacks Hackathon Highlights"
-            src="https://www.youtube.com/embed/sqzy5n3m-RA?rel=0&amp;controls=0&amp;showinfo=0"
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FQHacks%2Fvideos%2F346061232921670%2F&show_text=0&width=560"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
