@@ -44,6 +44,7 @@ class SpeakerCard extends Component {
                     this.props.image
                   }) no-repeat center center`,
                   minHeight: "300px",
+                  minWidth:"300px",
                   backgroundSize: "cover",
                   width: "100%",
                   borderTopLeftRadius: "inherit",
