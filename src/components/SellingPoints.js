@@ -9,17 +9,21 @@ import ContentWrapper from "./ContentWrapper";
 
 const points = [
   {
+    name:"Matthew",
+    project:"Qhacks",
     title: "Celebrate Diversity and Sustainability",
     image: "../img/logos/qhacksAppIcon.png",
     text:
       "This year we celebrate all the different people and things that make tech great! As we move forward, we have to use our abilities to make the world a better place for everyone who lives in it. That’s why this year we have chosen to promote diversity and sustainability by including speakers, mentors and workshops of all different backgrounds and making our event zero waste. "
   },
   {
+    name:"Matthew",
     title: "Learn Industry Skills from Industry Professionals",
+    project:"Qhacks",
     image: "../img/logos/qhacksAppIcon.png",
     text:
       "Learn things you won’t learn in a classroom about the tech industry, founding your own start up, technical interviews and so much more straight from professionals. With over 35 companies in attendance ... "
-  },
+  }
 //   {
 //     title: " ",
 //     // image: 
@@ -49,13 +53,15 @@ class SellingPoints extends Component {
   }
 
   render() {
+    
     const blurb = (
-      <span>
+      <span css = {{color:"#ffffffff"}}>
         QHacks has something to offer everyone.
         <br />
         Check out some of the reasons you might want to attend!
       </span>
     );
+   
     return (
       <section
         id="points"
