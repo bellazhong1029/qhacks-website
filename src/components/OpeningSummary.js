@@ -13,7 +13,7 @@ const caretCSS = (backgroundColor) =>
     height: "4px"
   });
 
-const BriefSummary = () => (
+const OpeningSummary = () => (
   <div
     css={{
       position: "relative",
@@ -132,4 +132,4 @@ const BriefSummary = () => (
   </div>
 );
 
-export default BriefSummary;
+export default OpeningSummary;

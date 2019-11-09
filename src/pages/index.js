@@ -21,7 +21,7 @@ export default () => {
   return (
    
       <div css={{ 
-        background: `url(${backgroundGradient}) no-repeat center center`,
+        backgroundImage: "linear-gradient(#855988, #070b34);",
         backgroundSize: "cover",
         overflowX: "hidden" }}>
         <Helmet

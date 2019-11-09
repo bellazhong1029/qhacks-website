@@ -1,9 +1,11 @@
 import React from "react";
 
+
 import Header from "./Header";
 // import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 import Particles from 'react-particles-js';
+import Countdown from 'react-countdown-now';
 
 import Rocket from "../assets/img/icons/Rocket.svg";
 import Planet from "../assets/img/icons/Planet.svg";
@@ -35,7 +37,6 @@ const Landing = () => (
     <ContentWrapper>
       <section
         css={{
-          display: "grid",
           gridTemplateColumns: "auto 1fr",
           "@media(max-width: 820px)": {
             textAlign: "center",
@@ -47,33 +48,18 @@ const Landing = () => (
           css={{
             "@media(min-width: 1200px)": {
               paddingRight: "50px",
-              paddingTop: "215px"
+              paddingTop: "100px"
             },
             "@media (min-width: 821px) and (max-width: 1199px)": {
               paddingRight: "50px",
-              paddingTop: "215px"
+              paddingTop: "100px"
             },
             "@media (max-width: 820px)": {
               paddingTop: "80px"
             }
           }}
         >
-          <img
-            data-cy="qhacks-crown"
-            src={logo}
-            width="170px"
-            css={{ "@media(max-width: 820px)": { display: "none" } }}
-            alt="QHacks Crown"
-          />
-          <img
-            src={Rocket}
-            css={{
-              width: "75vw",
-              maxWidth: "350px",
-              //"@media(min-width: 821px)": { display: "none" }
-            }}
-            alt="QHacks Illustration"
-          />
+          {/*
           <img
             src={Planet}
             css={{
@@ -82,12 +68,37 @@ const Landing = () => (
               //"@media(min-width: 821px)": { display: "none" }
             }}
             alt="QHacks Illustration"
-          />          
+          />           */}
           <br />
+
           <img
+            class="center"
+            data-cy="qhacks-wordmark"
+            src={logo}
+            css={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              paddingTop: "40px",
+              width: "100vw",
+              maxWidth: "200px",
+              "@media(max-width: 820px)": {
+                paddingTop: "12px",
+                width: "192px",
+                paddingBottom: "8px"
+              }
+            }}
+            alt="QHacks Wordmark"
+          />
+
+          <img
+            class="center"
             data-cy="qhacks-wordmark"
             src={word}
             css={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
               paddingTop: "40px",
               paddingBottom: "18px",
               width: "100vw",
@@ -100,13 +111,15 @@ const Landing = () => (
             }}
             alt="QHacks Wordmark"
           />
+          
           <h2
             data-cy="qhacks-information"
             css={{
               color: "#ffffff",
               fontWeight: 600,
               fontSize: "22px",
-              paddingBottom: "30px",
+              textAlign: "center",
+              // paddingBottom: "30px",
               "@media(max-width: 820px)": {
                 paddingBottom: "24px"
               }
@@ -114,12 +127,52 @@ const Landing = () => (
           >
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
+          <img src={Rocket} css={{position: "absolute", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
+          <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
           <h2
+            data-cy="qhacks-tagline"
+            css={{
+              padding: "50px 0 30px 0",
+              color: "#00205B",
+              fontWeight: 500,
+              fontSize: "70px",
+              letterSpacing: "10px",
+              textAlign: "center",
+              lineHeight: "30px",
+              "@media(max-width: 820px)": {
+                paddingTop: "20px",
+                fontSize: "15px",
+                lineHeight: "1.6"
+              }
+            }}
+          >
+          <Countdown date={"2020-01-31T17:30:00"}/>
+          </h2>
+          <h2
+            data-cy="qhacks-tagline"
+            css={{
+              padding: "20px 0 30px 0",
+              color: "#C9CCFF",
+              fontWeight: 500,
+              fontSize: "20px",
+              wordSpacing: "25px",
+              textAlign: "center",
+              lineHeight: "30px",
+              "@media(max-width: 820px)": {
+                paddingTop: "20px",
+                fontSize: "15px",
+                lineHeight: "1.6"
+              }
+            }}>
+              Days : Hours : Minutes : Seconds
+            </h2>
+            <h2
             data-cy="qhacks-tagline"
             css={{
               padding: "20px 0 100px",
               color: "#d3d3d3",
               fontWeight: 500,
+              textAlign: "center",
               lineHeight: "30px",
               "@media(max-width: 820px)": {
                 paddingTop: "20px",
@@ -142,19 +195,6 @@ const Landing = () => (
           >
             Apply
           </ActionButton> */}
-        </div>
-        <div
-          css={{
-            position: "relative",
-            textAlign: "right",
-            display: "flex",
-            paddingTop: "84px",
-            alignItems: "center",
-            "@media(max-width: 820px)": {
-              display: "none"
-            }
-          }}
-        >
         </div>
       </section>
       
