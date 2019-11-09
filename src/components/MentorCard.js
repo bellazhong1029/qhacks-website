@@ -24,7 +24,7 @@ export default ({
         borderWidth: "3px",
         borderStyle: "solid",
         overflow: "hidden"
-      }}
+          }}
     >
       <img
         css={{ width: "190px", marginLeft: "-10px" }}
@@ -38,7 +38,8 @@ export default ({
         marginTop: "24px",
         marginBottom: "8px",
         fontSize: "28px",
-        fontWeight: "600"
+        fontWeight: "600",
+        color: "#ffffff"
       }}
     >
       {name}
