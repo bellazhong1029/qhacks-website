@@ -4,17 +4,17 @@ import PointList from "./PointList.js";
 import PointBlurb from "./PointBlurb";
 import PointListCompressed from "./PointListCompressed.js";
 import PointBlurbCompressed from "./PointBlurbCompressed";
-
+import pascal from "../assets/img/headshots/pascal_siakam.png";
 import ContentWrapper from "./ContentWrapper";
 
 const points = [
   {
-    name:"Matthew",
-    project:"Qhacks",
-    title: "Celebrate Diversity and Sustainability",
-    image: "../img/logos/qhacksAppIcon.png",
+    name: "Amy Lu",
+    project: "Reeltube",
+    projectLink: "https://devpost.com/software/qhacks-v1",
+    image: pascal,
     text:
-      "This year we celebrate all the different people and things that make tech great! As we move forward, we have to use our abilities to make the world a better place for everyone who lives in it. That’s why this year we have chosen to promote diversity and sustainability by including speakers, mentors and workshops of all different backgrounds and making our event zero waste. "
+      "In high school, I’d never opened a single computer science course brochure, and now I will be an incoming graduate student in machine learning. QHacks gave me a taster of what tech really was - a creative endeavour with technical tools as the paint brush, and societal-level solution pitching as the frame."
   },
   {
     name:"Matthew",
