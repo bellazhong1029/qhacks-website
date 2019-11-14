@@ -10,8 +10,8 @@ const menuItems = [
   "about",
   // "schedule",
   "testimonials",
-  "speakers",
-  "sponsors",
+  // "speakers",
+  // "sponsors",
   "faq"
 ];
 

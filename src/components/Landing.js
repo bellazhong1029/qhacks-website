@@ -20,8 +20,38 @@ import backgroundGradient from "../assets/img/backgrounds/backgroundGradient.svg
 //   }
 // };
 
+const parameters = {
+  "particles": {
+      "number": {
+          "value": 60,
+          "density": {
+              "enable": true,
+              "value_area": 1500
+          }
+      },
+      "line_linked": {
+          "enable": false,
+          "opacity": 0.02
+      },
+      "move": {
+          "direction": "right",
+          "speed": 0.5
+      },
+      "size": {
+          "value": 2
+      },
+      "opacity": {
+          "anim": {
+              "enable": true,
+              "speed": 0.05,
+              "opacity_min": 0.10
+          }
+      }
+  },
+}
 
 const Landing = () => (
+  <div className="landing_wrapper">
   <div
     id=""
     css={{
@@ -33,6 +63,7 @@ const Landing = () => (
       }
     }}
   >
+    <script src="particles.js"></script>
     <Header standaloneVersion={false} />
     <ContentWrapper>
       <section
@@ -199,6 +230,8 @@ const Landing = () => (
       </section>
       
     </ContentWrapper>
+  </div>
+  <Particles params={parameters} style={{ position: "fixed", left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
   </div>
 );
 
