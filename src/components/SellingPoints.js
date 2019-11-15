@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
+
+import ContentWrapper from "./ContentWrapper";
 import PointList from "./PointList.js";
 import PointBlurb from "./PointBlurb";
 import PointListCompressed from "./PointListCompressed.js";
 import PointBlurbCompressed from "./PointBlurbCompressed";
+
 import pascal from "../assets/img/headshots/pascal_siakam.png";
-import ContentWrapper from "./ContentWrapper";
+
 
 const points = [
   {
@@ -20,16 +23,18 @@ const points = [
     name:"Matthew",
     title: "Learn Industry Skills from Industry Professionals",
     project:"Qhacks",
-    image: "../img/logos/qhacksAppIcon.png",
+    image: pascal,
     text:
       "Learn things you won’t learn in a classroom about the tech industry, founding your own start up, technical interviews and so much more straight from professionals. With over 35 companies in attendance ... "
+  },
+  {
+    name:"Test",
+    title: "Test McGee",
+    project:"Yeah",
+    image: pascal,
+    text:
+      "This is neato!"
   }
-//   {
-//     title: " ",
-//     // image: 
-//     text:
-//       " "
-//   }
 ];
 
 class SellingPoints extends Component {
@@ -55,7 +60,7 @@ class SellingPoints extends Component {
   render() {
     
     const blurb = (
-      <span css = {{color:"#ffffffff"}}>
+      <span css = {{ position: "relative", zIndex: "9999", color:"#ffffffff" }}>
         QHacks has something to offer everyone.
         <br />
         Check out some of the reasons you might want to attend!
@@ -66,6 +71,8 @@ class SellingPoints extends Component {
       <section
         id="points"
         css={{
+          background: "00205B",
+          backgroundSize: "cover",
           overflowX: "hidden"
         }}
       >

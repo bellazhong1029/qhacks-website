@@ -1,9 +1,7 @@
 import React from "react";
 import fetch from "unfetch";
 import Helmet from "react-helmet";
-import Particles from 'react-particles-js';
-import backgroundGradient from "../assets/img/backgrounds/backgroundGradient.svg";
-
+import Particles from "react-particles-js";
 
 
 import "./index.css";
@@ -15,6 +13,38 @@ import FAQs from "../components/FAQs";
 import Footer from "../components/Footer"
 import favicon from "../assets/img/icons/favicon.ico";
 import sharingImage from "../assets/img/logo/sharingImage2020.png";
+import MailingListSignup from "../components/MailingListSignup";
+
+const parameters = {
+  "particles": {
+      "number": {
+          "value": 60,
+          "density": {
+              "enable": true,
+              "value_area": 1500
+          }
+      },
+      "line_linked": {
+          "enable": false,
+          "opacity": 0.02
+      },
+      "move": {
+          "direction": "right",
+          "speed": 0.5
+      },
+      "size": {
+          "value": 2
+      },
+      "opacity": {
+          "anim": {
+              "enable": true,
+              "speed": 0.05,
+              "opacity_min": 0.10
+          }
+      }
+  },
+}
+
 
 export default () => {
  
@@ -82,11 +112,13 @@ export default () => {
         </Helmet>
         <div>
           <Landing />
+          <MailingListSignup />
           <OpeningSummary />
           <SellingPoints />
-          <Speakers />
+          {/* <Speakers /> */}
           <FAQs />
-          <Footer />
+          <Footer/>
+          <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
        </div>
       </div>
       

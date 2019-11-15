@@ -1,6 +1,14 @@
 import React from "react";
 import ContentWrapper from "./ContentWrapper";
 
+const linkCss = {
+  position: "relative",
+  zIndex: "9999",
+  textDecoration: "underline",
+  color: "#855988",
+  fontWeight: 500
+};
+
 const questionsAndAnswers = [
   {
     question: "What is a hackathon?",
@@ -36,6 +44,7 @@ const questionsAndAnswers = [
       <span>
         Yes! Hackers are expected to adhere to the{" "}
         <a
+          css={linkCss}
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
           rel="external noopener"
           target="_blank"
@@ -57,18 +66,14 @@ const questionsAndAnswers = [
   // }
 ];
 
-const linkCss = {
-  textDecoration: "underline",
-  color: "#00205b",
-  fontWeight: 500
-};
+
 
 const FAQs = () => (
   <section id="faq">
     <ContentWrapper>
       <div
         css={{
-          padding: "110px 0 114px 0",
+          padding: "0px 0 114px 0",
           "@media(max-width: 780px)": {
             padding: "64px 0 120px 0"
           }       
@@ -90,6 +95,7 @@ const FAQs = () => (
             <div
               key={question}
               css={{
+                zIndex: "9999",
                 padding: "0px 64px 40px 0px",
                 "@media(max-width: 780px)": {
                   paddingRight: "24px",

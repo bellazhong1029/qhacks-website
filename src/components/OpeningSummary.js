@@ -14,15 +14,16 @@ const caretCSS = (backgroundColor) =>
   });
 
 const OpeningSummary = () => (
+  <section id="about">
   <div
     css={{
       position: "relative",
+      zIndex: 9999,
       width: "100%",
-    //   background: "#f8f8f8",
       paddingTop: "80px",
       paddingBottom: "80px"
     }}
-  >
+    >
     <ContentWrapper>
       <div
         css={{
@@ -41,13 +42,13 @@ const OpeningSummary = () => (
             display: "block"
           }
         }}
-      >
+        >
         <div
           css={{
             paddingRight: "43px",
             "@media (max-width: 920px)": { paddingRight: "0px" }
           }}
-        >
+          >
           <h1 css={{ paddingTop: "2px" }}>Dream It. Build It.</h1>
           <div
             css={{
@@ -56,7 +57,7 @@ const OpeningSummary = () => (
               gridColumnGap: "4px",
               padding: "13px 0px 27px 0px"
             }}
-          >
+            >
             <div {...caretCSS("#00205b")} />
             <div {...caretCSS("#c81c2e")} />
             <div {...caretCSS("#fedb01")} />
@@ -75,7 +76,7 @@ const OpeningSummary = () => (
               height: "50vw"
             }
           }}
-        >
+          >
          
           <iframe
             title="2018 QHacks Hackathon Highlights"
@@ -96,7 +97,7 @@ const OpeningSummary = () => (
                 height: "100%"
               }
             }}
-          />
+            />
         </div>
         <picture
           css={{
@@ -111,7 +112,7 @@ const OpeningSummary = () => (
             bottom: "-140px",
             right: "40px"
           }}
-        >
+          >
           <source srcSet={cubes1webp} type="image/webp" />
           <source srcSet={cubes1png} type="image/png" />
           <img
@@ -125,11 +126,12 @@ const OpeningSummary = () => (
             }}
             src={cubes1png}
             alt="Floating cubes"
-          />
+            />
         </picture>
       </div>
     </ContentWrapper>
   </div>
+  </section>
 );
 
 export default OpeningSummary;

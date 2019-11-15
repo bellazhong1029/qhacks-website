@@ -18,7 +18,7 @@ const PointCard = (props) => (
       backgroundColor: "white",
       zIndex: 2,
       position: "relative",
-      opacity: props.mobile || !props.index ? 1 : 0.6,
+      opacity: props.mobile || !props.index ? 1 : 0.05,
       transition: !props.index
         ? "opacity 300ms ease 0ms"
         : "opacity 300ms ease 200ms"

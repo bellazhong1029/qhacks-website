@@ -4,14 +4,13 @@ import React from "react";
 import Header from "./Header";
 // import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
-import Particles from 'react-particles-js';
 import Countdown from 'react-countdown-now';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import Rocket from "../assets/img/icons/Rocket.svg";
 import Planet from "../assets/img/icons/Planet.svg";
 import logo from "../assets/img/logo/qhacksCrown-colored.svg";
 import word from "../assets/img/logo/qhacksWordmark-white.svg";
-import backgroundGradient from "../assets/img/backgrounds/backgroundGradient.svg";
 
 // const applyButtonCSS = {
 //   margin: "25px 0 100px 0",
@@ -20,35 +19,6 @@ import backgroundGradient from "../assets/img/backgrounds/backgroundGradient.svg
 //   }
 // };
 
-const parameters = {
-  "particles": {
-      "number": {
-          "value": 60,
-          "density": {
-              "enable": true,
-              "value_area": 1500
-          }
-      },
-      "line_linked": {
-          "enable": false,
-          "opacity": 0.02
-      },
-      "move": {
-          "direction": "right",
-          "speed": 0.5
-      },
-      "size": {
-          "value": 2
-      },
-      "opacity": {
-          "anim": {
-              "enable": true,
-              "speed": 0.05,
-              "opacity_min": 0.10
-          }
-      }
-  },
-}
 
 const Landing = () => (
   <div className="landing_wrapper">
@@ -56,8 +26,6 @@ const Landing = () => (
     id=""
     css={{
       width: "100%",
-      // background: `url(${backgroundGradient}) no-repeat center center`,
-      // backgroundSize: "cover",
       "@media(max-width: 600px)": {
         minHeight: "600px"
       }
@@ -90,16 +58,6 @@ const Landing = () => (
             }
           }}
         >
-          {/*
-          <img
-            src={Planet}
-            css={{
-              width: "75vw",
-              maxWidth: "350px",
-              //"@media(min-width: 821px)": { display: "none" }
-            }}
-            alt="QHacks Illustration"
-          />           */}
           <br />
 
           <img
@@ -158,9 +116,9 @@ const Landing = () => (
           >
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
-          <img src={Rocket} css={{position: "absolute", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
-          <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
-          <h2
+            <img src={Rocket} css={{position: "absolute", top: "0", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
+            <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
+          <div
             data-cy="qhacks-tagline"
             css={{
               padding: "50px 0 30px 0",
@@ -172,13 +130,13 @@ const Landing = () => (
               lineHeight: "30px",
               "@media(max-width: 820px)": {
                 paddingTop: "20px",
-                fontSize: "15px",
+                fontSize: "75px",
                 lineHeight: "1.6"
               }
             }}
           >
           <Countdown date={"2020-01-31T17:30:00"}/>
-          </h2>
+          </div>
           <h2
             data-cy="qhacks-tagline"
             css={{
@@ -228,10 +186,8 @@ const Landing = () => (
           </ActionButton> */}
         </div>
       </section>
-      
     </ContentWrapper>
   </div>
-  <Particles params={parameters} style={{ position: "fixed", left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
   </div>
 );
 
