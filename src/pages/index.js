@@ -115,7 +115,7 @@ export default () => {
           <MailingListSignup />
           <OpeningSummary />
           <SellingPoints />
-          {/* <Speakers /> */}
+          <Speakers />
           <FAQs />
           <Footer/>
           <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
