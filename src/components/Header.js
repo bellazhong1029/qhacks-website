@@ -94,6 +94,7 @@ class Header extends Component {
               css={{
                 "@media(max-width:100%)": {
                   display: "grid",
+                  zIndex: "9999",
                   gridTemplateColumns: "auto auto",
                  
                 }

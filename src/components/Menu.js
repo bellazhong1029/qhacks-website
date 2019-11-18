@@ -11,6 +11,7 @@ const Menu = (props) => {
         display: "grid",
         gridTemplateColumns: "min-content auto",
         overflow: "visible",
+        zIndex: "9999",
         height: "50px",
         width:"100%"
       }}
@@ -19,6 +20,7 @@ const Menu = (props) => {
         href="/#"
         css={{
           transition: "0.5s",
+          zIndex: "9999",
           "@media(min-width:820px)": {
             display: props.standaloneVersion
               ? "inline-block"
@@ -30,6 +32,7 @@ const Menu = (props) => {
       >
         <img
           css={{
+            zIndex: "9999",
             paddingTop: "2px",
             paddingBottom: "10px"
           }}
@@ -67,6 +70,7 @@ const Menu = (props) => {
         css={{
           paddingTop: "16px",
           paddingBottom: "32px",
+          zIndex: "9999",
           height: "84px",
           display: "grid",
           transition: "1s",
@@ -111,6 +115,7 @@ const Menu = (props) => {
                   lineHeight: "1.43",
                   textAlign: "center",
                   paddingLeft: "2px",
+                  zIndex: "9999",
                   paddingRight: "2px",
                   textTransform: "uppercase"
                 }}
@@ -123,6 +128,7 @@ const Menu = (props) => {
                   width: "100%",
                   height: "2px",
                   transition: "0.5s",
+                  zIndex: "9999",
                   marginLeft: "auto",
                   marginRight: "auto",
                   // backgroundColor: "#00205b",

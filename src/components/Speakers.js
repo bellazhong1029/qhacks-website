@@ -89,7 +89,7 @@ const Speakers = () => (
       >
         <SpeakerSlider speakers={speakers} />
       </div>
-      <picture
+      {/* <picture
         css={{
           zIndex: "1",
           width: "235px",
@@ -114,7 +114,7 @@ const Speakers = () => (
           src={cubes3png}
           alt="Floating cubes"
         />
-      </picture>
+      </picture> */}
       <Mentors />
     </ContentWrapper>
   </section>

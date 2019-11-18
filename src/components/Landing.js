@@ -37,6 +37,7 @@ const Landing = () => (
       <section
         css={{
           gridTemplateColumns: "auto 1fr",
+          overflowX: "hidden",
           "@media(max-width: 820px)": {
             textAlign: "center",
             display: "block"
@@ -47,7 +48,7 @@ const Landing = () => (
           css={{
             "@media(min-width: 1200px)": {
               paddingRight: "50px",
-              paddingTop: "100px"
+              paddingTop: "60px"
             },
             "@media (min-width: 821px) and (max-width: 1199px)": {
               paddingRight: "50px",
@@ -117,7 +118,7 @@ const Landing = () => (
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
             <img src={Rocket} css={{position: "absolute", top: "0", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
-            <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
+            <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", overflowX: "hidden", "@media(max-width: 1080px)": {display: "none"}}}/>
           <div
             data-cy="qhacks-tagline"
             css={{
@@ -130,7 +131,7 @@ const Landing = () => (
               lineHeight: "30px",
               "@media(max-width: 820px)": {
                 paddingTop: "20px",
-                fontSize: "75px",
+                fontSize: "60px",
                 lineHeight: "1.6"
               }
             }}

@@ -95,7 +95,7 @@ const FAQs = () => (
             <div
               key={question}
               css={{
-                zIndex: "9999",
+                zIndex: 3,
                 padding: "0px 64px 40px 0px",
                 "@media(max-width: 780px)": {
                   paddingRight: "24px",

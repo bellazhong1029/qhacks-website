@@ -53,6 +53,7 @@ export default () => {
       <div css={{ 
         backgroundImage: "linear-gradient(#855988, #070b34);",
         backgroundSize: "cover",
+        maxWidth: "100%",
         overflowX: "hidden" }}>
         <Helmet
           title="QHacks | Queen's University | Winter 2020"

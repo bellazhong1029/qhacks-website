@@ -18,7 +18,7 @@ const OpeningSummary = () => (
   <div
     css={{
       position: "relative",
-      zIndex: 9999,
+      zIndex: 3,
       width: "100%",
       paddingTop: "80px",
       paddingBottom: "80px"
