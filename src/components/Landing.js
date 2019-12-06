@@ -93,14 +93,14 @@ const Landing = () => (
           <br />
 
           <img
-            class="center"
-            data-cy="qhacks-wordmark"
+            // class="center"
             src={logo}
             css={{
               display: "block",
               marginLeft: "auto",
               marginRight: "auto",
               paddingTop: "40px",
+              paddingBottom: "30px",
               width: "100vw",
               maxWidth: "200px",
               "@media(max-width: 820px)": {
@@ -149,8 +149,6 @@ const Landing = () => (
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
           <div
-            data-cy="qhacks-tagline"
-            class="countdown"
             css={{
               padding: "50px 0 30px 0",
               color: "#00205B",

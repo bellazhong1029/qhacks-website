@@ -21,6 +21,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "style": "eslint src/**/*.js",
+    "clean": "gatsby clean",
     "format": "prettier --write 'src/**/*.js' && eslint src/**/*.js --fix",
     "test": "npm run jest-tests && npm run cypress-tests",
     "jest-tests": "jest",
