@@ -56,12 +56,13 @@ const Features = () => (
     <ContentWrapper>
       <div
         css={{
+          width: "100%",
           background: "#ffffff",
           borderRadius: "10px",
-          padding: "100px 0",
-          margin: "0 -28px",
+          padding: "50px 0 20px 0",
+          margin: "auto",
           "@media(max-width: 840px)": {
-            padding: "143px 0 50px 0"
+            padding: "80px 0 30px 0"
           }
         }}
       >

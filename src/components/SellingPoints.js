@@ -77,7 +77,11 @@ class SellingPoints extends Component {
         css={{
           background: "00205B",
           backgroundSize: "cover",
-          overflowX: "hidden"
+          "@media(max-width:1000px)": {
+            paddingBottom: "60px",
+            overflowX: "hidden",
+            overflowY: "hidden"
+          }
         }}
       >
         <ContentWrapper>

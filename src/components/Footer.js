@@ -189,7 +189,7 @@ const Footer = () => (
             <a
               data-cy="footer-dev-plug"
               css={{ ...finePrint, fontWeight: "400", position: "relative", zIndex: "9999" }}
-              href="https://github.com/qhacks/qhacks-website"
+              href="https://github.com/qhacks/qhacks-website/tree/dev-2020"
               target="_blank"
               rel="external noopener"
             >
@@ -355,7 +355,7 @@ const Footer = () => (
           <a
             data-cy="footer-dev-plug"
             css={{ ...finePrint, position: "relative", zIndex: "9999", fontWeight: "400" }}
-            href="https://github.com/qhacks/qhacks-website"
+            href="https://github.com/qhacks/qhacks-website/tree/dev-2020"
             target="_blank"
             rel="external noopener"
           >
