@@ -154,11 +154,17 @@ const Sponsors = () => (
                     width: "300px",
                     marginLeft: "100px",
                     "@media(max-width: 1080px)": {
-                      width: "200px"
+                      width: "200px",
                     },
                     "@media(max-width: 680px)": {
-                      width: "180px",
-                      marginBottom: "20px"
+                      width: "200px",
+                      marginBottom: "20px",
+                      marginLeft: "30px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "200px",
+                      marginBottom: "20px",
+                      marginLeft: "0px"
                     }
                   }}
                   alt="TD Logo"
@@ -187,11 +193,17 @@ const Sponsors = () => (
                     width: "300px",
                     marginRight: "100px",
                     "@media(max-width: 1080px)": {
-                      width: "200px"
+                      width: "200px",
                     },
                     "@media(max-width: 680px)": {
-                      width: "180px",
-                      marginBottom: "20px"
+                      width: "200px",
+                      marginBottom: "20px",
+                      marginRight: "30px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "200px",
+                      marginBottom: "20px",
+                      marginRight: "0px"
                     }
                   }}
                   alt="Scotiabank Logo"
@@ -208,8 +220,8 @@ const Sponsors = () => (
                 gridTemplateColumns: "1fr 1fr 1fr 1fr",
                 marginBottom: "40px",
                 "@media(max-width: 920px)": {
-                  gridTemplateColumns: "1fr 1fr",
-                  width: "60%",
+                  gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                  width: "80%",
                   marginLeft: "auto",
                   marginRight: "auto",
                   marginBottom: "10px"
@@ -245,28 +257,36 @@ const Sponsors = () => (
                   css={{
                     width: "200px",
                     marginTop: "20px",
+                    marginRight: "20px",
                     "@media(max-width: 920px)": {
-                      width: "120px"
+                      width: "150px",
+                      marginBottom: "10px",
+                      marginTop: "10px"
                     },
                     "@media(max-width: 610px)": {
-                      width: "90px",
+                      width: "150px",
                       marginBottom: "10px",
+                      marginRight: "0px",
                       marginTop: "10px"
                     }
                   }}
                   alt="Voiceflow Logo"
                 />
               </SponsorLink>
+              
               <SponsorLink url="http://rpabotpro.com/">
                 <img
                   src={rpaBotProLogo}
                   css={{
                     width: "200px",
+                    marginLeft: "20px",
                     "@media(max-width: 920px)": {
-                      width: "120px"
+                      width: "150px",
+                      marginBottom: "10px"
                     },
                     "@media(max-width: 610px)": {
-                      width: "90px",
+                      width: "150px",
+                      marginLeft: "0px",
                       marginBottom: "10px"
                     }
                   }}
