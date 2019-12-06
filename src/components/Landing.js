@@ -5,7 +5,8 @@ import Header from "./Header";
 import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 import Countdown from 'react-countdown-now';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 
 import Rocket from "../assets/img/icons/Rocket.svg";
 import Planet from "../assets/img/icons/Planet.svg";
@@ -25,6 +26,30 @@ const applyButtonCSS = {
 
 const Landing = () => (
   <div className="landing_wrapper" css={{zIndex: "9999"}}>
+  <Controller>
+  <Scene triggerHook="onLeave" duration={1000} pin>
+  {(progress1) => (
+  <Timeline totalProgress={progress1} paused>
+    <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "600px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "600px"} }}>
+      <div className="animation">
+        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {display: "none"}}}/>
+      </div>
+    </Tween>
+  </Timeline>
+  )}
+  </Scene>
+  <Scene triggerHook="onLeave" duration={1000} pin>
+  {(progress2) => (
+  <Timeline totalProgress={progress2} paused>
+    <Tween from={{ css: {opacity: 1, rotation: -20} }} to={{ css: {opacity: 0, rotation: 10} }}>
+      <div className="animation">
+      <img src={Planet} css={{position: "absolute", width: "400px", right: "130px", top: "350px", overflowX: "hidden", "@media(max-width: 1190px)": {display: "none"}}}/>
+      </div>
+    </Tween>
+  </Timeline>
+  )}
+  </Scene>
+  </Controller>
   <div
     id=""
     css={{
@@ -123,8 +148,6 @@ const Landing = () => (
           >
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
-            <img src={Rocket} css={{opacity: "0.8", position: "absolute", top: "0", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
-            <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", overflowX: "hidden", "@media(max-width: 1080px)": {display: "none"}}}/>
           <div
             data-cy="qhacks-tagline"
             class="countdown"
