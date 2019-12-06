@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 
 import placeholder from "../assets/img/sponsors/placeholder.png";
-import sunlifeLogo from "../assets/img/sponsors/sunlife.svg";
+import sunlifeLogo from "../assets/img/sponsors/sunlife.png";
 import voiceflowLogo from "../assets/img/sponsors/voiceflow.jpeg";
 import rpaBotProLogo from "../assets/img/sponsors/rpaBotPro.png";
 import tdLogo from "../assets/img/sponsors/td.png";
@@ -80,7 +80,7 @@ const Sponsors = () => (
                 }
               }}
             >
-              <SponsorLink url="">
+              <SponsorLink>
                 <img
                   src={placeholder}
                   css={{
@@ -114,7 +114,7 @@ const Sponsors = () => (
                 />
               </SponsorLink>
 
-              <SponsorLink url="">
+              <SponsorLink>
                 <img
                   src={placeholder}
                   css={{
@@ -165,7 +165,7 @@ const Sponsors = () => (
                 />
               </SponsorLink>
 
-              <SponsorLink url="">
+              <SponsorLink>
                 <img
                   src={placeholder}
                   css={{
@@ -224,7 +224,7 @@ const Sponsors = () => (
           >
             {/* Startup Row 1 */}
             <div className="fourCol">
-            <SponsorLink url="">
+            <SponsorLink>
                 <img
                   src={placeholder}
                   css={{
@@ -238,6 +238,7 @@ const Sponsors = () => (
                   alt=""
                 />
               </SponsorLink>
+
               <SponsorLink url="https://www.voiceflow.com/">
                 <img
                   src={voiceflowLogo}
@@ -272,7 +273,8 @@ const Sponsors = () => (
                   alt="RpaBotPro Logo"
                 />
               </SponsorLink>
-              <SponsorLink url="">
+              
+              <SponsorLink>
                 <img
                   src={placeholder}
                   css={{

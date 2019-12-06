@@ -57,13 +57,13 @@ const questionsAndAnswers = [
   {
     question: "What if I'm not from Kingston?",
     answer:
-      "Encountering a 307 status? We'll be sending busses to Kingston from Ottawa and Toronto. If you can make it to either of those cities, we'll reimburse for your cost to get there (busses only)."
-  } //,
-  // {
-  //   question: "How do I apply?",
-  //   answer:
-  //     "Applications will roll out at the end of November, so make sure to stay in the loop by following our social media pages or signing up for our newsletter (link to top). You don't need to be an expert hacker or to have been to a hackathon before - we just want to see what makes you creative and unique!"
-  // }
+      "Encountering a 307 status? We'll be sending buses to Kingston from Ottawa and Toronto. If you can make it to either of those cities, we'll reimburse for your cost to get there (GO Buses preferred)."
+  },
+  {
+    question: "How do I apply?",
+    answer:
+      "Applications are out now! Click the button at the top of the page to apply. You don't need to be an expert hacker or to have been to a hackathon before - we just want to see what makes you creative and unique!"
+  }
 ];
 
 
