@@ -9,16 +9,18 @@ import Landing from "../components/Landing";
 import OpeningSummary from "../components/OpeningSummary";
 import SellingPoints from "../components/SellingPoints";
 import Speakers from "../components/Speakers";
+import Sponsors from "../components/Sponsors";
 import FAQs from "../components/FAQs";
 import Footer from "../components/Footer"
 import favicon from "../assets/img/icons/favicon.ico";
 import sharingImage from "../assets/img/logo/sharingImage2020.png";
 import MailingListSignup from "../components/MailingListSignup";
+import Features from "../components/Features";
 
 const parameters = {
   "particles": {
       "number": {
-          "value": 60,
+          "value": 100,
           "density": {
               "enable": true,
               "value_area": 1500
@@ -30,7 +32,7 @@ const parameters = {
       },
       "move": {
           "direction": "right",
-          "speed": 0.5
+          "speed": 0.1
       },
       "size": {
           "value": 2
@@ -51,7 +53,7 @@ export default () => {
   return (
    
       <div css={{ 
-        backgroundImage: "linear-gradient(#855988, #070b34);",
+        backgroundImage: "repeating-linear-gradient(#855988, #070b34 20%, #855988, #070b34);",
         backgroundSize: "cover",
         maxWidth: "100%",
         overflowX: "hidden" }}>
@@ -113,12 +115,14 @@ export default () => {
         </Helmet>
         <div>
           <Landing />
-          <MailingListSignup />
+          {/* <MailingListSignup /> */}
           <OpeningSummary />
+          <Features />
           <SellingPoints />
-          <Speakers />
+          {/* <Speakers /> */}
+          <Sponsors />
           <FAQs />
-          <Footer/>
+          <Footer />
           <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
        </div>
       </div>

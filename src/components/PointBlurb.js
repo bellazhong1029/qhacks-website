@@ -31,7 +31,7 @@ const PointBlurb = (props) => {
       }}
     >
       <div css={{ marginRight: "64px" }}>
-        <h1 css={{ color: "#ffffff", marginBottom: "30px" }}>Why Should I Attend?</h1>
+        <h1 css={{ color: "#ffffff", marginBottom: "30px" }}> Hacker Testimonials </h1>
         <p css={{ ...blurbStyle }}>{props.text}</p>
         <div css={{ marginTop: "65px" }}>
           <input

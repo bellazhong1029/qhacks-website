@@ -11,8 +11,9 @@ const MobileMenu = (props) => (
   <div
     align="right"
     css={{
+      zIndex: "9999",
       marginLeft: "auto",
-      paddingTop: "32px",
+      paddingBottom: "10px",
       "@media(min-width: 820px)": {
         display: "none"
       }
@@ -22,7 +23,7 @@ const MobileMenu = (props) => (
       type="image"
       onClick={props.toggleMenu}
       src={hamburger}
-      css={{ width: "32px", height: "24px" }}
+      css={{  width: "32px", height: "24px" }}
       alt="Open menu"
     />
     <div
@@ -36,7 +37,7 @@ const MobileMenu = (props) => (
         top: "0px",
         left: "0px",
         zIndex: "5",
-        background: "#11213f"
+        background: "#855988"
       }}
     >
       <input

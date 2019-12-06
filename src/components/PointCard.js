@@ -48,7 +48,7 @@ const PointCard = (props) => (
         </strong>
         {props.item.project ? (
           <strong>
-            <span css={{ color: "#ffffff", fontWeight: 600 }}>Project:</span>{" "}
+            <span css={{ color: "#000000", fontWeight: 600 }}>Project:</span>{" "}
             <a
               rel="external noopener"
               target="_blank"

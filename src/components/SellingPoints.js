@@ -1,3 +1,5 @@
+/*Testimonials (refactor needed)*/
+
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 
@@ -7,7 +9,9 @@ import PointBlurb from "./PointBlurb";
 import PointListCompressed from "./PointListCompressed.js";
 import PointBlurbCompressed from "./PointBlurbCompressed";
 
-import pascal from "../assets/img/headshots/pascal_siakam.png";
+import jacobLaframboise from "../assets/img/headshots/jacobLaframboise.jpg";
+import amyLu from "../assets/img/headshots/amyLu.png";
+import cooperLeong from "../assets/img/headshots/cooperLeong.png";
 
 
 const points = [
@@ -15,25 +19,25 @@ const points = [
     name: "Amy Lu",
     project: "Reeltube",
     projectLink: "https://devpost.com/software/qhacks-v1",
-    image: pascal,
+    image: amyLu,
     text:
       "In high school, I’d never opened a single computer science course brochure, and now I will be an incoming graduate student in machine learning. QHacks gave me a taster of what tech really was - a creative endeavour with technical tools as the paint brush, and societal-level solution pitching as the frame."
   },
   {
-    name:"Matthew",
-    title: "Learn Industry Skills from Industry Professionals",
-    project:"Qhacks",
-    image: pascal,
+    name: "Cooper Leong",
+    project: "ESPECT",
+    projectLink: "https://devpost.com/software/espect",
+    image: cooperLeong,
     text:
-      "Learn things you won’t learn in a classroom about the tech industry, founding your own start up, technical interviews and so much more straight from professionals. With over 35 companies in attendance ... "
+      "Events such as QHacks have allowed me to delve into topics without fear. I used to find it time consuming and intimidating to learn enough to feel confident about a topic, but now I can tackle it head on. It has been just under a year since my first hackathon, and I can say that it has changed my life for the best, and I look forward to participating in many more!"
   },
   {
-    name:"Test",
-    title: "Test McGee",
-    project:"Yeah",
-    image: pascal,
+    name: "Jacob LaFramboise",
+    project: "Spoiler No Spoiling!",
+    projectLink: "https://devpost.com/software/qhacks-zgmlxr",
+    image: jacobLaframboise,
     text:
-      "This is neato!"
+      "QHacks was an exciting environment to learn and code in, and I really enjoyed the challenge. The sponsors were really cool and the event was a lot of fun!"
   }
 ];
 
@@ -63,13 +67,13 @@ class SellingPoints extends Component {
       <span css = {{ position: "relative", zIndex: "9999", color:"#ffffffff" }}>
         QHacks has something to offer everyone.
         <br />
-        Check out some of the reasons you might want to attend!
+        Check out what some past hackers have to say about the event!
       </span>
     );
    
     return (
       <section
-        id="points"
+        id="testimonials"
         css={{
           background: "00205B",
           backgroundSize: "cover",

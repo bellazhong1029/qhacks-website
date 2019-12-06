@@ -3,8 +3,8 @@ import React from "react";
 const PointBlurbCompressed = (props) => {
   return (
     <div css={{ textAlign: "center", marginBottom: "10px" }}>
-      <h1 css={{ marginTop: "32px", marginBottom: "16px" }}>
-        Why Should I Attend?
+      <h1 css={{ color: "#ffffff", marginTop: "32px", marginBottom: "16px" }}>
+        Hacker Testimonials
       </h1>
       <p
         css={{

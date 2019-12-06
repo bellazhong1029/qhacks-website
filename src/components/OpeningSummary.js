@@ -20,7 +20,7 @@ const OpeningSummary = () => (
       position: "relative",
       zIndex: 3,
       width: "100%",
-      paddingTop: "80px",
+      // paddingTop: "50px",
       paddingBottom: "80px"
     }}
     >
@@ -62,8 +62,8 @@ const OpeningSummary = () => (
             <div {...caretCSS("#c81c2e")} />
             <div {...caretCSS("#fedb01")} />
           </div>
-          <p css={{ lineHeight: "24px", fontColor: "#000000" }}>
-          Join over 500 hackers, speakers and mentors to create, learn and share your ideas.
+          <p css={{ lineHeight: "26px", fontColor: "#000000" }}>
+          Join over 500 hackers, speakers and mentors to create, learn and share your ideas. Attend workshops, play with hardware, take part in hacker challenges, and meet some new friends. Out-of-the-box thinkers, creatives, and innovators from all faculties and skill levels are encouraged to attend. We can't wait to see you there!
           </p>
         </div>
         <div

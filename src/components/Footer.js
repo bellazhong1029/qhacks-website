@@ -79,10 +79,11 @@ const [smallScreens, mediumScreens, largeScreens] = [
 ];
 
 const Footer = () => (
-  <footer css={{ backgroundColor: "#070b34", color: "#ffffff" }}>
+  <footer css={{ zIndex: "9999", backgroundColor: "#070b34", color: "#ffffff" }}>
     <ContentWrapper>
       <div
         css={{
+          zIndex: "9999",
           display: "grid",
           gridTemplateColumns: "auto auto auto",
           paddingTop: "80px",
@@ -91,6 +92,7 @@ const Footer = () => (
             textTransform: "uppercase"
           },
           [smallScreens]: {
+            zIndex: "9999",
             display: "block",
             textAlign: "center"
           }
@@ -98,7 +100,9 @@ const Footer = () => (
       >
         <div
           css={{
+            zIndex: "9999",
             [smallScreens]: {
+              zIndex: "9999",
               marginLeft: "auto",
               marginRight: "auto"
             },
@@ -122,7 +126,7 @@ const Footer = () => (
               paddingRight: "20px",
               paddingBottom: "40px",
               lineHeight: "1.67",
-              [smallScreens]: { paddingLeft: "24px", paddingRight: "24px" }
+              [smallScreens]: { zIndex: "9999", paddingLeft: "24px", paddingRight: "24px" }
             }}
           >
             QHacks is Queen’s University’s annual hackathon! QHacks was founded
@@ -144,12 +148,14 @@ const Footer = () => (
           </p> */}
           <div
             css={{
+              zIndex: "9999",
               alignItems: "left",
               justifyContent: "left",
               display: "flex",
               marginLeft: "-8px",
               paddingBottom: "64px",
               [smallScreens]: {
+                zIndex: "9999",
                 marginLeft: "0px",
                 paddingBottom: "24px"
               }
@@ -173,7 +179,7 @@ const Footer = () => (
               /> */}
             </MediaQuery>
           </div>
-          <div css={{ [smallScreens]: { display: "none" } }}>
+          <div css={{ position: "relative", zIndex: "9999", [smallScreens]: { display: "none" } }}>
             <p
               data-cy="footer-address"
               css={{ ...finePrint, marginBottom: "5px" }}
@@ -182,7 +188,7 @@ const Footer = () => (
             </p>
             <a
               data-cy="footer-dev-plug"
-              css={{ ...finePrint, fontWeight: "400" }}
+              css={{ ...finePrint, fontWeight: "400", position: "relative", zIndex: "9999" }}
               href="https://github.com/qhacks/qhacks-website"
               target="_blank"
               rel="external noopener"
@@ -203,28 +209,34 @@ const Footer = () => (
         </div>
         <div
           css={{
+            zIndex: "9999",
             marginLeft: "auto",
             marginRight: "auto",
             paddingTop: "80px",
             [smallScreens]: {
-              paddingTop: "0px",
-              paddingBottom: "50px"
+              paddingTop: "10px",
+              paddingBottom: "30px",
+              position: "relative",
+              zIndex: "9999"
             }
           }}
         >
           <h3>Navigate</h3>
           <ul
             css={{
+              zIndex: "9999",
               paddingTop: "30px",
               listStyleType: "none",
               ">li": { paddingBottom: "23px" },
               " a": {
+                zIndex: "9999",
                 color: "inherit",
                 fontWeight: 600,
                 textDecoration: "none",
                 ":hover": {
                   color: "#ed253a"
-                }
+                },
+                [smallScreens]: {zIndex: "9999"}
               }
             }}
           >
@@ -243,6 +255,7 @@ const Footer = () => (
               paddingTop: "80px"
             },
             [mediumScreens]: {
+              zIndex: "9999",
               paddingTop: "80px"
             }
           }}
@@ -274,6 +287,7 @@ const Footer = () => (
               <div
                 key={url}
                 css={{
+                  zIndex: "9999",
                   display: "grid",
                   gridTemplateColumns: "min-content auto",
                   ":hover": {
@@ -285,6 +299,7 @@ const Footer = () => (
                     }
                   },
                   [smallScreens]: {
+                    zIndex: "9999",
                     display: "block",
                     width: "40px",
                     height: "40px",
@@ -307,6 +322,7 @@ const Footer = () => (
                         backgroundColor: "#ed253a"
                       },
                       [smallScreens]: {
+                        zIndex: "9999",
                         width: "40px",
                         height: "40px"
                       }
@@ -326,8 +342,8 @@ const Footer = () => (
         </div>
         <div
           css={{
-            [largeScreens]: { display: "none" },
-            [mediumScreens]: { display: "none" }
+            [largeScreens]: { position: "relative", zIndex: "9999", display: "none" },
+            [mediumScreens]: { position: "relative", zIndex: "9999", display: "none" }
           }}
         >
           <p
@@ -338,7 +354,7 @@ const Footer = () => (
           </p>
           <a
             data-cy="footer-dev-plug"
-            css={{ ...finePrint, fontWeight: "400" }}
+            css={{ ...finePrint, position: "relative", zIndex: "9999", fontWeight: "400" }}
             href="https://github.com/qhacks/qhacks-website"
             target="_blank"
             rel="external noopener"

@@ -1,219 +1,85 @@
-import React, { Component } from "react";
-import ActionButton from "./ActionButton";
-import { graphql } from "react-apollo";
-import * as Sentry from "@sentry/browser";
-import gql from "graphql-tag";
+import React from "react";
 
-import circleCheckWhite from "../assets/img/icons/circleSuccess-white.svg";
-import circleTimesWhite from "../assets/img/icons/circleError-white.svg";
-import circleCheck from "../assets/img/icons/circleSuccess-green.svg";
-import circleTimes from "../assets/img/icons/circleError-red.svg";
-import spinnerWhite from "../assets/img/icons/spinner-white.svg";
-import spinner from "../assets/img/icons/spinner-black.svg";
-
-const CREATE_MAILING_LIST_SUBSCRIPTION_MUTATION = gql`
-  mutation CreateMailingListSubscription(
-    $eventSlug: String!
-    $mailingListSlug: String!
-    $input: MailingListSubscriberInput!
-  ) {
-    mailingListSubscriberCreate(
-      eventSlug: $eventSlug
-      mailingListSlug: $mailingListSlug
-      input: $input
-    ) {
-      subscriber {
-        email
-      }
+const ActionButton = (props) => {
+  const roundedStyles = {
+    borderRadius: "30px",
+    border: `solid 2px ${props.foregroundColor}`,
+    paddingLeft: "50px",
+    paddingRight: "50px",
+    "@media screen and (max-width: 450px)": {
+      width: "92%",
+      paddingLeft: "4%",
+      paddingRight: "4%"
     }
-  }
-`;
-
-class SignUpForm extends Component {
-  state = {
-    status: null,
-    message: null,
-    emailAddress: "",
-    boldMessage: ""
   };
 
-  setStatusFailure = (errorMsg) => {
-    this.setState({
-      status: "failure",
-      boldMessage: errorMsg,
-      message: ""
-    });
-    setTimeout(() => this.resetStatus(), 3500);
+  const rectStyles = {
+    borderRadius: "4px",
+    border: "none",
+    paddingLeft: "25px",
+    paddingRight: "25px"
   };
 
-  setStatusSuccess = (email) => {
-    this.setState({
-      status: "success",
-      boldMessage: email,
-      message: "has been added to our mailing list."
-    });
-    setTimeout(() => this.resetStatus(), 3500);
-  };
-
-  setStatusLoading = () => {
-    this.setState({ status: "loading", message: "", boldMessage: "" });
-  };
-
-  resetStatus = () => {
-    this.setState({ status: null, message: "", boldMessage: "" });
-  };
-
-  signUp() {
-    const email = this.state.emailAddress;
-
-    this.setStatusLoading();
-
-    this.props
-      .mutate({
-        variables: {
-          mailingListSlug: "announcements-newsletter",
-          eventSlug: "qhacks-2019",
-          input: {
-            email
-          }
-        }
-      })
-      .then((res) => {
-        try {
-          return this.setStatusSuccess(
-            res.data.mailingListSubscriberCreate.subscriber.email
-          );
-        } catch (err) {
-          Sentry.captureException(err);
-          return this.setStatusFailure(
-            "Something went wrong - please try again later."
-          );
-        }
-      })
-      .catch((err) => {
-        Sentry.captureException(err);
-        if (
-          err.graphQLErrors &&
-          err.graphQLErrors[0] &&
-          err.graphQLErrors[0].extensions &&
-          err.graphQLErrors[0].extensions.code === "EMAIL_ALREADY_SUBSCRIBED"
-        ) {
-          return this.setStatusFailure(`${email} has already been signed up!`);
-        }
-
-        return this.setStatusFailure(
-          "Something went wrong - please try again later."
-        );
-      });
-  }
-
-  render() {
-    let buttonContent = "";
-    const whiteIcons =
-      this.props.foregroundColor &&
-      ["#fff", "#ffffff", "white"].includes(
-        this.props.foregroundColor.toLowerCase()
-      );
-    switch (this.state.status) {
-      case "loading": {
-        buttonContent = (
-          <img
-            src={whiteIcons ? spinnerWhite : spinner}
-            css={{
-              animation: "spin 2s infinite linear"
-            }}
-            alt=""
-          />
-        );
-        break;
-      }
-      case "success": {
-        buttonContent = (
-          <img src={whiteIcons ? circleCheckWhite : circleCheck} alt="" />
-        );
-        break;
-      }
-      case "failure": {
-        buttonContent = (
-          <img src={whiteIcons ? circleTimesWhite : circleTimes} alt="" />
-        );
-        break;
-      }
-      default: {
-        buttonContent = "Sign Up";
-        break;
-      }
+  let commonStyles = {
+    ...props.style,
+    minHeight: "48px",
+    lineHeight: "48px",
+    width: props.width,
+    textAlign: "center",
+    textTransform: "uppercase",
+    backgroundColor: props.backgroundColor,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: props.foregroundColor,
+    fontSize: "18px",
+    transition: "0.5s ease",
+    fontWeight: 700,
+    ":hover:not(:disabled)": {
+      backgroundColor: props.hoverBackgroundColor || props.foregroundColor,
+      color: props.backgroundColor
     }
+  };
 
-    return (
-      <div
-        css={{
-          maxWidth: "530px",
-          margin: this.props.center ? "0 auto" : "12px 0 0 8px",
-          width: "100%"
-        }}
-      >
-        <div
-          css={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexWrap: "wrap"
-          }}
-        >
-          <input
-            placeholder="Enter your email address"
-            type="email"
-            css={{
-              flexGrow: 2,
-              padding: "0 16px",
-              height: "48px",
-              lineHeight: "48px",
-              borderRadius: "4px",
-              border: "none",
-              fontSize: this.props.fontSize || "16px",
-              margin: "4px"
-            }}
-            data-cy={this.props.dataCyInput || "signup-input"}
-            value={this.state.emailAddress}
-            aria-label="Your email address"
-            onChange={(e) => this.setState({ emailAddress: e.target.value })}
-          />
-          <ActionButton
-            backgroundColor={this.props.backgroundColor || "white"}
-            foregroundColor={this.props.foregroundColor || "black"}
-            hoverBackgroundColor={this.props.hoverBackgroundColor} // can be null
-            type="rect"
-            onClick={() => this.signUp()}
-            width="130px"
-            css={{ margin: "4px" }}
-            disabled={!!this.state.status}
-            data-cy={this.props.dataCyButton || "signup-button"}
-          >
-            {buttonContent}
-          </ActionButton>
-        </div>
-        <p
-          css={{
-            marginTop: "8px",
-            height: "22px",
-            fontWeight: "500",
-            lineHeight: "22px"
-          }}
-        >
-          {this.state.boldMessage ? (
-            <strong>
-              {this.state.boldMessage}
-              &nbsp;
-            </strong>
-          ) : (
-            ""
-          )}
-          {this.state.message}
-        </p>
-      </div>
-    );
+  switch (props.type) {
+    case "rounded":
+      commonStyles = { ...roundedStyles, ...commonStyles };
+      break;
+    case "rect":
+      commonStyles = { ...rectStyles, ...commonStyles };
+      break;
   }
-}
 
-export default graphql(CREATE_MAILING_LIST_SUBSCRIPTION_MUTATION)(SignUpForm);
+  return props.link ? (
+    <a
+      css={{
+        ...commonStyles,
+        ...props.style,
+        display: "inline-block",
+        boxSizing: "content-box"
+      }}
+      data-cy={props.dataCy}
+      disabled={props.disabled}
+      onClick={props.onClick}
+      href={props.link}
+      rel="external noopener"
+      target={props.target || "_blank"}
+    >
+      {props.children}
+    </a>
+  ) : (
+    <button
+      css={{
+        ...commonStyles,
+        ...props.style
+      }}
+      data-cy={props.dataCy}
+      disabled={props.disabled}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  );
+};
+
+export default ActionButton;

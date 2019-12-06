@@ -9,9 +9,9 @@ let prevScrollY = 0;
 const menuItems = [
   "about",
   // "schedule",
-  // "testimonials",
+  "testimonials",
   // "speakers",
-  // "sponsors",
+  "sponsors",
   "faq"
 ];
 
@@ -74,19 +74,20 @@ class Header extends Component {
             width: "100%",
             position: "fixed",
             top: this.state.isHeaderVisible ? "0px" : "-100px",
+            opacity: 0.97,
             transition: "0.5s",
             backgroundColor: "#ffffff",
-            // opacity: this.state.isMobileMenuVisible
-            //   ? "1.0"
-            //   : (this.state.isHeaderVisible && "0.95") || "0",
+            opacity: this.state.isMobileMenuVisible
+              ? "1.0"
+              : (this.state.isHeaderVisible && "0.97") || "0.8",
             zIndex: "5",
-            // "@media(min-width:860px)": {
-            //   backgroundColor: this.props.standaloneVersion
-            //     ? "#ffffff"
-            //     : this.state.isAtTheTop
-            //       ? "rgba(0,0,0,0)"
-            //       : "#ffffff"
-            // }
+            "@media(min-width:860px)": {
+              opacity: this.props.standaloneVersion
+                ? "0.97"
+                : this.state.isAtTheTop
+                  ? "0.85"
+                  : "0.97"
+            }
           }}
         >
           <ContentWrapper>
@@ -94,7 +95,7 @@ class Header extends Component {
               css={{
                 "@media(max-width:100%)": {
                   display: "grid",
-                  zIndex: "9999",
+                  zIndex: "99999",
                   gridTemplateColumns: "auto auto",
                  
                 }

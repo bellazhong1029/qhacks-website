@@ -2,7 +2,7 @@ import React from "react";
 
 
 import Header from "./Header";
-// import ActionButton from "./ActionButton";
+import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 import Countdown from 'react-countdown-now';
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -12,19 +12,23 @@ import Planet from "../assets/img/icons/Planet.svg";
 import logo from "../assets/img/logo/qhacksCrown-colored.svg";
 import word from "../assets/img/logo/qhacksWordmark-white.svg";
 
-// const applyButtonCSS = {
-//   margin: "25px 0 100px 0",
-//   "@media(max-width: 820px)": {
-//     margin: "30px 0 45px auto"
-//   }
-// };
+const applyButtonCSS = {
+  alignItems: "center",
+  position: "relative",
+  zIndex: "2",
+  margin: "40px 0 20px auto",
+  "@media(max-width: 820px)": {
+    margin: "30px 0 45px auto"
+  }
+};
 
 
 const Landing = () => (
-  <div className="landing_wrapper">
+  <div className="landing_wrapper" css={{zIndex: "9999"}}>
   <div
     id=""
     css={{
+      zIndex: "9999",
       width: "100%",
       "@media(max-width: 600px)": {
         minHeight: "600px"
@@ -36,6 +40,8 @@ const Landing = () => (
     <ContentWrapper>
       <section
         css={{
+          zIndex: "9999",
+          textAlign: "center",
           gridTemplateColumns: "auto 1fr",
           overflowX: "hidden",
           "@media(max-width: 820px)": {
@@ -117,13 +123,15 @@ const Landing = () => (
           >
             Queen’s University • January 31st - February 2nd, 2020
           </h2>
-            <img src={Rocket} css={{position: "absolute", top: "0", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
+            <img src={Rocket} css={{opacity: "0.8", position: "absolute", top: "0", left: "50px", top: "300px", "@media(max-width: 1080px)": {display: "none"}}}/>
             <img src={Planet} css={{position: "absolute", width: "400px", right: "-100px", top: "300px", overflowX: "hidden", "@media(max-width: 1080px)": {display: "none"}}}/>
           <div
             data-cy="qhacks-tagline"
+            class="countdown"
             css={{
               padding: "50px 0 30px 0",
               color: "#00205B",
+              "-webkit-text-stroke": "1.3px #ffffff", 
               fontWeight: 500,
               fontSize: "70px",
               letterSpacing: "10px",
@@ -141,7 +149,7 @@ const Landing = () => (
           <h2
             data-cy="qhacks-tagline"
             css={{
-              padding: "20px 0 30px 0",
+              padding: "8px 0 10px 0",
               color: "#C9CCFF",
               fontWeight: 500,
               fontSize: "20px",
@@ -156,11 +164,21 @@ const Landing = () => (
             }}>
               Days : Hours : Minutes : Seconds
             </h2>
+            <ActionButton
+            dataCy="apply-button"
+            backgroundColor="#00205B"
+            foregroundColor="#ffffff"
+            style={applyButtonCSS}
+            link="https://app.qhacks.io"
+            type="rounded"
+            >
+            Apply Now
+            </ActionButton>
             <h2
             data-cy="qhacks-tagline"
             css={{
               padding: "20px 0 100px",
-              color: "#d3d3d3",
+              color: "#ffffff",
               fontWeight: 500,
               textAlign: "center",
               lineHeight: "30px",
@@ -175,16 +193,6 @@ const Landing = () => (
             <br />
             Join us for an unforgettable experience!
           </h2>
-          {/* <ActionButton
-            dataCy="login-button"
-            backgroundColor="#ffffff"
-            foregroundColor="#00205b"
-            style={applyButtonCSS}
-            link="https://app.qhacks.io/qhacks-2019/apply"
-            type="rounded"
-          >
-            Apply
-          </ActionButton> */}
         </div>
       </section>
     </ContentWrapper>

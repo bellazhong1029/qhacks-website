@@ -2,6 +2,7 @@ import React from "react";
 import ScrollSpy from "react-scrollspy";
 
 import colored from "../assets/img/logo/qhacksCrown-colored.svg";
+import coloredWordmark from "../assets/img/logo/qhacksWordmark-colored.svg";
 import { withClientState } from "apollo-link-state";
 
 const Menu = (props) => {
@@ -12,8 +13,11 @@ const Menu = (props) => {
         gridTemplateColumns: "min-content auto",
         overflow: "visible",
         zIndex: "9999",
-        height: "50px",
-        width:"100%"
+        height: "84px",
+        // width:"50%"
+        "@media(max-width:820px)": {
+          height: "20px"
+        }
       }}
     >
       <a
@@ -33,10 +37,26 @@ const Menu = (props) => {
         <img
           css={{
             zIndex: "9999",
-            paddingTop: "2px",
-            paddingBottom: "10px"
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            "@media(max-width:820px)": {
+              display: "none"
+            }
           }}
           src={colored}
+          alt="QHacks Crown"
+        />
+        <img
+          css={{
+            zIndex: "9999",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            width: "95px",
+            "@media(min-width:820px)": {
+              display: "none"
+            }
+          }}
+          src={coloredWordmark}
           alt="QHacks Crown"
         />
       </a>
@@ -68,7 +88,7 @@ const Menu = (props) => {
       <div
         align="right"
         css={{
-          paddingTop: "16px",
+          paddingTop: "32px",
           paddingBottom: "32px",
           zIndex: "9999",
           height: "84px",
@@ -76,7 +96,7 @@ const Menu = (props) => {
           transition: "1s",
           marginLeft: "auto",
           "@media(max-width: 820px)": {
-            display: "none"
+            display: "none",
           },
           " li": {
             listStyleType: "none"
