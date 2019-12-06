@@ -19,7 +19,8 @@ const applyButtonCSS = {
   zIndex: "2",
   margin: "40px 0 20px auto",
   "@media(max-width: 820px)": {
-    margin: "30px 0 45px auto"
+    margin: "30px auto 45px auto",
+    padding: "5px 10px 5px 10px"
   }
 };
 
@@ -32,7 +33,7 @@ const Landing = () => (
   <Timeline totalProgress={progress1} paused>
     <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "600px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "600px"} }}>
       <div className="animation">
-        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {display: "none"}}}/>
+        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "180px", left: "-50px", width: "100px"}}}/>
       </div>
     </Tween>
   </Timeline>
@@ -160,7 +161,7 @@ const Landing = () => (
               lineHeight: "30px",
               "@media(max-width: 820px)": {
                 paddingTop: "20px",
-                fontSize: "60px",
+                fontSize: "45px",
                 lineHeight: "1.6"
               }
             }}
@@ -178,9 +179,10 @@ const Landing = () => (
               textAlign: "center",
               lineHeight: "30px",
               "@media(max-width: 820px)": {
-                paddingTop: "20px",
+                paddingTop: "10px",
                 fontSize: "15px",
-                lineHeight: "1.6"
+                lineHeight: "1.6",
+                wordSpacing: "5px"
               }
             }}>
               Days : Hours : Minutes : Seconds
@@ -204,7 +206,7 @@ const Landing = () => (
               textAlign: "center",
               lineHeight: "30px",
               "@media(max-width: 820px)": {
-                paddingTop: "20px",
+                paddingTop: "10px",
                 fontSize: "15px",
                 lineHeight: "1.6"
               }

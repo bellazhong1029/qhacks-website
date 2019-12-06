@@ -86,7 +86,7 @@ const Features = () => (
               list={[
                 {
                   icon: applications,
-                  number: 1800,
+                  number: 3000,
                   text: "Applications"
                 },
                 {
