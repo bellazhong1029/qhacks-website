@@ -69,26 +69,25 @@ class Header extends Component {
       <div>
       
         <div
-          data-cy="mlh-banner"
-          css={{
-            width: "100%",
-            position: "fixed",
-            top: this.state.isHeaderVisible ? "0px" : "-100px",
-            opacity: 0.97,
-            transition: "0.5s",
-            backgroundColor: "#ffffff",
-            opacity: this.state.isMobileMenuVisible
-              ? "1.0"
-              : (this.state.isHeaderVisible && "0.97") || "0.8",
-            zIndex: "5",
-            "@media(min-width:860px)": {
-              opacity: this.props.standaloneVersion
-                ? "0.97"
-                : this.state.isAtTheTop
-                  ? "0.85"
-                  : "0.97"
-            }
-          }}
+data-cy="mlh-banner"
+css={{
+  width: "100%",
+  position: "fixed",
+  top: this.state.isHeaderVisible ? "0px" : "-100px",
+  transition: "0.5s",
+  backgroundColor: "#ffffff",
+  opacity: this.state.isMobileMenuVisible
+    ? "1.0"
+    : (this.state.isHeaderVisible && "0.95") || "0",
+  zIndex: "5",
+  "@media(min-width:860px)": {
+    backgroundColor: this.props.standaloneVersion
+      ? "#ffffff"
+      : this.state.isAtTheTop
+        ? "#ffffff"
+        : "#ffffff",
+  }
+}}
         >
           <ContentWrapper>
             <div

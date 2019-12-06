@@ -4,10 +4,16 @@ import SponsorLink from "./SponsorLink";
 import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 
+import placeholder from "../assets/img/sponsors/placeholder.png";
+import voiceflowLogo from "../assets/img/sponsors/voiceflow.jpeg";
+import rpaBotProLogo from "../assets/img/sponsors/rpaBotPro.png";
+import tdLogo from "../assets/img/sponsors/td.png";
+import scotiabankLogo from "../assets/img/sponsors/scotiabank.svg";
+
 import qicLogo from "../assets/img/sponsors/qic.svg";
 import eceLogo from "../assets/img/sponsors/ece.svg";
 import mmieLogo from "../assets/img/sponsors/mmie.svg";
-import mlhLogo from "../assets/img/sponsors/mlhText.svg";
+import mlhLogo from "../assets/img/sponsors/mlh-black.svg";
 import githubLogo from "../assets/img/sponsors/github.svg";
 import sodexoLogo from "../assets/img/sponsors/sodexo.svg";
 import pccLogo from "../assets/img/sponsors/pcc.png";
@@ -22,11 +28,11 @@ const Sponsors = () => (
     id="sponsors"
     css={{
       position: "relative",
-      zIndex: "9999",
+      zIndex: "2",
       paddingBottom: "60px",
       color: "#FFFFFF",
       opacity: "1",
-      "img": {
+      " img": {
         transition: "0.3s",
         ":hover": {
           transform: "scale(1.1)"
@@ -44,14 +50,195 @@ const Sponsors = () => (
           marginLeft: "auto",
           marginRight: "auto",
           textAlign: "center",
-          paddingTop: "0px",
-          paddingBottom: "0.5px"
+          paddingTop: "40px",
         }}
       >
         {/* Sponsors */}
-        {/* <div>
-        <h1>Sponsors</h1>
-        </div> */}
+
+        <div>
+          <h1>Sponsors</h1>
+
+          {/* Giga */}
+          <div
+            css={{
+              marginTop: "50px",
+              "@media(max-width: 500px)": {
+                marginBottom: "60px"
+              }
+            }}
+          >
+            {/* Giga Row 1 */}
+            <div
+              css={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                marginBottom: "60px",
+                "@media(max-width: 500px)": {
+                  gridTemplateColumns: "1fr",
+                  marginBottom: "40px"
+                }
+              }}
+            >
+              <SponsorLink url="https://www.voiceflow.com/">
+                <img
+                  css={{
+                    width: "400px",
+                    "@media(max-width: 980px)": {
+                      width: "300px"
+                    },
+                    "@media(max-width: 680px)": {
+                      width: "200px"
+                    },
+                    "@media(max-width: 500px)": {
+                      width: "180px"
+                    }
+                  }}
+                  src={voiceflowLogo}
+                  alt="Voiceflow Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink url="http://bloomberg.com/">
+                <img
+                  css={{
+                    width: "400px",
+                    marginTop: "15px",
+                    "@media(max-width: 980px)": {
+                      width: "300px"
+                    },
+                    "@media(max-width: 680px)": {
+                      width: "200px"
+                    },
+                    "@media(max-width: 500px)": {
+                      width: "190px",
+                      marginTop: "25px"
+                    }
+                  }}
+                  src={bloombergLogo}
+                  alt="Bloomberg Logo"
+                />
+              </SponsorLink>
+
+            </div>
+          
+          {/* Mega */}
+          <div
+              css={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr",
+                marginTop: "60px",
+                marginBottom: "50px",
+                "@media(max-width: 610px)": {
+                  gridTemplateColumns: "1fr",
+                  marginBottom: "40px"
+                }
+              }}
+            >
+
+            {/* Mega Row 1 */}
+
+            <SponsorLink url="http://td.com/">
+                <img
+                  src={tdLogo}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      width: "200px"
+                    },
+                    "@media(max-width: 680px)": {
+                      width: "180px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt="TD Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink url="http://github.com/">
+                <img
+                  src={githubLogo}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      width: "200px"
+                    },
+                    "@media(max-width: 680px)": {
+                      width: "180px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt="GitHub Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink url="https://www.scotiabank.com/ca/en">
+                <img
+                  src={scotiabankLogo}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      width: "200px"
+                    },
+                    "@media(max-width: 680px)": {
+                      width: "180px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt="Scotiabank Logo"
+                />
+              </SponsorLink>
+
+            </div>
+
+            {/* Mega Row 2 */}
+
+            <SponsorLink url="">
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "200px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
+                />
+              </SponsorLink>
+
+              <SponsorLink url="http://rpabotpro.com/">
+                <img
+                  src={rpaBotProLogo}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 910px)": {
+                      width: "220px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "180px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt="RpaBotPro Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink url="">
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "200px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
+                />
+              </SponsorLink>
+        </div>
 
         {/* Partners */}
 
@@ -60,7 +247,7 @@ const Sponsors = () => (
             position: "relative",
             zIndex: "9999",
             paddingTop: "70px",
-            paddingBottom: "70px"
+            paddingBottom: "0px"
           }}
         >
           <h1 css={{ paddingBottom: "40px" }}>Our Partners</h1>
@@ -339,7 +526,7 @@ const Sponsors = () => (
               }
             }}
           >
-            <SponsorLink url="https://www.bloomberg.com/canada">
+            {/* <SponsorLink url="https://www.bloomberg.com/canada">
               <img
                 src={bloombergLogo}
                 css={{
@@ -358,12 +545,26 @@ const Sponsors = () => (
                 }}
                 alt="Bloomberg Logo"
               />
-            </SponsorLink>
+            </SponsorLink> */}
+            <SponsorLink url="">
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "200px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
+                />
+              </SponsorLink>
             <SponsorLink url="https://www.stickermule.com/ca">
               <img
                 src={stickermuleLogo}
                 css={{
-                  width: "150px",
+                  width: "200px",
                   "@media(max-width: 980px)": {
                     width: "140px"
                   },
@@ -377,7 +578,21 @@ const Sponsors = () => (
                 alt="Stickermule Logo"
               />
             </SponsorLink>
-            <SponsorLink url="https://education.github.com/pack">
+            <SponsorLink url="">
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "300px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "200px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
+                />
+              </SponsorLink>
+            {/* <SponsorLink url="https://education.github.com/pack">
               <img
                 src={githubLogo}
                 css={{
@@ -395,7 +610,7 @@ const Sponsors = () => (
                 }}
                 alt="GitHub Logo"
               />
-            </SponsorLink>
+            </SponsorLink> */}
           </div>
 
           {/* School Row 6 */}
@@ -410,7 +625,7 @@ const Sponsors = () => (
                 src={mlhLogo}
                 css={{
                   width: "150px",
-                  marginTop: "25px",
+                  paddingBottom: "30px",
                   "@media(max-width: 980px)": {
                     width: "130px"
                   },
@@ -427,6 +642,7 @@ const Sponsors = () => (
           </div>
         </div>
       </div>
+    </div>
     </ContentWrapper>
   </section>
 );

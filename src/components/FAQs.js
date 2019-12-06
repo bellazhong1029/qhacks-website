@@ -57,7 +57,7 @@ const questionsAndAnswers = [
   {
     question: "What if I'm not from Kingston?",
     answer:
-      "Encountering a 307 status? We'll be sending busses to Montreal, Ottawa, Toronto and Waterloo. If those aren't convenient for you, we'll be offering travel reimbursements on a case by case basis."
+      "Encountering a 307 status? We'll be sending busses to Kingston from Ottawa and Toronto. If you can make it to either of those cities, we'll reimburse for your cost to get there (busses only)."
   } //,
   // {
   //   question: "How do I apply?",
@@ -75,7 +75,7 @@ const FAQs = () => (
         css={{
           padding: "0px 0 114px 0",
           "@media(max-width: 780px)": {
-            padding: "64px 0 120px 0"
+            padding: "0 0 120px 0"
           }       
         }}
       >

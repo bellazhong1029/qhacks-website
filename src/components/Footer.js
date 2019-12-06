@@ -131,8 +131,8 @@ const Footer = () => (
           >
             QHacks is Queen’s University’s annual hackathon! QHacks was founded
             in 2016 with a mission to advocate and incubate the tech community
-            at Queen’s University and throughout Canada. Going into our fourth
-            year we have been aggressively growing to become one of the biggest
+            at Queen’s University and throughout Canada. Going into our fifth
+            year, we have been aggressively growing to become one of the biggest
             and most exciting hackathons in North America.
           </p>
           {/* <h3>Stay Connected</h3> */}

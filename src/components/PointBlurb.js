@@ -21,8 +21,8 @@ const PointBlurb = (props) => {
       css={{
         width: "50%",
         height: "100%",
-        position: "absolute",
-        zIndex: 9999,
+        position: "relative",
+        zIndex: 2,
         top: 0,
         left: 0,
         display: "flex",

@@ -64,7 +64,7 @@ class SellingPoints extends Component {
   render() {
     
     const blurb = (
-      <span css = {{ position: "relative", zIndex: "9999", color:"#ffffffff" }}>
+      <span css = {{ color:"#ffffffff" }}>
         QHacks has something to offer everyone.
         <br />
         Check out what some past hackers have to say about the event!

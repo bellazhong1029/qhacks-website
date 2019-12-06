@@ -39,6 +39,8 @@ class PointListCompressed extends Component {
       <div
         key={`${item.name} ${item.project}`}
         css={{
+          position: "relative",
+          zIndex: 2,
           maxWidth: "700px",
           margin: "0 auto"
         }}
@@ -48,7 +50,7 @@ class PointListCompressed extends Component {
     ));
 
     return (
-      <div css={{ width: "100%" }}>
+      <div css={{ width: "100%", position: "relative", zIndex: 2 }}>
         <Slider {...settings}>{list}</Slider>
       </div>
     );

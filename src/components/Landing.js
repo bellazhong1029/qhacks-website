@@ -100,7 +100,7 @@ const Landing = () => (
               marginLeft: "auto",
               marginRight: "auto",
               paddingTop: "40px",
-              paddingBottom: "30px",
+              paddingBottom: "5px",
               width: "100vw",
               maxWidth: "200px",
               "@media(max-width: 820px)": {
