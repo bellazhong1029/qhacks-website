@@ -114,8 +114,7 @@ const Landing = () => (
           />
 
           <img
-            class="center"
-            data-cy="qhacks-wordmark"
+            // class="center"
             src={word}
             css={{
               display: "block",
@@ -123,11 +122,11 @@ const Landing = () => (
               marginRight: "auto",
               paddingTop: "40px",
               paddingBottom: "18px",
-              width: "100vw",
+              width: "130vw",
               maxWidth: "300px",
               "@media(max-width: 820px)": {
                 paddingTop: "12px",
-                width: "192px",
+                width: "190px",
                 paddingBottom: "8px"
               }
             }}
