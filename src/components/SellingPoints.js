@@ -32,7 +32,7 @@ const points = [
       "Events such as QHacks have allowed me to delve into topics without fear. I used to find it time consuming and intimidating to learn enough to feel confident about a topic, but now I can tackle it head on. It has been just under a year since my first hackathon, and I can say that it has changed my life for the best, and I look forward to participating in many more!"
   },
   {
-    name: "Jacob LaFramboise",
+    name: "Jacob Laframboise",
     project: "Spoiler No Spoiling!",
     projectLink: "https://devpost.com/software/qhacks-zgmlxr",
     image: jacobLaframboise,
