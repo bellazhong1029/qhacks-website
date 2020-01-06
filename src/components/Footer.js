@@ -92,7 +92,8 @@ const Footer = () => (
             textTransform: "uppercase"
           },
           [smallScreens]: {
-            zIndex: "9999",
+            position: "relative",
+            zIndex: "2",
             display: "block",
             textAlign: "center"
           }
