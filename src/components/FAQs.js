@@ -75,7 +75,9 @@ const FAQs = () => (
         css={{
           padding: "0px 0 114px 0",
           "@media(max-width: 780px)": {
-            padding: "0 0 120px 0"
+            padding: "0 0 120px 0",
+            position: "relative",
+            zIndex: "2"
           }       
         }}
       >
