@@ -10,6 +10,7 @@ import voiceflowLogo from "../assets/img/sponsors/voiceflow.jpeg";
 import rpaBotProLogo from "../assets/img/sponsors/rpaBotPro.png";
 import tdLogo from "../assets/img/sponsors/td.png";
 import scotiabankLogo from "../assets/img/sponsors/scotiabank.svg";
+import ritualLogo from "../assets/img/sponsors/ritual.svg";
 
 import qicLogo from "../assets/img/sponsors/qic.svg";
 import eceLogo from "../assets/img/sponsors/ece.svg";
@@ -217,10 +218,10 @@ const Sponsors = () => (
             css={{
               ">div.fourCol": {
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                gridTemplateColumns: "1fr 1fr 1fr",
                 marginBottom: "40px",
                 "@media(max-width: 920px)": {
-                  gridTemplateColumns: "1fr 1fr 1fr 1fr",
+                  gridTemplateColumns: "1fr 1fr 1fr",
                   width: "80%",
                   marginLeft: "auto",
                   marginRight: "auto",
@@ -236,22 +237,8 @@ const Sponsors = () => (
           >
             {/* Startup Row 1 */}
             <div className="fourCol">
-            <SponsorLink>
-                <img
-                  src={placeholder}
-                  css={{
-                    width: "0px",
-                    "@media(max-width: 1080px)": {
-                      display: "none",
-                      width: "0px",
-                      marginBottom: "20px"
-                    }
-                  }}
-                  alt=""
-                />
-              </SponsorLink>
 
-              <SponsorLink url="https://www.voiceflow.com/">
+            <SponsorLink url="https://www.voiceflow.com/">
                 <img
                   src={voiceflowLogo}
                   css={{
@@ -273,6 +260,29 @@ const Sponsors = () => (
                   alt="Voiceflow Logo"
                 />
               </SponsorLink>
+
+            <SponsorLink url="https://ritual.co/">
+                <img
+                  src={ritualLogo}
+                  css={{
+                    width: "200px",
+                    marginTop: "20px",
+                    // marginRight: "20px",
+                    "@media(max-width: 920px)": {
+                      width: "150px",
+                      marginBottom: "10px",
+                      marginTop: "10px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "150px",
+                      marginBottom: "10px",
+                      // marginRight: "0px",
+                      marginTop: "10px"
+                    }
+                  }}
+                  alt="Ritual Logo"
+                />
+              </SponsorLink>
               
               <SponsorLink url="http://rpabotpro.com/">
                 <img
@@ -282,32 +292,18 @@ const Sponsors = () => (
                     marginLeft: "20px",
                     "@media(max-width: 920px)": {
                       width: "150px",
+                      paddingRight: "30px",
                       marginBottom: "10px"
                     },
                     "@media(max-width: 610px)": {
                       width: "150px",
-                      marginLeft: "0px",
                       marginBottom: "10px"
                     }
                   }}
                   alt="RpaBotPro Logo"
                 />
               </SponsorLink>
-              
-              <SponsorLink>
-                <img
-                  src={placeholder}
-                  css={{
-                    width: "0px",
-                    "@media(max-width: 1080px)": {
-                      display: "none",
-                      width: "0px",
-                      marginBottom: "20px"
-                    }
-                  }}
-                  alt=""
-                />
-              </SponsorLink>
+            
                </div>
               </div>
             </div>

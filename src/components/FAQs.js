@@ -5,7 +5,7 @@ const linkCss = {
   position: "relative",
   zIndex: "9999",
   textDecoration: "underline",
-  color: "#855988",
+  color: "#fcbdff",
   fontWeight: 500
 };
 
