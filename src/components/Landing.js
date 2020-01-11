@@ -21,6 +21,7 @@ const applyButtonCSS = {
   "@media(max-width: 820px)": {
     margin: "30px auto 45px auto",
     padding: "5px 10px 5px 10px"
+    
   }
 };
 
@@ -31,7 +32,7 @@ const Landing = () => (
   <Scene triggerHook="onLeave" duration={1000} pin>
   {(progress1) => (
   <Timeline totalProgress={progress1} paused>
-    <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "600px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "600px"} }}>
+    <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "500px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "300px"} }}>
       <div className="animation">
         <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "180px", left: "-50px", width: "100px"}}}/>
       </div>
@@ -114,7 +115,8 @@ const Landing = () => (
           />
 
           <img
-            // class="center"
+            class="center"
+            data-cy="qhacks-wordmark"
             src={word}
             css={{
               display: "block",
@@ -122,11 +124,11 @@ const Landing = () => (
               marginRight: "auto",
               paddingTop: "40px",
               paddingBottom: "18px",
-              width: "130vw",
+              width: "100vw",
               maxWidth: "300px",
               "@media(max-width: 820px)": {
                 paddingTop: "12px",
-                width: "190px",
+                width: "192px",
                 paddingBottom: "8px"
               }
             }}
@@ -186,7 +188,7 @@ const Landing = () => (
             }}>
               Days : Hours : Minutes : Seconds
             </h2>
-            <ActionButton
+            {/* <ActionButton
             dataCy="apply-button"
             backgroundColor="#00205B"
             foregroundColor="#ffffff"
@@ -195,7 +197,7 @@ const Landing = () => (
             type="rounded"
             >
             Apply Now
-            </ActionButton>
+            </ActionButton> */}
             <h2
             data-cy="qhacks-tagline"
             css={{
