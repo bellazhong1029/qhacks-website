@@ -11,6 +11,7 @@ import rpaBotProLogo from "../assets/img/sponsors/rpaBotPro.png";
 import tdLogo from "../assets/img/sponsors/td.png";
 import scotiabankLogo from "../assets/img/sponsors/scotiabank.svg";
 import ritualLogo from "../assets/img/sponsors/ritual.svg";
+import sketchLogo from "../assets/img/sponsors/sketch.svg";
 
 import qicLogo from "../assets/img/sponsors/qic.svg";
 import eceLogo from "../assets/img/sponsors/ece.svg";
@@ -155,9 +156,14 @@ const Sponsors = () => (
                     width: "300px",
                     marginLeft: "100px",
                     "@media(max-width: 1080px)": {
-                      width: "200px",
+                      width: "250px",
                     },
-                    "@media(max-width: 680px)": {
+                    "@media(max-width: 980px)": {
+                      width: "205px",
+                      marginBottom: "20px",
+                      marginRight: "30px"
+                    },
+                    "@media(max-width: 740px)": {
                       width: "200px",
                       marginBottom: "20px",
                       marginLeft: "30px"
@@ -191,12 +197,18 @@ const Sponsors = () => (
                 <img
                   src={scotiabankLogo}
                   css={{
-                    width: "300px",
+                    width: "350px",
                     marginRight: "100px",
+                    marginTop: "8px",
                     "@media(max-width: 1080px)": {
-                      width: "200px",
+                      width: "300px",
                     },
-                    "@media(max-width: 680px)": {
+                    "@media(max-width: 980px)": {
+                      width: "220px",
+                      marginBottom: "20px",
+                      marginRight: "60px"
+                    },
+                    "@media(max-width: 740px)": {
                       width: "200px",
                       marginBottom: "20px",
                       marginRight: "30px"
@@ -220,6 +232,8 @@ const Sponsors = () => (
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr 1fr",
                 marginBottom: "40px",
+                marginLeft: "auto",
+                marginRight: "auto",
                 "@media(max-width: 920px)": {
                   gridTemplateColumns: "1fr 1fr 1fr",
                   width: "80%",
@@ -283,24 +297,84 @@ const Sponsors = () => (
                   alt="Ritual Logo"
                 />
               </SponsorLink>
-              
+
+              <SponsorLink url="https://sketch.com/">
+                <img
+                  src={sketchLogo}
+                  css={{
+                    width: "200px",
+                    marginTop: "20px",
+                    // marginRight: "20px",
+                    "@media(max-width: 920px)": {
+                      width: "150px",
+                      marginBottom: "10px",
+                      marginTop: "10px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "150px",
+                      marginBottom: "10px",
+                      // marginRight: "0px",
+                      marginTop: "10px"
+                    }
+                  }}
+                  alt="Sketch Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink>
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "0px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "0px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
+                />
+              </SponsorLink>
+
               <SponsorLink url="http://rpabotpro.com/">
                 <img
                   src={rpaBotProLogo}
                   css={{
                     width: "200px",
-                    marginLeft: "20px",
+                    marginRight: "10px",
+                    marginTop: "60px",
                     "@media(max-width: 920px)": {
                       width: "150px",
                       paddingRight: "30px",
-                      marginBottom: "10px"
+                      marginBottom: "10px",
+                      // marginRight: "0px",
+                      marginLeft: "15px",
+                      // marginTop: "0px"
                     },
                     "@media(max-width: 610px)": {
                       width: "150px",
-                      marginBottom: "10px"
+                      marginBottom: "10px",
+                      marginRight: "0px",
+                      marginLeft: "15px",
+                      marginTop: "0px"
                     }
                   }}
                   alt="RpaBotPro Logo"
+                />
+              </SponsorLink>
+
+              <SponsorLink>
+                <img
+                  src={placeholder}
+                  css={{
+                    width: "0px",
+                    "@media(max-width: 1080px)": {
+                      display: "none",
+                      width: "0px",
+                      marginBottom: "20px"
+                    }
+                  }}
+                  alt=""
                 />
               </SponsorLink>
             
