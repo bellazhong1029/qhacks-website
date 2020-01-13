@@ -12,6 +12,7 @@ import tdLogo from "../assets/img/sponsors/td.png";
 import scotiabankLogo from "../assets/img/sponsors/scotiabank.svg";
 import ritualLogo from "../assets/img/sponsors/ritual.svg";
 import sketchLogo from "../assets/img/sponsors/sketch.svg";
+import wolframLogo from "../assets/img/sponsors/wolfram.svg";
 
 import qicLogo from "../assets/img/sponsors/qic.svg";
 import eceLogo from "../assets/img/sponsors/ece.svg";
@@ -321,6 +322,33 @@ const Sponsors = () => (
                 />
               </SponsorLink>
 
+              <SponsorLink url="https://www.wolfram.com/language/">
+                <img
+                  src={wolframLogo}
+                  css={{
+                    width: "230px",
+                    // marginRight: "10px",
+                    marginTop: "60px",
+                    "@media(max-width: 920px)": {
+                      width: "170px",
+                      paddingRight: "30px",
+                      marginBottom: "10px",
+                      // marginRight: "0px",
+                      marginLeft: "15px",
+                      // marginTop: "0px"
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "170px",
+                      marginBottom: "10px",
+                      marginRight: "0px",
+                      marginLeft: "30px",
+                      marginTop: "0px"
+                    }
+                  }}
+                  alt="Wolfram Language Logo"
+                />
+              </SponsorLink>
+
               <SponsorLink>
                 <img
                   src={placeholder}
@@ -355,26 +383,11 @@ const Sponsors = () => (
                       width: "150px",
                       marginBottom: "10px",
                       marginRight: "0px",
-                      marginLeft: "15px",
+                      marginLeft: "30px",
                       marginTop: "0px"
                     }
                   }}
                   alt="RpaBotPro Logo"
-                />
-              </SponsorLink>
-
-              <SponsorLink>
-                <img
-                  src={placeholder}
-                  css={{
-                    width: "0px",
-                    "@media(max-width: 1080px)": {
-                      display: "none",
-                      width: "0px",
-                      marginBottom: "20px"
-                    }
-                  }}
-                  alt=""
                 />
               </SponsorLink>
             

@@ -34,7 +34,7 @@ const Landing = () => (
   <Timeline totalProgress={progress1} paused>
     <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "500px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "300px"} }}>
       <div className="animation">
-        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "180px", left: "-50px", width: "100px"}}}/>
+        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "150px", left: "-50px", width: "150px"}}}/>
       </div>
     </Tween>
   </Timeline>
@@ -115,11 +115,11 @@ const Landing = () => (
           />
 
           <img
-            class="center"
-            data-cy="qhacks-wordmark"
+            // class="center"
+            // data-cy="qhacks-wordmark"
             src={word}
             css={{
-              display: "block",
+              // display: "block",
               marginLeft: "auto",
               marginRight: "auto",
               paddingTop: "40px",
@@ -138,6 +138,8 @@ const Landing = () => (
           <h2
             data-cy="qhacks-information"
             css={{
+              position: "relative",
+              zIndex: "2",
               color: "#ffffff",
               fontWeight: 600,
               fontSize: "22px",
@@ -172,6 +174,8 @@ const Landing = () => (
           <h2
             data-cy="qhacks-tagline"
             css={{
+              position: "relative",
+              zIndex: "2",
               padding: "8px 0 10px 0",
               color: "#C9CCFF",
               fontWeight: 500,
@@ -201,6 +205,8 @@ const Landing = () => (
             <h2
             data-cy="qhacks-tagline"
             css={{
+              position: "relative",
+              zIndex: "2",
               padding: "20px 0 100px",
               color: "#ffffff",
               fontWeight: 500,
