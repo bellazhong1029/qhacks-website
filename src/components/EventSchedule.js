@@ -304,7 +304,7 @@ class EventSchedule extends Component {
           >
             Event Schedule<sup><a css={{color: "#bababa"}} href="/#*">*</a></sup>
           </h1>
-          <a href = "../public/downloadables/QHacksSchedule.ics" download>
+          <a href = "http://shorturl.at/lCDY0">
             <h2
             css={{
               paddingTop: "10px",
@@ -314,7 +314,7 @@ class EventSchedule extends Component {
               color: "#bababa"
             }}
             >
-            Download to Calendar
+            Download as Calendar
             </h2>
           </a>
           <DaySwitcher

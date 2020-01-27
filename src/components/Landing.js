@@ -62,7 +62,7 @@ const Landing = () => (
       }
     }}
   >
-    <script src="particles.js"></script>
+    {/* <script src="particles.js"></script> */}
     <Header standaloneVersion={false} />
     <ContentWrapper>
       <section
