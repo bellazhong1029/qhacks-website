@@ -9,7 +9,7 @@ let prevScrollY = 0;
 const menuItems = [
   "about",
   "testimonials",
-  "*schedule*",
+  "schedule",
   // "speakers",
   "sponsors",
   "faq"

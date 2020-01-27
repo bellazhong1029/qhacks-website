@@ -7,6 +7,7 @@ import EventScheduleCompressedTable from "./EventScheduleCompressedTable";
 import EventScheduleFullSizeTable from "./EventScheduleFullSizeTable";
 import ContentWrapper from "./ContentWrapper";
 import DaySwitcher from "./DaySwitcher";
+import ScheduleDownload from "../assets/downloadables/QHacksSchedule.ics";
 
 moment.tz.setDefault("America/Kingston");
 
