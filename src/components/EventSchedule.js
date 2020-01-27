@@ -305,7 +305,7 @@ class EventSchedule extends Component {
           >
             Event Schedule<sup><a css={{color: "#bababa"}} href="/#*">*</a></sup>
           </h1>
-          <a href = "../assets/downloadables/QHacksSchedule.ics" download>
+          <a href = "../public/downloadables/QHacksSchedule.ics" download>
             <h2
             css={{
               paddingTop: "10px",
