@@ -125,7 +125,7 @@ export default () => {
           <Sponsors />
           <FAQs />
           <Footer />
-          <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
+          {/* <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/> */}
        </div>
       </div>
       
