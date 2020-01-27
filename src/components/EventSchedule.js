@@ -304,7 +304,7 @@ class EventSchedule extends Component {
           >
             Event Schedule<sup><a css={{color: "#bababa"}} href="/#*">*</a></sup>
           </h1>
-          <a href = "http://shorturl.at/lCDY0">
+          <a href = "https://drive.google.com/uc?id=1MzL0_EGkKBtBZXvd3kL3ddrqGzVgioJe&export=download">
             <h2
             css={{
               paddingTop: "10px",
