@@ -6,6 +6,7 @@ const EventScheduleCompressedTable = (props) => (
   <table
     {...css({
       borderRadius: "4px",
+      overflow: "hidden",
       border: "1px solid #e4e4e4",
       borderSpacing: "0",
       margin: "16px 0",

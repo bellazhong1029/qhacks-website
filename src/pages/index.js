@@ -57,6 +57,7 @@ export default () => {
         backgroundImage: "repeating-linear-gradient(#855988, #070b34 20%, #855988, #070b34);",
         backgroundSize: "cover",
         maxWidth: "100%",
+        overflowY: "hidden",
         overflowX: "hidden" }}>
         <Helmet
           title="QHacks | Queen's University | Winter 2020"
@@ -125,7 +126,7 @@ export default () => {
           <Sponsors />
           <FAQs />
           <Footer />
-          {/* <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/> */}
+          <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh'}}/>
        </div>
       </div>
       
