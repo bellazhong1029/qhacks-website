@@ -24,7 +24,7 @@ import pccLogo from "../assets/img/sponsors/pcc.png";
 import kingstonLogo from "../assets/img/sponsors/kingston.svg";
 import bloombergLogo from "../assets/img/sponsors/bloomberg.svg";
 import stickermuleLogo from "../assets/img/sponsors/stickermule.svg";
-import schoolOfComputingLogo from "../assets/img/sponsors/schoolOfComputing.svg";
+import schoolOfComputingLogo from "../assets/img/sponsors/schoolOfComputing.png";
 import asusAmsEngSocLogo from "../assets/img/sponsors/asusAmsEngSoc.png";
 
 const Sponsors = () => (
