@@ -16,6 +16,7 @@ import favicon from "../assets/img/icons/favicon.ico";
 import sharingImage from "../assets/img/logo/sharingImage2020.png";
 import MailingListSignup from "../components/MailingListSignup";
 import Features from "../components/Features";
+import EventSchedule from "../components/EventSchedule";
 
 const parameters = {
   "particles": {
@@ -120,6 +121,7 @@ export default () => {
           <Features />
           <SellingPoints />
           {/* <Speakers /> */}
+          <EventSchedule />
           <Sponsors />
           <FAQs />
           <Footer />
