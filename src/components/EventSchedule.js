@@ -291,7 +291,8 @@ class EventSchedule extends Component {
           id="schedule"
           css={{
             padding: "0px 0 50px 0",
-            margin: "0 auto"
+            margin: "0 auto",
+            overflow: "hidden"
           }}
         >
           <h1

@@ -34,7 +34,7 @@ const Landing = () => (
   <Timeline totalProgress={progress1} paused>
     <Tween from={{ css: {opacity: 1, position: "absolute", left: "50px", top: "500px"} }} to={{ css: {opacity: 0, position: "absolute", left: "300px", top: "300px"} }}>
       <div className="animation">
-        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "150px", left: "-50px", width: "150px"}}}/>
+        <img src={Rocket} css={{position: "absolute", "@media(max-width: 1190px)": {top: "150px", left: "-50px", width: "150px", "@media(max-width: 1190px)": {display: "none"}}}}/>
       </div>
     </Tween>
   </Timeline>
@@ -62,7 +62,6 @@ const Landing = () => (
       }
     }}
   >
-    {/* <script src="particles.js"></script> */}
     <Header standaloneVersion={false} />
     <ContentWrapper>
       <section
