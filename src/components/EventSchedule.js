@@ -34,8 +34,8 @@ const schedule = [
     location: "Wallace Hall, JDUC"
     },
     {
-    startDate: "2020-01-31T18:30:00",
-    endDate: "2020-01-31T20:30:00",
+    startDate: "2020-01-31T19:30:00",
+    endDate: "2020-01-31T21:30:00",
     eventName: "Opening Ceremony",
     subtitle: "",
     location: "Bartlett Gym, Mitchell Hall"
@@ -305,7 +305,7 @@ class EventSchedule extends Component {
           >
             Event Schedule<sup><a css={{color: "#bababa"}} href="/#*">*</a></sup>
           </h1>
-          <a href = "https://drive.google.com/uc?id=1GWCs55vY7vNB3f_nLP5jlDnOdOXqGCyj&export=download">
+          <a href = "https://drive.google.com/uc?id=1VMyUIprZIcx0lp2EOD7DnRorPg1W7LKz&export=download">
             <h2
             css={{
               paddingTop: "10px",
