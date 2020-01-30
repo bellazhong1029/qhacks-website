@@ -12,6 +12,7 @@ import tdLogo from "../assets/img/sponsors/td.png";
 import scotiabankLogo from "../assets/img/sponsors/scotiabank.svg";
 import ritualLogo from "../assets/img/sponsors/ritual.svg";
 import sketchLogo from "../assets/img/sponsors/sketch.svg";
+import mosaicLogo from "../assets/img/sponsors/mosaic.png";
 import wolframLogo from "../assets/img/sponsors/wolfram.svg";
 
 import qicLogo from "../assets/img/sponsors/qic.svg";
@@ -242,7 +243,7 @@ const Sponsors = () => (
                   marginRight: "auto",
                   marginBottom: "10px"
                 },
-                "@media(max-width: 610px)": {
+                "@media(max-width: 715px)": {
                   gridTemplateColumns: "1fr",
                   width: "90%",
                   marginBottom: "0px"
@@ -349,18 +350,27 @@ const Sponsors = () => (
                 />
               </SponsorLink>
 
-              <SponsorLink>
+              <SponsorLink url="https://mosaicmfg.com/">
                 <img
-                  src={placeholder}
+                  src={mosaicLogo}
                   css={{
-                    width: "0px",
-                    "@media(max-width: 1080px)": {
-                      display: "none",
-                      width: "0px",
-                      marginBottom: "20px"
+                    width: "230px",
+                    // marginRight: "10px",
+                    marginTop: "60px",
+                    "@media(max-width: 920px)": {
+                      width: "170px",
+                      paddingRight: "30px",
+                      // marginBottom: "10px",
+                    },
+                    "@media(max-width: 610px)": {
+                      width: "170px",
+                      marginBottom: "10px",
+                      marginRight: "0px",
+                      marginLeft: "30px",
+                      marginTop: "0px"
                     }
                   }}
-                  alt=""
+                  alt="Mosaic Logo"
                 />
               </SponsorLink>
 
