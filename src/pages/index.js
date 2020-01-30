@@ -121,8 +121,8 @@ export default () => {
           <OpeningSummary />
           <Features />
           <SellingPoints />
-          <Speakers />
           <EventSchedule />
+          <Speakers />
           <Sponsors />
           <FAQs />
           <Footer />
