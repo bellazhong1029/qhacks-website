@@ -21,10 +21,10 @@ class DaySwitcher extends Component {
       top: 0,
       height: "44px",
       backgroundColor: "#00205B",
-      borderRadius: "44px",
+      borderRadius: "20px",
       width: `${sliderWidth}%`,
       zIndex: 2,
-      transition: "left 0.8s ease"
+      transition: "left 0.3s ease"
     };
 
     const navBarCss = css({
@@ -38,8 +38,8 @@ class DaySwitcher extends Component {
       height: "44px",
       position: "relative",
       zIndex: 2,
-      border: "1px solid #00205B",
-      borderRadius: "44px",
+      border: "0.5px solid #00205B",
+      borderRadius: "100px",
       "> button.dayItem": {
         textAlign: "center",
         lineHeight: "44px",
