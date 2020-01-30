@@ -598,6 +598,7 @@ const Sponsors = () => (
               />
             </SponsorLink>
           </div>
+          
 
           {/* School Row 4 */}
           {/* <div
@@ -661,6 +662,26 @@ const Sponsors = () => (
               }
             }}
           >
+            <SponsorLink url="https://smith.queensu.ca/grad_studies/mei/">
+              <img
+                src={mmieLogo}
+                css={{
+                  width: "400px",
+                  marginTop: "25px",
+                  paddingBottom: "40px",
+                  "@media(max-width: 980px)": {
+                    width: "310px"
+                  },
+                  "@media(max-width: 680px)": {
+                    width: "250px"
+                  },
+                  "@media(max-width: 460px)": {
+                    width: "230px"
+                  }
+                }}
+                alt="MMIE Logo"
+              />
+            </SponsorLink>
             <SponsorLink url="https://www.cityofkingston.ca/">
               <img
                 src={kingstonLogo}
