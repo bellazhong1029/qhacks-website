@@ -47,7 +47,7 @@ const Speakers = () => (
           }
         }}
       >
-        Keynote/Fireside Speakers
+        Fireside Chat Speakers
       </h1>
       {/* Desktop */}
       <div
