@@ -3,35 +3,27 @@ import SpeakerCard from "./SpeakerCard";
 import SpeakerSlider from "./SpeakerSlider";
 import Mentors from "./Mentors";
 
-import plchldr from "../assets/img/logo/qhacksAppIcon.png";
-import pascal from "../assets/img/headshots/pascal_siakam.png";
-import cubes3png from "../assets/img/icons/cubes-3.png";
-import cubes3webp from "../assets/img/icons/cubes-3.webp";
+import cameron from "../assets/img/speakers/CameronGorrie.jpg";
+import david from "../assets/img/speakers/DavidHariri.jpg";
+
 
 import ContentWrapper from "./ContentWrapper";
 
 const speakers = [
   {
-    name: "Speaker 1",
-    title: "Co-Founder of X",
-    description:
-      "Speaker 1 is the best.",
-    image: pascal
-  },
-  {
-    name: "Speaker 2",
-    title: "CEO at Y",
-    description:
-      "Speaker 2 is also pretty good.",
-    image: pascal
-  },
-  {
-    name: "Speaker 3",
-    title: "Founder & CEO of Z",
-    description:
-      "Speaker 3 is also cool, but not as cool as 1 and 2.",
-    image: pascal
-  }
+    name: "Cameron Gorrie",
+    title: "Senior Engineering Manager",
+    company: "Top Hat",
+    description: " ",
+    image: cameron
+    },
+    {
+    name: "David Hariri",
+    title: "Co-Founder, Head of Product",
+    company: "Ada",
+    description: " ",
+    image: david
+    }
 ];
 
 const Speakers = () => (
@@ -45,19 +37,17 @@ const Speakers = () => (
     <ContentWrapper>
       <h1
         css={{
-          paddingTop: "112px",
           paddingBottom: "48px",
           textAlign: "center",
           position: "relative",
           color: "#ffffff",
           zIndex: "3",
           "@media(max-width: 820px)": {
-            paddingTop: "200px",
             paddingBottom: "24px"
           }
         }}
       >
-        Keynote Speakers
+        Keynote/Fireside Speakers
       </h1>
       {/* Desktop */}
       <div

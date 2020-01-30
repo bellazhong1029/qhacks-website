@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SpeakerCardTextToggle from "./SpeakerCardTextToggle";
 
 class SpeakerCard extends Component {
   componentWillMount() {
@@ -50,10 +49,6 @@ class SpeakerCard extends Component {
                   borderTopLeftRadius: "inherit",
                   borderTopRightRadius: "inherit",
                   transition: "1s",
-                  filter: this.state.learnMoreToggled
-                    ? "blur(5px)"
-                    : "blur(0px)",
-                  marginBottom: this.state.learnMoreToggled ? "-178px" : "0px"
                 }}
               />
             </div>
@@ -64,8 +59,7 @@ class SpeakerCard extends Component {
                 lineHeight: "20px",
                 overflow: "hidden",
                 transition: "1s",
-                // maxHeight: this.state.learnMoreToggled ? "" : "500px",
-                minHeight: this.state.learnMoreToggled ? "390px" : "210px"
+                marginBottom: "-40px",
               }}
             >
               <h3
@@ -87,47 +81,21 @@ class SpeakerCard extends Component {
               >
                 {this.props.title}
               </h2>
-              <div css={{ textOverflow: "hidden" }}>
-                <p
-                  css={{
-                    paddingTop: "24px",
-                    paddingBottom: "36px",
-                    textOverflow: "hidden",
-                    transition: "1s",
-                    marginBottom: this.state.learnMoreToggled
-                      ? "0px"
-                      : "-305px",
-                    lineHeight: "1.43",
-                    color: this.state.learnMoreToggled ? "#000000" : "#565656"
-                  }}
-                >
-                  {this.props.description}
-                </p>
-              </div>
-            </div>
-            <div
-              css={{
-                paddingLeft: "24px",
-                paddingBottom: "24px",
-                paddingTop: "36px"
-              }}
-            >
-              <SpeakerCardTextToggle
-                focused={this.state.learnMoreToggled}
-                defaultText={"learn more"}
-                focusedText={"show less"}
-                onClick={this.onLearnMoreClicked}
-              />
+              <h2
+                css={{
+                  fontWeight: 500,
+                  paddingTop: "8px",
+                  lineHeight: "23px"
+                }}
+              >
+                <b>{this.props.company}</b>
+              </h2>
             </div>
           </div>
         </div>
       );
     }
   }
-
-  onLearnMoreClicked = () => {
-    this.setState({ learnMoreToggled: !this.state.learnMoreToggled });
-  };
 }
 
 export default SpeakerCard;
