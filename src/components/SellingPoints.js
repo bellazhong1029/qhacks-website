@@ -78,6 +78,7 @@ class SellingPoints extends Component {
           background: "00205B",
           backgroundSize: "cover",
           "@media(max-width:1000px)": {
+            paddingTop: "50px",
             paddingBottom: "60px",
             overflowX: "hidden",
             overflowY: "hidden"

@@ -121,7 +121,7 @@ export default () => {
           <OpeningSummary />
           <Features />
           <SellingPoints />
-          {/* <Speakers /> */}
+          <Speakers />
           <EventSchedule />
           <Sponsors />
           <FAQs />
