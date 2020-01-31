@@ -168,29 +168,8 @@ const Landing = () => (
               }
             }}
           >
-          <Countdown date={"2020-01-31T17:30:00"}/>
+          <h1 css={{fontSize: "50px"}}>QHacks 2020 is Live!</h1>
           </div>
-          <h2
-            data-cy="qhacks-tagline"
-            css={{
-              position: "relative",
-              zIndex: "2",
-              padding: "8px 0 10px 0",
-              color: "#C9CCFF",
-              fontWeight: 500,
-              fontSize: "20px",
-              wordSpacing: "25px",
-              textAlign: "center",
-              lineHeight: "30px",
-              "@media(max-width: 820px)": {
-                paddingTop: "10px",
-                fontSize: "15px",
-                lineHeight: "1.6",
-                wordSpacing: "5px"
-              }
-            }}>
-              Days : Hours : Minutes : Seconds
-            </h2>
             {/* <ActionButton
             dataCy="apply-button"
             backgroundColor="#00205B"
