@@ -43,8 +43,19 @@ const mentors1 = [
     headshot: stefan,
     companyLogo: kindred,
     companyUrl: "https://www.kindred.ai/",
-    },
-    {
+    }
+
+];
+
+const mentors2 = [
+  // {
+  // name: "Nicole Fitzgerald",
+  // title: "Machine Learning Engineer",
+  // headshot: nicole,
+  // companyLogo: microsoft,
+  // companyUrl: "https://www.microsoft.com"
+  // },
+  {
     name: "Enoch Tam",
     title: "Software Engineer",
     headshot: enoch,
@@ -52,17 +63,6 @@ const mentors1 = [
     companyUrl: "https://www.careers.google.com",
     logoMarginTop: "-15px",
     logoHeight: "80px"
-    }
-
-];
-
-const mentors2 = [
-  {
-  name: "Nicole Fitzgerald",
-  title: "Machine Learning Engineer",
-  headshot: nicole,
-  companyLogo: microsoft,
-  companyUrl: "https://www.microsoft.com"
   },
   {
   name: "Alex Adusei",
@@ -96,7 +96,7 @@ export default () => (
         color: "#ffffff",
         display: "grid",
         "@media (min-width: 1284px)": {
-          gridTemplateColumns: "1fr 1fr 1fr 1fr"
+          gridTemplateColumns: "1fr 1fr 1fr"
         },
         "@media (max-width: 1284px)": {
           gridTemplateColumns: "1fr 1fr"
