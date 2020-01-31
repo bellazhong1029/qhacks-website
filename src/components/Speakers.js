@@ -4,6 +4,7 @@ import SpeakerSlider from "./SpeakerSlider";
 import Mentors from "./Mentors";
 
 import cameron from "../assets/img/speakers/CameronGorrie.jpg";
+import nicole from "../assets/img/mentors/headshots/NicoleFitzgerald.jpg";
 import david from "../assets/img/speakers/DavidHariri.jpg";
 
 
@@ -15,15 +16,27 @@ const speakers = [
     title: "Senior Engineering Manager",
     company: "Top Hat",
     description: " ",
-    image: cameron
-    },
-    {
-    name: "David Hariri",
-    title: "Co-Founder, Head of Product",
-    company: "Ada",
+    image: cameron,
+    companyUrl: "https://tophat.com/"
+  },
+  {
+    name: "Nicole Fitzgerald",
+    title: "Machine Learning Engineer",
+    company: "Microsoft",
     description: " ",
-    image: david
-    }
+    image: nicole,
+    companyUrl: "https://careers.microsoft.com/us/en"
+
+  }
+
+    //He got the flu :(
+    // {
+    // name: "David Hariri",
+    // title: "Co-Founder, Head of Product",
+    // company: "Ada",
+    // description: " ",
+    // image: david
+    // }
 ];
 
 const Speakers = () => (
@@ -47,7 +60,7 @@ const Speakers = () => (
           }
         }}
       >
-        Fireside Chat Speakers
+        Speakers
       </h1>
       {/* Desktop */}
       <div
