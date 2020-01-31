@@ -76,23 +76,9 @@ const schedule = [
     location: "John Orr Room, JDUC"
     },
     {
-    startDate: "2020-02-01T02:00:00",
-    endDate: "2020-02-01T02:45:00",
-    eventName: "Interactive Event",
-    subtitle: "MLH Cup Stacking",
-    location: "John Orr Room, JDUC"
-    },
-    {
     startDate: "2020-02-01T07:00:00",
     endDate: "2020-02-01T07:45:00",
     eventName: "Workshop | MMIE",
-    subtitle: "",
-    location: "John Orr Room, JDUC"
-    },
-    {
-    startDate: "2020-02-01T08:00:00",
-    endDate: "2020-02-01T08:45:00",
-    eventName: "Workshop | Merlin",
     subtitle: "",
     location: "John Orr Room, JDUC"
     },
@@ -160,11 +146,25 @@ const schedule = [
     location: "John Orr Room, JDUC"
     },
     {
+      startDate: "2020-02-01T19:00:00",
+      endDate: "2020-02-01T19:45:00",
+      eventName: "Interactive Event",
+      subtitle: "MLH Cup Stacking",
+      location: "Rooms 215, 225, and 235, Mitchell Hall"
+    },
+    {
     startDate: "2020-02-01T20:00:00",
     endDate: "2020-02-01T20:45:00",
     eventName: "Workshop | Cameron Gorrie - Top Hat",
     subtitle: "",
     location: "Wallace Hall, JDUC"
+    },
+    {
+      startDate: "2020-02-01T21:00:00",
+      endDate: "2020-02-01T21:45:00",
+      eventName: "Workshop | Merlin",
+      subtitle: "",
+      location: "Wallace Hall, JDUC"
     },
     {
     startDate: "2020-02-01T22:00:00",
@@ -305,7 +305,7 @@ class EventSchedule extends Component {
           >
             Event Schedule<sup><a css={{color: "#bababa"}} href="/#*">*</a></sup>
           </h1>
-          <a href = "https://drive.google.com/uc?id=1VMyUIprZIcx0lp2EOD7DnRorPg1W7LKz&export=download">
+          <a href = "https://drive.google.com/u/0/uc?id=1pXxZahN_sinbTNjVFJ3xzmToHU9o-bkh&export=download">
             <h2
             css={{
               paddingTop: "10px",
