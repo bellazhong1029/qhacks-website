@@ -55,6 +55,8 @@ const EventScheduleCompressedTable = (props) => (
           </td>
           <td className="eventName">
             <strong>{item.eventName}</strong>
+            <br></br>
+            <p css={{fontSize: "14px", paddingTop: "6px"}}>{item.subtitle}</p>
           </td>
         </tr>
         <tr>
