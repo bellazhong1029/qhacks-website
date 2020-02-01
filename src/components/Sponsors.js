@@ -682,7 +682,7 @@ const Sponsors = () => (
                 alt="MMIE Logo"
               />
             </SponsorLink>
-            <SponsorLink url="https://www.cityofkingston.ca/">
+            <SponsorLink url="https://innovation-challenge.cityofkingston.ca">
               <img
                 src={kingstonLogo}
                 css={{
