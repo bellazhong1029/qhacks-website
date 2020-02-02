@@ -146,13 +146,6 @@ const schedule = [
     location: "John Orr Room, JDUC"
     },
     {
-    startDate: "2020-02-01T19:00:00",
-    endDate: "2020-02-01T19:45:00",
-    eventName: "Interactive Event",
-    subtitle: "MLH Cup Stacking",
-    location: "Rooms 215, 225, and 235, Mitchell Hall"
-    },
-    {
     startDate: "2020-02-01T20:00:00",
     endDate: "2020-02-01T20:45:00",
     eventName: "Workshop | Cameron Gorrie - Top Hat",
@@ -170,7 +163,7 @@ const schedule = [
     startDate: "2020-02-01T22:00:00",
     endDate: "2020-02-01T23:45:00",
     eventName: "Mini Event",
-    subtitle: "Candy Bar and Decorating Competition",
+    subtitle: "Candy Bar",
     location: "Wallace Hall, JDUC"
     },
     {
