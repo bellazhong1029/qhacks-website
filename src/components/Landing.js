@@ -168,7 +168,9 @@ const Landing = () => (
               }
             }}
           >
-          <h1 css={{fontSize: "50px"}}>QHacks 2020 is Live!</h1>
+          <h1 css={{fontSize: "50px"}}>QHacks 2020 has Ended</h1>
+          <br></br>
+          <h2 css={{fontSize: "40px"}}>See you all next year!</h2>
           </div>
             {/* <ActionButton
             dataCy="apply-button"
