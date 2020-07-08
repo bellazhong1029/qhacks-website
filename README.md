@@ -32,4 +32,5 @@ Make your own branch and create pull requests!(**RECOMMENDED**)
 3. Make changes on your local branch
 4. `git add <file-name>`
 5. `git commit -m <message>`
-6. Go to the github repo page under **your newly created branch**, and click on "Pull Request" button in the repo header to create a pull request. (https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+6. `git push origin <your branch name>`
+7. Go to the github repo page under **your newly created branch**, and click on "Pull Request" button in the repo header to create a pull request. (https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
