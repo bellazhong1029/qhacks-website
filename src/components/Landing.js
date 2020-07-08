@@ -47,7 +47,7 @@ function Landing() {
         width: "100%",
         marginBottom: "50px",
         background: `url(${backgroundImage}) no-repeat center top`,
-        backgroundSize: "cover",
+        backgroundSize: "1400px auto",
         "@media (min-width: 820px) and (max-width: 1200px)": {
           backgroundSize: "1200px auto"
         },
@@ -61,9 +61,9 @@ function Landing() {
       <ContentWrapper>
         <section
           css={{
+            textAlign: "center",
             marginRight: "auto",
             "@media(max-width: 820px)": {
-              textAlign: "center",
               display: "block"
             }
           }}
