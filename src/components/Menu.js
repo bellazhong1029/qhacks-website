@@ -12,11 +12,9 @@ const Menu = (props) => {
         display: "grid",
         gridTemplateColumns: "min-content auto",
         overflow: "visible",
-        zIndex: "9999",
         height: "84px",
-        // width:"50%"
         "@media(max-width:820px)": {
-          height: "20px"
+          display: "none"
         }
       }}
     >
@@ -29,8 +27,8 @@ const Menu = (props) => {
             display: props.standaloneVersion
               ? "inline-block"
               : props.imgCss
-                ? "inline-block"
-                : "none"
+              ? "inline-block"
+              : "none"
           }
         }}
       >
@@ -46,23 +44,10 @@ const Menu = (props) => {
           src={colored}
           alt="QHacks Crown"
         />
-        <img
-          css={{
-            zIndex: "9999",
-            paddingTop: "20px",
-            paddingBottom: "20px",
-            width: "95px",
-            "@media(min-width:820px)": {
-              display: "none"
-            }
-          }}
-          src={coloredWordmark}
-          alt="QHacks Crown"
-        />
       </a>
       <a
         id="mlh-trust-badge"
-        href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=gray"
+        href="https://mlh.io/seasons/na-2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
         target="_blank"
         rel="external noopener"
         css={{
@@ -71,32 +56,31 @@ const Menu = (props) => {
             display: props.standaloneVersion
               ? "none"
               : props.imgCss
-                ? "none"
-                : "inline-block"
+              ? "none"
+              : "inline-block"
           },
           transition: "0.5s"
         }}
       >
         <img
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-gray.svg"
-          alt="Major League Hacking 2020 Hackathon Season"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
+          alt="Major League Hacking 2021 Hackathon Season"
           css={{
             height: "150px"
           }}
-        />
+        ></img>
       </a>
       <div
         align="right"
         css={{
           paddingTop: "32px",
           paddingBottom: "32px",
-          zIndex: "9999",
           height: "84px",
           display: "grid",
           transition: "1s",
           marginLeft: "auto",
           "@media(max-width: 820px)": {
-            display: "none",
+            display: "none"
           },
           " li": {
             listStyleType: "none"
@@ -121,7 +105,7 @@ const Menu = (props) => {
               css={{
                 ":hover": {
                   " a": {
-                    color: "#00205b"
+                    color: "#000000"
                   },
                   ">div": {
                     width: "100%",
@@ -132,10 +116,10 @@ const Menu = (props) => {
             >
               <a
                 css={{
+                  color: "#000000",
                   lineHeight: "1.43",
                   textAlign: "center",
                   paddingLeft: "2px",
-                  zIndex: "9999",
                   paddingRight: "2px",
                   textTransform: "uppercase"
                 }}
@@ -148,11 +132,9 @@ const Menu = (props) => {
                   width: "100%",
                   height: "2px",
                   transition: "0.5s",
-                  zIndex: "9999",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  // backgroundColor: "#00205b",
-                  backgroundColor: "#00205b",
+                  backgroundColor: "#000000",
                   width: "0px"
                 }}
               />

@@ -37,7 +37,7 @@ const ActionButton = (props) => {
     fontWeight: 700,
     ":hover:not(:disabled)": {
       backgroundColor: props.hoverBackgroundColor || props.foregroundColor,
-      color: props.backgroundColor
+      color: props.hoverForegroundColor || props.backgroundColor
     }
   };
 

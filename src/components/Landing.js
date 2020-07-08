@@ -1,32 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "./Header";
 import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
 
+import backgroundImage from "../assets/img/backgrounds/landingBG.png";
+import graphicMobile from "../assets/img/backgrounds/backgroundMobile.png";
+import waveLineRed from "../assets/img/backgrounds/waveLineRed.png";
 import logo from "../assets/img/logo/qhacksCrown-colored.svg";
-import word from "../assets/img/logo/qhacksWordmark-white.svg";
+import word from "../assets/img/logo/qhacksWordmark-colored.svg";
+import mail from "../assets/img/icons/mail.svg";
+import mailOpen from "../assets/img/icons/mailOpen.svg";
 
 const applyButtonCSS = {
   alignItems: "center",
   position: "relative",
-  zIndex: "2",
-  margin: "40px 0 20px auto",
+  margin: "40px 0 40px auto",
   "@media(max-width: 820px)": {
     margin: "30px auto 45px auto",
     padding: "5px 10px 5px 10px"
   }
 };
 
-const Landing = () => (
-  <div className="landing_wrapper" css={{ zIndex: "9999" }}>
+const mailingButtonCSS = {
+  alignItems: "center",
+  position: "relative",
+  margin: "40px 0 5px auto",
+  fontWeight: "550",
+  fontSize: "15px",
+  ":hover:not(:disabled)": {
+    backgroundColor: "#ffffff",
+    color: "#000000",
+    border: "2px solid #000000"
+  },
+  "@media(max-width: 820px)": {
+    display: "none"
+  }
+};
+
+function Landing() {
+  const [mailOnHover, setMail] = useState(false);
+
+  return (
     <div
-      id=""
       css={{
-        zIndex: "9999",
         width: "100%",
-        "@media(max-width: 600px)": {
-          minHeight: "600px"
+        marginBottom: "50px",
+        background: `url(${backgroundImage}) no-repeat center top`,
+        backgroundSize: "cover",
+        "@media (min-width: 820px) and (max-width: 1200px)": {
+          backgroundSize: "1200px auto"
+        },
+        "@media(max-width: 820px)": {
+          minHeight: "600px",
+          background: `url(${waveLineRed}) no-repeat center bottom`
         }
       }}
     >
@@ -34,10 +61,7 @@ const Landing = () => (
       <ContentWrapper>
         <section
           css={{
-            zIndex: "9999",
-            textAlign: "center",
-            gridTemplateColumns: "auto 1fr",
-            overflowX: "hidden",
+            marginRight: "auto",
             "@media(max-width: 820px)": {
               textAlign: "center",
               display: "block"
@@ -46,122 +70,97 @@ const Landing = () => (
         >
           <div
             css={{
+              marginLeft: "55%",
+              textAlign: "left",
+              paddingRight: "auto",
               "@media(min-width: 1200px)": {
-                paddingRight: "50px",
-                paddingTop: "60px"
+                paddingTop: "150px"
               },
-              "@media (min-width: 821px) and (max-width: 1199px)": {
+              "@media (min-width: 820px) and (max-width: 1200px)": {
                 paddingRight: "50px",
                 paddingTop: "100px"
               },
               "@media (max-width: 820px)": {
+                margin: "0",
+                textAlign: "center",
                 paddingTop: "80px"
               }
             }}
           >
-            <br />
-
             <img
-              // class="center"
-              src={logo}
+              src={graphicMobile}
               css={{
+                width: "350px",
                 display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                paddingTop: "40px",
-                paddingBottom: "5px",
-                width: "100vw",
-                maxWidth: "200px",
-                "@media(max-width: 820px)": {
-                  paddingTop: "12px",
-                  width: "192px",
-                  paddingBottom: "8px"
+                margin: "0 auto",
+                "@media(min-width: 820px)": {
+                  display: "none"
                 }
               }}
-              alt="QHacks Wordmark"
             />
 
             <img
-              // class="center"
-              // data-cy="qhacks-wordmark"
               src={word}
               css={{
-                // display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                paddingTop: "40px",
-                paddingBottom: "18px",
-                width: "100vw",
-                maxWidth: "300px",
+                paddingTop: "20px",
+                paddingBottom: "10px",
+                paddingRight: "10px",
+                width: "280px",
+                "@media (min-width: 820px) and (max-width: 1200px)": {
+                  width: "200px"
+                },
                 "@media(max-width: 820px)": {
                   paddingTop: "12px",
-                  width: "192px",
-                  paddingBottom: "8px"
+                  width: "250px"
                 }
               }}
               alt="QHacks Wordmark"
             />
-
+            <img
+              src={logo}
+              css={{
+                paddingBottom: "20px",
+                paddingLeft: "10px",
+                width: "140px",
+                "@media (min-width: 820px) and (max-width: 1200px)": {
+                  width: "100px",
+                  paddingLeft: "5px"
+                },
+                "@media(max-width: 820px)": {
+                  display: "none"
+                }
+              }}
+              alt="QHacks Wordmark"
+            />
             <h2
               data-cy="qhacks-information"
               css={{
-                position: "relative",
                 zIndex: "2",
                 color: "#000000",
                 fontWeight: 600,
                 fontSize: "22px",
-                textAlign: "center",
-                // paddingBottom: "30px",
+                marginTop: "20px",
+                marginBottom: "20px",
+                "@media (min-width: 820px) and (max-width: 1200px)": {
+                  fontSize: "20px"
+                },
                 "@media(max-width: 820px)": {
-                  paddingBottom: "24px"
+                  fontSize: "15px",
+                  fontWeight: 600,
+                  paddingBottom: "20px"
                 }
               }}
             >
-              Queen’s University • January 31st - February 2nd, 2020
+              Queen’s University • February 1st - 3rd, 2021
             </h2>
-            {/* <div
-              css={{
-                padding: "50px 0 30px 0",
-                color: "#00205B",
-                "-webkit-text-stroke": "1.3px #ffffff",
-                fontWeight: 500,
-                fontSize: "70px",
-                letterSpacing: "10px",
-                textAlign: "center",
-                lineHeight: "30px",
-                "@media(max-width: 820px)": {
-                  paddingTop: "20px",
-                  fontSize: "45px",
-                  lineHeight: "1.6"
-                }
-              }}
-            >
-              <h1 css={{ fontSize: "50px" }}>QHacks 2020 has Ended</h1>
-              <br></br>
-              <h2 css={{ fontSize: "40px" }}>See you all next year!</h2>
-            </div> */}
-            <ActionButton
-              dataCy="apply-button"
-              backgroundColor="#00205B"
-              foregroundColor="#ffffff"
-              style={applyButtonCSS}
-              link="https://app.qhacks.io"
-              type="rounded"
-            >
-              Apply Now
-            </ActionButton>
             <h2
               data-cy="qhacks-tagline"
               css={{
-                position: "relative",
-                zIndex: "2",
-                padding: "20px 0 100px",
-                color: "#000000",
+                marginTop: "30px",
+                marginBottom: "15px",
                 fontWeight: 500,
-                textAlign: "center",
                 lineHeight: "30px",
                 "@media(max-width: 820px)": {
-                  paddingTop: "10px",
                   fontSize: "15px",
                   lineHeight: "1.6"
                 }
@@ -171,11 +170,87 @@ const Landing = () => (
               <br />
               Join us for an unforgettable experience!
             </h2>
+            <ActionButton
+              dataCy="apply-button"
+              backgroundColor="#00205B"
+              foregroundColor="#ffffff"
+              hoverBackgroundColor="#16498c"
+              hoverForegroundColor="#ffffff"
+              style={applyButtonCSS}
+              link="https://app.qhacks.io"
+              type="rounded"
+            >
+              Apply Now
+            </ActionButton>
+          </div>
+          <div
+            css={{
+              textAlign: "left",
+              "@media(min-width: 1200px)": {
+                paddingLeft: "50px",
+                paddingTop: "50px"
+              },
+              "@media  (max-width: 1200px)": {
+                paddingLeft: "20px",
+                paddingTop: "50px"
+              }
+            }}
+          >
+            <button
+              onMouseEnter={() => setMail(true)}
+              onMouseLeave={() => setMail(false)}
+              style={{
+                border: "none",
+                backgroundColor: "transparent",
+                padding: "0"
+              }}
+            >
+              <ActionButton
+                backgroundColor="#ffffff"
+                foregroundColor="#000000"
+                style={mailingButtonCSS}
+                link="https://app.qhacks.io"
+                type="rounded"
+              >
+                {!mailOnHover && (
+                  <img
+                    src={mail}
+                    css={{
+                      width: "28px",
+                      paddingRight: "8px"
+                    }}
+                  />
+                )}
+                {mailOnHover && (
+                  <img
+                    src={mailOpen}
+                    css={{
+                      width: "28px",
+                      paddingRight: "8px"
+                    }}
+                  />
+                )}
+                Sign up for our mailing list
+              </ActionButton>
+            </button>
+            <h3
+              css={{
+                fontWeight: 300,
+                fontSize: "18px",
+                textDecoration: "underline",
+                padding: "0 auto 0 10px",
+                "@media(max-width: 820px)": {
+                  display: "none"
+                }
+              }}
+            >
+              to receive important QHacks announcements!
+            </h3>
           </div>
         </section>
       </ContentWrapper>
     </div>
-  </div>
-);
+  );
+}
 
 export default Landing;
