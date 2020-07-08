@@ -4,40 +4,39 @@ import ContentWrapper from "./ContentWrapper";
 
 import background from "../assets/img/backgrounds/FooterGraphic.png";
 import landingImg from "../assets/img/icons/landingImg.svg";
+import circuitGrey from "../assets/img/backgrounds/circuitsGrey.png";
 
 const FooterGraphic = () => (
-  <footerGraphic css={{ zIndex: "9999" }}>
+  <div>
     <div
-      id=""
       css={{
+        position: "relative",
         width: "100%",
-        background: `url(${background}) no-repeat center center`,
-        backgroundSize: "cover",
-        "@media(max-width: 600px)": {
-          minHeight: "600px"
+        height: "500px",
+        background: `url(${circuitGrey}) repeat-x center bottom`,
+        backgroundSize: "auto 300px",
+        "@media(max-width: 820px)": {
+          height: "300px",
+          backgroundSize: "auto 150px"
         }
       }}
     >
       <ContentWrapper>
-        <img
-          src={landingImg}
-          css={{
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingBottom: "83px",
-            width: "75vw",
-            maxWidth: "350px"
-          }}
-          alt="QHacks Illustration"
-        />
+        <div css={{ textAlign: "center", margin: "auto 0" }}>
+          <img
+            src={landingImg}
+            css={{
+              width: "450px",
+              "@media(max-width: 820px)": {
+                width: "330px"
+              }
+            }}
+            alt="QHacks Illustration"
+          />
+        </div>
       </ContentWrapper>
     </div>
-  </footerGraphic>
+  </div>
 );
 
 export default FooterGraphic;
-
-
-
-    
