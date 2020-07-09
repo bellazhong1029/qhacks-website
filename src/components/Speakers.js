@@ -29,23 +29,22 @@ const speakers = [
 
   }
 
-    //He got the flu :(
-    // {
-    // name: "David Hariri",
-    // title: "Co-Founder, Head of Product",
-    // company: "Ada",
-    // description: " ",
-    // image: david
-    // }
+  //He got the flu :(
+  // {
+  // name: "David Hariri",
+  // title: "Co-Founder, Head of Product",
+  // company: "Ada",
+  // description: " ",
+  // image: david
+  // }
 ];
 
 const Speakers = () => (
   <section
+    id="speakers"
     css={{
-    //   backgroundColor: "#f8f8f8",
       position: "relative"
     }}
-    id="speakers"
   >
     <ContentWrapper>
       <h1
@@ -53,8 +52,6 @@ const Speakers = () => (
           paddingBottom: "48px",
           textAlign: "center",
           position: "relative",
-          color: "#ffffff",
-          zIndex: "3",
           "@media(max-width: 820px)": {
             paddingBottom: "24px"
           }
@@ -62,7 +59,6 @@ const Speakers = () => (
       >
         Speakers
       </h1>
-      {/* Desktop */}
       <div
         css={{
           display: "grid",

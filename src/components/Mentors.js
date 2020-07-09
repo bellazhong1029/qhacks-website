@@ -21,29 +21,29 @@ import rakan from "../assets/img/mentors/headshots/RakanAlShawaf.jpg";
 const QHACKS_COLORS = ["#00205b", "#fedb01", "#c81c2e"];
 
 const mentors1 = [
-    {
+  {
     name: "Anuj Arora",
     title: "Sales Engineering Lead",
     headshot: anuj,
     companyLogo: ada,
     companyUrl: "https://www.ada.support/",
     logoHeight: "40px"
-    },
-    {
+  },
+  {
     name: "Gordon Gibson",
     title: "Machine Learning Manager",
     headshot: gordon,
     companyLogo: ada,
     companyUrl: "https://www.ada.support/",
     logoHeight: "40px"
-    },
-    {
+  },
+  {
     name: "Stefan Sokic",
     title: "Software Engineer",
     headshot: stefan,
     companyLogo: kindred,
     companyUrl: "https://www.kindred.ai/",
-    }
+  }
 
 ];
 
@@ -65,28 +65,28 @@ const mentors2 = [
     logoHeight: "80px"
   },
   {
-  name: "Alex Adusei",
-  title: "Software Engineer",
-  headshot: alex,
-  companyLogo: twitter,
-  companyUrl: "https://www.twitter.com",
-  logoMarginTop: "-15px",
-  logoHeight: "80px"
+    name: "Alex Adusei",
+    title: "Software Engineer",
+    headshot: alex,
+    companyLogo: twitter,
+    companyUrl: "https://www.twitter.com",
+    logoMarginTop: "-15px",
+    logoHeight: "80px"
   },
   {
-  name: "Rakan Al-Shawaf",
-  title: "Co-Founder",
-  headshot: rakan,
-  companyLogo: makeship,
-  companyUrl: "https://makeship.com/",
-  logoMarginTop: "-5px",
+    name: "Rakan Al-Shawaf",
+    title: "Co-Founder",
+    headshot: rakan,
+    companyLogo: makeship,
+    companyUrl: "https://makeship.com/",
+    logoMarginTop: "-5px",
   }
 
 ];
 
 export default () => (
   <div css={{ marginBottom: "16px" }}>
-    <h1 css={{ color: "#ffffff", fontWeight: "600", fontSize: "28px" ,textAlign: "center",position: "relative",}}>
+    <h1 css={{ fontWeight: "600", fontSize: "28px", textAlign: "center", position: "relative", }}>
       Additional Mentors and Workshop Leaders
     </h1>
     <div
@@ -109,9 +109,9 @@ export default () => (
       {mentors1.map((mentor, i) => (
         <MentorCard
           {...mentor}
-           key={mentor.name}
+          key={mentor.name}
           borderColor={QHACKS_COLORS[i % 3]}
-          
+
         />
       ))}
     </div>
@@ -136,13 +136,13 @@ export default () => (
       {mentors2.map((mentor, i) => (
         <MentorCard
           {...mentor}
-           key={mentor.name}
+          key={mentor.name}
           borderColor={QHACKS_COLORS[i % 3]}
-          
+
         />
       ))}
     </div>
   </div>
 
-  
+
 );

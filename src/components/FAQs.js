@@ -3,9 +3,8 @@ import ContentWrapper from "./ContentWrapper";
 
 const linkCss = {
   position: "relative",
-  zIndex: "9999",
   textDecoration: "underline",
-  color: "#fcbdff",
+  color: "#00205B",
   fontWeight: 500
 };
 
@@ -42,7 +41,7 @@ const questionsAndAnswers = [
     question: "Is there a Code of Conduct?",
     answer: (
       <span>
-        Yes! Hackers are expected to adhere to the{" "}
+        Yes! Hackers are expected to adhere to the
         <a
           css={linkCss}
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
@@ -73,35 +72,34 @@ const FAQs = () => (
     <ContentWrapper>
       <div
         css={{
+          color: "#000000",
           padding: "0px 0 114px 0",
           "@media(max-width: 780px)": {
             padding: "0 0 120px 0",
             position: "relative",
             zIndex: "2"
-          }       
+          }
         }}
       >
-        <h1 css ={{color:"white"}}>Frequently Asked Questions</h1>
+        <h1>Frequently Asked Questions</h1>
         <div
           css={{
             paddingTop: "36px",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            "@media(max-width: 1190px)": {
+            "@media(max-width: 1000px)": {
               display: "block"
             },
-            color: "#ffffff"
           }}
         >
           {questionsAndAnswers.map(({ question, answer }) => (
             <div
               key={question}
               css={{
-                zIndex: 3,
                 padding: "0px 64px 40px 0px",
                 "@media(max-width: 780px)": {
                   paddingRight: "24px",
-                  
+
                 }
               }}
             >
@@ -109,20 +107,19 @@ const FAQs = () => (
                 css={{
                   paddingBottom: "10px",
                   fontWeight: "500",
-                  color:"white"
                 }}
               >
                 {question}
               </h2>
               <p
-                css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}
+                css={{ fontSize: "14px", lineHeight: "20px" }}
               >
                 {answer}
               </p>
             </div>
           ))}
           <div css={{ paddingTop: "12px" }}>
-            <h2 css={{ paddingBottom: "10px", fontWeight: "500", color:"white" }}>
+            <h2 css={{ paddingBottom: "10px", fontWeight: "500", color: "white" }}>
               Have additional questions?
             </h2>
             <p css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}>

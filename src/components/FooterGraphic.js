@@ -12,9 +12,9 @@ const FooterGraphic = () => (
       css={{
         position: "relative",
         width: "100%",
-        height: "500px",
+        height: "450px",
         background: `url(${background}) repeat-x center bottom`,
-        backgroundSize: "auto 300px",
+        backgroundSize: "auto 250px",
         "@media(max-width: 820px)": {
           height: "300px",
           backgroundSize: "auto 150px"
@@ -26,7 +26,7 @@ const FooterGraphic = () => (
           <img
             src={landingImg}
             css={{
-              width: "450px",
+              width: "400px",
               "@media(max-width: 820px)": {
                 width: "330px"
               }
