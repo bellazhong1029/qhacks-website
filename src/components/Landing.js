@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import Header from "./Header";
 import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
+import MailingListSignUp from "./MailingListSignup";
 
 import backgroundImage from "../assets/img/backgrounds/landingBG.png";
 import graphicMobile from "../assets/img/backgrounds/backgroundMobile.png";
 import waveLineRed from "../assets/img/backgrounds/waveLineRed.png";
 import logo from "../assets/img/logo/qhacksCrown-colored.svg";
 import word from "../assets/img/logo/qhacksWordmark-colored.svg";
-import mail from "../assets/img/icons/mail.svg";
+import mailIcon from "../assets/img/icons/mail.svg";
 import mailOpen from "../assets/img/icons/mailOpen.svg";
 
 const applyButtonCSS = {
@@ -25,13 +26,13 @@ const applyButtonCSS = {
 const mailingButtonCSS = {
   alignItems: "center",
   position: "relative",
-  margin: "40px 0 5px auto",
+  margin: "15px 0 5px auto",
   fontWeight: "550",
   fontSize: "15px",
   ":hover:not(:disabled)": {
     backgroundColor: "#ffffff",
-    color: "#000000",
-    border: "2px solid #000000"
+    color: "#16498c",
+    border: "2px solid #16498c"
   },
   "@media(max-width: 820px)": {
     display: "none"
@@ -39,13 +40,13 @@ const mailingButtonCSS = {
 };
 
 function Landing() {
-  const [mailOnHover, setMail] = useState(false);
+  const [mail, setMail] = useState({ onMouse: false, onClick: false });
 
   return (
     <div
       css={{
         width: "100%",
-        marginBottom: "50px",
+        paddingBottom: "80px",
         background: `url(${backgroundImage}) no-repeat center top`,
         backgroundSize: "1400px auto",
         "@media (min-width: 820px) and (max-width: 1200px)": {
@@ -183,72 +184,88 @@ function Landing() {
               Apply Now
             </ActionButton>
           </div>
-          <div
-            css={{
-              textAlign: "left",
-              "@media(min-width: 1200px)": {
-                paddingLeft: "50px",
-                paddingTop: "50px"
-              },
-              "@media  (max-width: 1200px)": {
-                paddingLeft: "20px",
-                paddingTop: "50px"
-              }
-            }}
-          >
-            <button
-              onMouseEnter={() => setMail(true)}
-              onMouseLeave={() => setMail(false)}
-              style={{
-                border: "none",
-                backgroundColor: "transparent",
-                padding: "0"
-              }}
-            >
-              <ActionButton
-                backgroundColor="#ffffff"
-                foregroundColor="#000000"
-                style={mailingButtonCSS}
-                link="https://app.qhacks.io"
-                type="rounded"
-              >
-                {!mailOnHover && (
-                  <img
-                    src={mail}
-                    css={{
-                      width: "28px",
-                      paddingRight: "8px"
-                    }}
-                  />
-                )}
-                {mailOnHover && (
-                  <img
-                    src={mailOpen}
-                    css={{
-                      width: "28px",
-                      paddingRight: "8px"
-                    }}
-                  />
-                )}
-                Sign up for our mailing list
-              </ActionButton>
-            </button>
-            <h3
+          {!mail.onClick && (
+            <div
               css={{
-                fontWeight: 300,
-                fontSize: "18px",
-                textDecoration: "underline",
-                padding: "0 auto 0 10px",
-                "@media(max-width: 820px)": {
-                  display: "none"
+                textAlign: "left",
+                "@media(min-width: 1200px)": {
+                  paddingLeft: "50px",
+                  paddingTop: "50px"
+                },
+                "@media  (max-width: 1200px)": {
+                  paddingLeft: "20px",
+                  paddingTop: "50px"
                 }
               }}
             >
-              to receive important QHacks announcements!
-            </h3>
-          </div>
+              <button
+                onMouseEnter={() => setMail({ ...mail, onMouse: true })}
+                onMouseLeave={() => setMail({ ...mail, onMouse: false })}
+                onClick={() => setMail({ ...mail, onClick: !mail.onClick })}
+                style={{
+                  border: "none",
+                  backgroundColor: "transparent",
+                  padding: "0"
+                }}
+              >
+                <a href="/#mailinglist">
+                  <ActionButton
+                    backgroundColor="#ffffff"
+                    foregroundColor="#000000"
+                    style={mailingButtonCSS}
+                    type="rounded"
+                  >
+                    {!mail.onMouse && (
+                      <img
+                        src={mailIcon}
+                        css={{
+                          width: "28px",
+                          paddingRight: "8px"
+                        }}
+                      />
+                    )}
+                    {mail.onMouse && (
+                      <img
+                        src={mailOpen}
+                        css={{
+                          width: "28px",
+                          paddingRight: "8px"
+                        }}
+                      />
+                    )}
+                    Sign up for our mailing list
+                  </ActionButton>
+                </a>
+              </button>
+
+              <h3
+                css={{
+                  fontWeight: 300,
+                  fontSize: "18px",
+                  textDecoration: "underline",
+                  padding: "0 auto 0 10px",
+                  "@media(max-width: 820px)": {
+                    display: "none"
+                  }
+                }}
+              >
+                to receive important QHacks announcements!
+              </h3>
+            </div>
+          )}
         </section>
       </ContentWrapper>
+
+      {mail.onClick && (
+        <div
+          css={{
+            display: "block",
+            marginTop: "150px"
+          }}
+        >
+          <MailingListSignUp onClick={mail.onClick} setMail={setMail} />
+        </div>
+      )}
     </div>
   );
 }
