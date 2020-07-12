@@ -78,7 +78,15 @@ export default () => {
       </Helmet>
       <div>
         <Landing />
-        {/* <MailingListSignup /> */}
+        <div
+          css={{
+            "@media(min-width: 820px)": {
+              display: "none"
+            }
+          }}
+        >
+          <MailingListSignup />
+        </div>
         <OpeningSummary />
         <Features />
         <SellingPoints />
@@ -91,4 +99,4 @@ export default () => {
       </div>
     </div>
   );
-}
+};
