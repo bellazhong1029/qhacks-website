@@ -18,6 +18,7 @@ import Features from "../components/Features";
 import EventSchedule from "../components/EventSchedule";
 import FooterGraphic from "../components/FooterGraphic";
 
+
 // const parameters = {
 //   "particles": {
 //     "number": {
