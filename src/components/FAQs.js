@@ -65,10 +65,15 @@ const questionsAndAnswers = [
   }
 ];
 
-
-
 const FAQs = () => (
-  <section id="faq">
+  <section
+    id="faq"
+    css={{
+      backgroundImage:
+        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      padding: "60px 0 0 0"
+    }}
+  >
     <ContentWrapper>
       <div
         css={{
@@ -89,7 +94,7 @@ const FAQs = () => (
             gridTemplateColumns: "1fr 1fr",
             "@media(max-width: 1000px)": {
               display: "block"
-            },
+            }
           }}
         >
           {questionsAndAnswers.map(({ question, answer }) => (
@@ -98,32 +103,29 @@ const FAQs = () => (
               css={{
                 padding: "0px 64px 40px 0px",
                 "@media(max-width: 780px)": {
-                  paddingRight: "24px",
-
+                  paddingRight: "24px"
                 }
               }}
             >
               <h2
                 css={{
                   paddingBottom: "10px",
-                  fontWeight: "500",
+                  fontWeight: "500"
                 }}
               >
                 {question}
               </h2>
-              <p
-                css={{ fontSize: "14px", lineHeight: "20px" }}
-              >
-                {answer}
-              </p>
+              <p css={{ fontSize: "14px", lineHeight: "20px" }}>{answer}</p>
             </div>
           ))}
           <div css={{ paddingTop: "12px" }}>
-            <h2 css={{ paddingBottom: "10px", fontWeight: "500", color: "white" }}>
+            <h2 css={{ paddingBottom: "10px", fontWeight: "500" }}>
               Have additional questions?
             </h2>
-            <p css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}>
-              Feel free to reach out to us at{" "}
+            <p
+              css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}
+            >
+              Feel free to reach out to us at
               <a
                 rel="external noopener"
                 target="_blank"
@@ -131,8 +133,8 @@ const FAQs = () => (
                 href="mailto:hello@qhacks.io"
               >
                 hello@qhacks.io
-              </a>{" "}
-              or on{" "}
+              </a>
+              or on
               <a
                 rel="external noopener"
                 target="_blank"

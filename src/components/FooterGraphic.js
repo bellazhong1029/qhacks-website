@@ -1,13 +1,16 @@
 import React from "react";
 
-import ContentWrapper from "./ContentWrapper";
-
 import background from "../assets/img/backgrounds/extendedGrayCircuits.png";
 import landingImg from "../assets/img/icons/landingImg.svg";
 import circuitGrey from "../assets/img/backgrounds/circuitsGrey.png";
 
 const FooterGraphic = () => (
-  <div>
+  <div
+    css={{
+      backgroundImage:
+        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))"
+    }}
+  >
     <div
       css={{
         position: "relative",
@@ -21,20 +24,18 @@ const FooterGraphic = () => (
         }
       }}
     >
-      <ContentWrapper>
-        <div css={{ textAlign: "center", margin: "auto 0" }}>
-          <img
-            src={landingImg}
-            css={{
-              width: "400px",
-              "@media(max-width: 820px)": {
-                width: "330px"
-              }
-            }}
-            alt="QHacks Illustration"
-          />
-        </div>
-      </ContentWrapper>
+      <div css={{ textAlign: "center" }}>
+        <img
+          src={landingImg}
+          css={{
+            width: "400px",
+            "@media(max-width: 820px)": {
+              width: "330px"
+            }
+          }}
+          alt="QHacks Illustration"
+        />
+      </div>
     </div>
   </div>
 );

@@ -58,7 +58,8 @@ const schedule = [
     startDate: "2020-01-31T23:00:00",
     endDate: "2020-01-31T23:45:00",
     eventName: "Workshop | Tech Company Panel",
-    subtitle: "Featuring: Nicole Fitzgerald, Enoch Tam, Alex Adusei, Stefan Sokic",
+    subtitle:
+      "Featuring: Nicole Fitzgerald, Enoch Tam, Alex Adusei, Stefan Sokic",
     location: "Wallace Hall, JDUC"
   },
   {
@@ -221,7 +222,7 @@ const schedule = [
     eventName: "Buses Leave",
     subtitle: "",
     location: "Mitchell Hall"
-  },
+  }
 ];
 
 const eventDays = [];
@@ -279,72 +280,78 @@ class EventSchedule extends Component {
     const data = this.addDurations(eventsOnSelectedDay);
 
     return (
-      <ContentWrapper>
-        <section
-          id="schedule"
-          css={{
-            padding: "0px 0 50px 0",
-            margin: "0 auto",
-            overflow: "hidden"
-          }}
-        >
-          <h1
+      <section id="schedule" css={{ padding: "60px 0 0 0" }}>
+        <ContentWrapper>
+          <div
             css={{
-              textAlign: "center",
-              position: "relative",
+              padding: "0px 0 50px 0",
+              margin: "0 auto",
+              overflow: "hidden"
             }}
           >
-            Event Schedule<sup><a css={{ color: "#bababa" }} href="/#*">*</a></sup>
-          </h1>
-          <a href="https://drive.google.com/uc?id=1LGefjiJIepqQzHWk0FWqtCsVKjxqX_ng&export=download">
-            <h2
+            <h1
               css={{
-                paddingTop: "10px",
+                textAlign: "center",
+                position: "relative"
+              }}
+            >
+              Event Schedule
+              <sup>
+                <a css={{ color: "#bababa" }} href="/#*">
+                  *
+                </a>
+              </sup>
+            </h1>
+            <a href="https://drive.google.com/uc?id=1LGefjiJIepqQzHWk0FWqtCsVKjxqX_ng&export=download">
+              <h2
+                css={{
+                  paddingTop: "10px",
+                  textAlign: "center",
+                  position: "relative",
+                  zIndex: 2,
+                  color: "#bababa"
+                }}
+              >
+                Download as Calendar
+              </h2>
+            </a>
+            <DaySwitcher
+              days={eventDays}
+              changeDay={(day) => this.changeDay(day)}
+            />
+            <h3
+              {...css({
+                textTransform: "uppercase",
+                color: "#FFFFFF",
+                marginLeft: "16px",
+                "@media(max-width: 760px)": { marginLeft: 0 },
+                fontWeight: 800
+              })}
+            >
+              {moment(this.state.selectedDay, "YYYY-MM-DD").format(
+                "dddd, MMMM Do, YYYY"
+              )}
+            </h3>
+            <MediaQuery query="screen and (min-width: 760px)">
+              <EventScheduleFullSizeTable data={data} />
+            </MediaQuery>
+            <MediaQuery query="screen and (max-width: 760px)">
+              <EventScheduleCompressedTable data={data} />
+            </MediaQuery>
+            <p
+              id="*"
+              css={{
                 textAlign: "center",
                 position: "relative",
                 zIndex: 2,
                 color: "#bababa"
               }}
             >
-              Download as Calendar
-            </h2>
-          </a>
-          <DaySwitcher
-            days={eventDays}
-            changeDay={(day) => this.changeDay(day)}
-          />
-          <h3
-            {...css({
-              textTransform: "uppercase",
-              color: "#FFFFFF",
-              marginLeft: "16px",
-              "@media(max-width: 760px)": { marginLeft: 0 },
-              fontWeight: 800
-            })}
-          >
-            {moment(this.state.selectedDay, "YYYY-MM-DD").format(
-              "dddd, MMMM Do, YYYY"
-            )}
-          </h3>
-          <MediaQuery query="screen and (min-width: 760px)">
-            <EventScheduleFullSizeTable data={data} />
-          </MediaQuery>
-          <MediaQuery query="screen and (max-width: 760px)">
-            <EventScheduleCompressedTable data={data} />
-          </MediaQuery>
-          <p
-            id="*"
-            css={{
-              textAlign: "center",
-              position: "relative",
-              zIndex: 2,
-              color: "#bababa"
-            }}
-          >
-            *Subject to Change
-          </p>
-        </section>
-      </ContentWrapper>
+              *Subject to Change
+            </p>
+          </div>
+        </ContentWrapper>
+      </section>
     );
   }
 }

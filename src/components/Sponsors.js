@@ -49,21 +49,12 @@ const Sponsors = () => (
       <div
         css={{
           position: "relative",
-          zIndex: "9999",
-          background: "#ffffff",
-          borderRadius: "10px",
-          marginLeft: "auto",
-          marginRight: "auto",
           textAlign: "center",
-          paddingTop: "40px",
+          padding: "60px 0 0 0"
         }}
       >
-        {/* Sponsors */}
-
         <div>
           <h1>Sponsors</h1>
-
-          {/* Giga */}
           <div
             css={{
               marginTop: "50px",
@@ -132,7 +123,6 @@ const Sponsors = () => (
                   alt=""
                 />
               </SponsorLink>
-
             </div>
 
             {/* Mega */}
@@ -148,7 +138,6 @@ const Sponsors = () => (
                 }
               }}
             >
-
               {/* Mega Row 1 */}
 
               <SponsorLink url="http://td.com/">
@@ -158,7 +147,7 @@ const Sponsors = () => (
                     width: "300px",
                     marginLeft: "100px",
                     "@media(max-width: 1080px)": {
-                      width: "250px",
+                      width: "250px"
                     },
                     "@media(max-width: 980px)": {
                       width: "205px",
@@ -203,7 +192,7 @@ const Sponsors = () => (
                     marginRight: "100px",
                     marginTop: "8px",
                     "@media(max-width: 1080px)": {
-                      width: "300px",
+                      width: "300px"
                     },
                     "@media(max-width: 980px)": {
                       width: "220px",
@@ -224,7 +213,6 @@ const Sponsors = () => (
                   alt="Scotiabank Logo"
                 />
               </SponsorLink>
-
             </div>
 
             {/* Startup */}
@@ -253,7 +241,6 @@ const Sponsors = () => (
             >
               {/* Startup Row 1 */}
               <div className="fourCol">
-
                 <SponsorLink url="https://www.voiceflow.com/">
                   <img
                     src={voiceflowLogo}
@@ -335,7 +322,7 @@ const Sponsors = () => (
                         paddingRight: "30px",
                         marginBottom: "10px",
                         // marginRight: "0px",
-                        marginLeft: "15px",
+                        marginLeft: "15px"
                         // marginTop: "0px"
                       },
                       "@media(max-width: 610px)": {
@@ -359,7 +346,7 @@ const Sponsors = () => (
                       marginTop: "60px",
                       "@media(max-width: 920px)": {
                         width: "170px",
-                        paddingRight: "30px",
+                        paddingRight: "30px"
                         // marginBottom: "10px",
                       },
                       "@media(max-width: 610px)": {
@@ -386,7 +373,7 @@ const Sponsors = () => (
                         paddingRight: "30px",
                         marginBottom: "10px",
                         // marginRight: "0px",
-                        marginLeft: "15px",
+                        marginLeft: "15px"
                         // marginTop: "0px"
                       },
                       "@media(max-width: 610px)": {
@@ -400,7 +387,6 @@ const Sponsors = () => (
                     alt="RpaBotPro Logo"
                   />
                 </SponsorLink>
-
               </div>
             </div>
           </div>
@@ -441,7 +427,7 @@ const Sponsors = () => (
                 }}
               >
                 partnership@qhacks.io
-            </a>
+              </a>
             </p>
             {/* <ActionButton
             backgroundColor="#f8f8f8"
@@ -598,7 +584,6 @@ const Sponsors = () => (
                 />
               </SponsorLink>
             </div>
-
 
             {/* School Row 4 */}
             {/* <div

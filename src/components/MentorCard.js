@@ -24,7 +24,7 @@ export default ({
         borderWidth: "3px",
         borderStyle: "solid",
         overflow: "hidden"
-          }}
+      }}
     >
       <img
         css={{ width: "190px", marginLeft: "-10px" }}
@@ -32,31 +32,31 @@ export default ({
         alt={`${name} - ${title}`}
       />
     </div>
-
-    <h2
-      css={{
-        marginTop: "24px",
-        marginBottom: "8px",
-        fontSize: "28px",
-        fontWeight: "600",
-        color: "#ffffff"
-      }}
-    >
-      {name}
-    </h2>
-    <p>{title}</p>
-    <br />
-    <a href={companyUrl} target="_blank" rel="external noopener">
-      <img
+    <div css={{ color: "#000000" }}>
+      <h2
         css={{
-          width: logoWidth,
-          height: logoHeight,
-          marginBottom: "32px",
-          marginTop: logoMarginTop
+          marginTop: "24px",
+          marginBottom: "8px",
+          fontSize: "28px",
+          fontWeight: "600"
         }}
-        src={companyLogo}
-        alt={companyName}
-      />
-    </a>
+      >
+        {name}
+      </h2>
+      <p>{title}</p>
+      <br />
+      <a href={companyUrl} target="_blank" rel="external noopener">
+        <img
+          css={{
+            width: logoWidth,
+            height: logoHeight,
+            marginBottom: "32px",
+            marginTop: logoMarginTop
+          }}
+          src={companyLogo}
+          alt={companyName}
+        />
+      </a>
+    </div>
   </div>
 );

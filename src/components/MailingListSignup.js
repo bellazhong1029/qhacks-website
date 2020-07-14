@@ -15,7 +15,7 @@ const MailingListSignup = (props) => (
       justifyContent: "center",
       background: "#00205B",
       backgroundSize: "cover",
-      marginBottom: "30px"
+      paddingBottom: "30px"
     }}
   >
     <ContentWrapper>

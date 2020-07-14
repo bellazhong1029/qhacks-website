@@ -7,7 +7,6 @@ import cameron from "../assets/img/speakers/CameronGorrie.jpg";
 import nicole from "../assets/img/mentors/headshots/NicoleFitzgerald.jpg";
 import david from "../assets/img/speakers/DavidHariri.jpg";
 
-
 import ContentWrapper from "./ContentWrapper";
 
 const speakers = [
@@ -26,24 +25,17 @@ const speakers = [
     description: " ",
     image: nicole,
     companyUrl: "https://careers.microsoft.com/us/en"
-
   }
-
-  //He got the flu :(
-  // {
-  // name: "David Hariri",
-  // title: "Co-Founder, Head of Product",
-  // company: "Ada",
-  // description: " ",
-  // image: david
-  // }
 ];
 
 const Speakers = () => (
   <section
     id="speakers"
     css={{
-      position: "relative"
+      position: "relative",
+      backgroundImage:
+        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      padding: "60px 0 0 0"
     }}
   >
     <ContentWrapper>
@@ -63,7 +55,6 @@ const Speakers = () => (
         css={{
           display: "grid",
           position: "relative",
-          zIndex: 3,
           maxWidth: speakers.length * 500,
           marginLeft: "auto",
           marginRight: "auto",
@@ -88,32 +79,6 @@ const Speakers = () => (
       >
         <SpeakerSlider speakers={speakers} />
       </div>
-      {/* <picture
-        css={{
-          zIndex: "1",
-          width: "235px",
-          height: "289px",
-          position: "absolute",
-          bottom: "-250px",
-          right: "62px",
-          display: "block",
-          "@media(max-width: 1000px)": {
-            display: "none"
-          }
-        }}
-      >
-        <source srcSet={cubes3webp} type="image/webp" />
-        <source srcSet={cubes3png} type="image/png" />
-        <img
-          css={{
-            "@media(max-width: 1000px)": {
-              display: "none"
-            }
-          }}
-          src={cubes3png}
-          alt="Floating cubes"
-        />
-      </picture> */}
       <Mentors />
     </ContentWrapper>
   </section>

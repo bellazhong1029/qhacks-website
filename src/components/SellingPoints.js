@@ -11,7 +11,6 @@ import jacobLaframboise from "../assets/img/headshots/jacobLaframboise.jpg";
 import amyLu from "../assets/img/headshots/amyLu.png";
 import cooperLeong from "../assets/img/headshots/cooperLeong.png";
 
-
 const points = [
   {
     name: "Amy Lu",
@@ -46,10 +45,7 @@ class SellingPoints extends Component {
 
   nextPoint() {
     this.setState({
-      currentPoint: Math.min(
-        this.state.currentPoint + 1,
-        points.length - 1
-      )
+      currentPoint: Math.min(this.state.currentPoint + 1, points.length - 1)
     });
   }
 
@@ -60,7 +56,6 @@ class SellingPoints extends Component {
   }
 
   render() {
-
     const blurb = (
       <span css={{ color: "#000000" }}>
         QHacks has something to offer everyone.
@@ -73,6 +68,8 @@ class SellingPoints extends Component {
       <section
         id="testimonials"
         css={{
+          backgroundImage:
+            "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
           "@media(max-width:1000px)": {
             paddingTop: "50px",
             paddingBottom: "60px",
@@ -93,9 +90,7 @@ class SellingPoints extends Component {
                 nextPoint={() => this.nextPoint()}
                 prevPoint={() => this.prevPoint()}
                 firstPoint={!this.state.currentPoint}
-                lastPoint={
-                  this.state.currentPoint === points.length - 1
-                }
+                lastPoint={this.state.currentPoint === points.length - 1}
                 text={blurb}
               />
               <PointList
