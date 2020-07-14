@@ -18,49 +18,9 @@ import Features from "../components/Features";
 import EventSchedule from "../components/EventSchedule";
 import FooterGraphic from "../components/FooterGraphic";
 
-
-// const parameters = {
-//   "particles": {
-//     "number": {
-//       "value": 100,
-//       "density": {
-//         "enable": true,
-//         "value_area": 1500
-//       }
-//     },
-//     "line_linked": {
-//       "enable": false,
-//       "opacity": 0.02
-//     },
-//     "move": {
-//       "direction": "right",
-//       "speed": 0.1
-//     },
-//     "size": {
-//       "value": 2
-//     },
-//     "opacity": {
-//       "anim": {
-//         "enable": true,
-//         "speed": 0.05,
-//         "opacity_min": 0.10
-//       }
-//     }
-//   },
-// }
-
 export default () => {
   return (
-    <div
-    // css={{
-    //   backgroundImage:
-    //     "repeating-linear-gradient(#855988, #070b34 20%, #855988, #070b34);",
-    //   backgroundSize: "cover",
-    //   maxWidth: "100%",
-    //   overflowY: "hidden",
-    //   overflowX: "hidden"
-    // }}
-    >
+    <div>
       <Helmet
         title="QHacks | Queen's University | Winter 2020"
         meta={[
@@ -118,17 +78,24 @@ export default () => {
       </Helmet>
       <div>
         <Landing />
-        {/* <MailingListSignup /> */}
+        <div
+          css={{
+            "@media(min-width: 820px)": {
+              display: "none"
+            }
+          }}
+        >
+          <MailingListSignup />
+        </div>
         <OpeningSummary />
         <Features />
         <SellingPoints />
         <EventSchedule />
         <Speakers />
         <Sponsors />
-        {/* <FAQs /> */}
+        <FAQs />
         <FooterGraphic />
         <Footer />
-        {/* <Particles params={parameters} style={{ position: "fixed", zIndex: 0, left: 0, top: 0, minWidth: '100vw', minHeight: '100vh' }} /> */}
       </div>
     </div>
   );

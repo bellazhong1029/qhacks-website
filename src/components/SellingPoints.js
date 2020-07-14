@@ -1,5 +1,3 @@
-/*Testimonials (refactor needed)*/
-
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 
@@ -62,21 +60,19 @@ class SellingPoints extends Component {
   }
 
   render() {
-    
+
     const blurb = (
-      <span css = {{ color:"#ffffffff" }}>
+      <span css={{ color: "#000000" }}>
         QHacks has something to offer everyone.
         <br />
         Check out what some past hackers have to say about the event!
       </span>
     );
-   
+
     return (
       <section
         id="testimonials"
         css={{
-          background: "00205B",
-          backgroundSize: "cover",
           "@media(max-width:1000px)": {
             paddingTop: "50px",
             paddingBottom: "60px",

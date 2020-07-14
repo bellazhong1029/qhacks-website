@@ -5,6 +5,7 @@ import ActionButton from "./ActionButton";
 
 const MailingListSignup = (props) => (
   <section
+    id="mailinglist"
     css={{
       width: "100%",
       color: "white",
@@ -13,7 +14,8 @@ const MailingListSignup = (props) => (
       alignItems: "center",
       justifyContent: "center",
       background: "#00205B",
-      backgroundSize: "cover"
+      backgroundSize: "cover",
+      marginBottom: "30px"
     }}
   >
     <ContentWrapper>
@@ -24,7 +26,7 @@ const MailingListSignup = (props) => (
           marginTop: "20px",
           marginBottom: "28px",
           fontSize: "22px",
-          "@media screen and (max-width: 860px)": {
+          "@media screen and (max-width: 820px)": {
             fontSize: "16px"
           },
           lineHeight: "28px",
@@ -34,22 +36,22 @@ const MailingListSignup = (props) => (
         Sign up for our mailing list to receive important QHacks announcements!
       </p>
       <input
-      placeholder="This field is non-functional"
-      type="email"
-      css={{
-        display: "block",
-        margin: "0 auto",
-        textAlign: "center",
-        flexGrow: 2,
-        padding: "0 16px",
-        height: "48px",
-        width: "325px",
-        lineHeight: "48px",
-        borderRadius: "4px",
-        border: "none",
-        fontSize: "16px"
+        placeholder="This field is non-functional"
+        type="email"
+        css={{
+          display: "block",
+          margin: "0 auto",
+          textAlign: "center",
+          flexGrow: 2,
+          padding: "0 16px",
+          height: "48px",
+          width: "325px",
+          lineHeight: "48px",
+          borderRadius: "4px",
+          border: "none",
+          fontSize: "16px"
         }}
-        />
+      />
       {/* <SignUpForm
         dataCyInput="mailing-list-input"
         dataCyButton="mailing-list-button"

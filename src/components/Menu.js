@@ -22,7 +22,6 @@ const Menu = (props) => {
         href="/#"
         css={{
           transition: "0.5s",
-          zIndex: "9999",
           "@media(min-width:820px)": {
             display: props.standaloneVersion
               ? "inline-block"
@@ -34,7 +33,6 @@ const Menu = (props) => {
       >
         <img
           css={{
-            zIndex: "9999",
             paddingTop: "20px",
             paddingBottom: "20px",
             "@media(max-width:820px)": {
