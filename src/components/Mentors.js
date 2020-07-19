@@ -115,7 +115,6 @@ export default () => (
         />
       ))}
     </div>
-
     <div
       css={{
         position: "relative",
@@ -138,7 +137,6 @@ export default () => (
           {...mentor}
           key={mentor.name}
           borderColor={QHACKS_COLORS[i % 3]}
-
         />
       ))}
     </div>

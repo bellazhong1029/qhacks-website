@@ -168,7 +168,7 @@ function Landing() {
                   }
                 }}
               >
-                Queen’s University • February 1st - 3rd, 2021
+                Queen’s University • January 22nd - 24th, 2021
               </h2>
               <h2
                 data-cy="qhacks-tagline"
@@ -183,7 +183,7 @@ function Landing() {
                   }
                 }}
               >
-                Queen’s University’s 5th annual hackathon.
+                Queen’s University’s annual hackathon.
                 <br />
                 Join us for an unforgettable experience!
               </h2>

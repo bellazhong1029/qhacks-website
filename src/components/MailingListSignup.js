@@ -1,7 +1,6 @@
 import React from "react";
 import SignUpForm from "./SignUpForm";
 import ContentWrapper from "./ContentWrapper";
-import ActionButton from "./ActionButton";
 
 const MailingListSignup = (props) => (
   <section

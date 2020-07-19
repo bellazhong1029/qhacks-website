@@ -1,7 +1,5 @@
 import React from "react";
-import fetch from "unfetch";
 import Helmet from "react-helmet";
-import Particles from "react-particles-js";
 
 import "./index.css";
 import Landing from "../components/Landing";
@@ -16,18 +14,17 @@ import sharingImage from "../assets/img/logo/sharingImage2020.png";
 import MailingListSignup from "../components/MailingListSignup";
 import Features from "../components/Features";
 import EventSchedule from "../components/EventSchedule";
-import FooterGraphic from "../components/FooterGraphic";
 
 export default () => {
   return (
     <div>
       <Helmet
-        title="QHacks | Queen's University | Winter 2020"
+        title="QHacks | Queen's University | Winter 2021"
         meta={[
           {
             name: "description",
             content:
-              "QHacks is Queen’s University’s annual hackathon, happening January 31st - February 2nd, 2020."
+              "QHacks is Queen’s University’s annual hackathon, happening January 22nd - January 24th, 2020."
           },
           {
             name: "keywords",
@@ -94,7 +91,6 @@ export default () => {
         <Speakers />
         <Sponsors />
         <FAQs />
-        <FooterGraphic />
         <Footer />
       </div>
     </div>

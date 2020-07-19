@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qhacks/qhacks-website.git"
+    "url": "https://github.com/bellazhong1029/qhacks-website/tree/qhacks-2021"
   },
   "husky": {
     "hooks": {
@@ -34,7 +34,7 @@
     "cypress-verify": "cypress verify"
   },
   "engines": {
-    "node": "8.11.x",
+    "node": "12.6.x",
     "npm": "6.x"
   },
   "dependencies": {

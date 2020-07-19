@@ -41,7 +41,7 @@ const questionsAndAnswers = [
     question: "Is there a Code of Conduct?",
     answer: (
       <span>
-        Yes! Hackers are expected to adhere to the
+        Yes! Hackers are expected to adhere to the{" "}
         <a
           css={linkCss}
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
@@ -125,7 +125,7 @@ const FAQs = () => (
             <p
               css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}
             >
-              Feel free to reach out to us at
+              Feel free to reach out to us at{" "}
               <a
                 rel="external noopener"
                 target="_blank"
@@ -134,7 +134,7 @@ const FAQs = () => (
               >
                 hello@qhacks.io
               </a>
-              or on
+              {" "}or on{" "}
               <a
                 rel="external noopener"
                 target="_blank"
