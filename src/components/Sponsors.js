@@ -3,9 +3,9 @@ import React from "react";
 import SponsorLink from "./SponsorLink";
 import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
-import partnershipPackage from "../assets/partnershipPackage2021.pdf";
-import contourlinegrey from "../assets/img/backgrounds/ContourLineGraphicFill.png";
 
+import partnershipPackage from "../assets/partnershipPackage2021.pdf";
+import contourlinegrey from "../assets/img/backgrounds/ContourLineGraphicFill0.2.png";
 import placeholder from "../assets/img/sponsors/placeholder.png";
 import sunlifeLogo from "../assets/img/sponsors/sunlife.png";
 import voiceflowLogo from "../assets/img/sponsors/voiceflow.jpeg";

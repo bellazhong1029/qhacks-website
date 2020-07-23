@@ -38,13 +38,18 @@
     "npm": "6.x"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/styles": "^4.10.0",
     "@sentry/browser": "^4.2.4",
     "apollo-boost": "^0.1.23",
     "babel-polyfill": "^6.26.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.17.4",
     "gatsby-plugin-glamor": "^2.0.5",
     "gatsby-plugin-google-analytics": "^2.0.7",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.0.6",
+    "gatsby-plugin-material-ui": "^2.1.9",
     "gatsby-plugin-netlify": "^2.0.1",
     "gatsby-plugin-offline": "^2.0.9",
     "gatsby-plugin-react-helmet": "^3.0.0",

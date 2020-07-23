@@ -8,7 +8,6 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === 'production';
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
-
 const allowCrawling = {
   policy: [{ userAgent: '*' }],
   sitemap: null
@@ -19,6 +18,10 @@ const disallowCrawling = {
   sitemap: null,
   host: null
 };
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -62,6 +65,13 @@ module.exports = {
           'deploy-preview': disallowCrawling
         }
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT, // string; add your MC list endpoint here
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
   ]
 };
