@@ -10,7 +10,7 @@ import Sponsors from "../components/Sponsors";
 import FAQs from "../components/FAQs";
 import Footer from "../components/Footer";
 import favicon from "../assets/img/icons/favicon.ico";
-import sharingImage from "../assets/img/logo/sharingImage2020.png";
+import sharingImage from "../assets/img/logo/sharingImage2021.png";
 import MailingListSignup from "../components/MailingListSignup";
 import Features from "../components/Features";
 import EventSchedule from "../components/EventSchedule";
@@ -75,15 +75,7 @@ export default () => {
       </Helmet>
       <div>
         <Landing />
-        <div
-          css={{
-            "@media(min-width: 820px)": {
-              display: "none"
-            }
-          }}
-        >
-          <MailingListSignup />
-        </div>
+        <MailingListSignup />
         <OpeningSummary />
         <Features />
         <SellingPoints />
