@@ -3,7 +3,8 @@ import SignUpForm from "./SignUpForm";
 import ContentWrapper from "./ContentWrapper";
 
 import lottie from "lottie-web";
-import circle from "../assets/animations/mailingAnimation.json";
+import animationImage from "../assets/animations/paperplane.json";
+import circuitsLine from "../assets/img/backgrounds/circuitsRed.png";
 
 const MailingListSignup = (props) => {
   let animationContainer = createRef();
@@ -14,7 +15,7 @@ const MailingListSignup = (props) => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: circle
+      animationData: animationImage
     });
     return () => animation.destroy(); // optional clean up for unmounting
   }, []);
@@ -52,7 +53,7 @@ const MailingListSignup = (props) => {
         css={{
           position: "relative",
           zIndex: "2",
-          backgroundColor: "#c8102e",
+          background: `#c8102e url(${circuitsLine}) repeat-x center bottom`,
           paddingBottom: "50px",
           textAlign: "center",
           marginTop: "-6px"
@@ -60,16 +61,22 @@ const MailingListSignup = (props) => {
       >
         <ContentWrapper>
           <div
-            className="animationContainer"
+            className="paperplane"
             ref={animationContainer}
             css={{
               zIndex: "-1",
-              width: "40%",
               position: "absolute",
-              top: "50%",
-              left: "50%",
-              marginTop: "-20%",
-              marginLeft: "-20%"
+              width: "500px",
+              top: "-250px",
+              left: "50px",
+              "@media(max-width: 820px)": {
+                width: "350px",
+                top: "-120px",
+                left: "-50px"
+              },
+              "@media(min-width: 1400px)": {
+                left: "20%"
+              }
             }}
           />
           <p

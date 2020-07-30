@@ -18,7 +18,7 @@ const SignUpForm = (props) => {
     setState({
       result: "success",
       boldMessage: email,
-      message: "has been added to our mailing list."
+      message: "has been added to our mailing list!"
     });
     setTimeout(() => resetresult(), 3500);
   };
@@ -62,17 +62,19 @@ const SignUpForm = (props) => {
       .catch((err) => {
         if (err === "The email you entered is not valid.") {
           return setresultFailure(
-            "Looks like your browser is blocking this. Try to disable any tracker-blocking feature and resubmit."
+            "The email you entered is not valid or Try to disable any tracker-blocking feature and resubmit."
           );
         }
-        if (err.includes("is already subscribed")) {
+        else if (err.includes("is already subscribed")) {
           return setresultFailure(
-            "Looks like the email is already in our mailing list!"
+            "This email address has already been added to our mailing list."
           );
         }
-        return setresultFailure(
-          "Something went wrong - please try again later."
-        );
+        else {
+          return setresultFailure(
+            "Something went wrong - please try again later."
+          );
+        }
       });
   };
 
@@ -140,9 +142,6 @@ const SignUpForm = (props) => {
             fontSize: "16px",
             margin: "4px",
             marginRight: "10px",
-            "@media screen and (max-width: 450px)": {
-              marginBottom: "20px"
-            },
             ":hover": {
               backgroundColor: "#F0F0F0"
             }
@@ -180,8 +179,8 @@ const SignUpForm = (props) => {
             &nbsp;
           </strong>
         ) : (
-          ""
-        )}
+            ""
+          )}
         {state.message}
       </p>
     </div>
