@@ -3,7 +3,6 @@ import ScrollSpy from "react-scrollspy";
 
 import colored from "../assets/img/logo/qhacksCrown-colored.svg";
 import coloredWordmark from "../assets/img/logo/qhacksWordmark-colored.svg";
-import { withClientState } from "apollo-link-state";
 
 const Menu = (props) => {
   return (
