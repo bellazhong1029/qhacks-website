@@ -20,7 +20,7 @@ const landingCSS = {
     backgroundSize: "auto 550px"
   },
   "@media(max-width: 820px)": {
-    height: "800px",
+    height: "900px",
     marginTop: "50px",
     background: `url(${waveLineRed}) no-repeat center bottom`
   }
@@ -38,7 +38,7 @@ const applyButtonCSS = {
 
 function Landing() {
   return (
-    <div css={landingCSS}>
+    <section id="main" css={landingCSS}>
       <Header standaloneVersion={false} />
       <ContentWrapper>
         <div
@@ -78,7 +78,7 @@ function Landing() {
               },
               "@media(max-width: 820px)": {
                 paddingTop: "12px",
-                width: "250px"
+                width: "220px"
               }
             }}
             alt="QHacks Wordmark"
@@ -151,7 +151,7 @@ function Landing() {
           </ActionButton>
         </div>
       </ContentWrapper>
-    </div>
+    </section>
   );
 }
 

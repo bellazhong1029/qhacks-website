@@ -1,9 +1,9 @@
 import React from "react";
 import FeaturesIcons from "./FeaturesIcons.js";
 
-import cubes2png from "../assets/img/icons/cubes-2.png";
+// import cubes2png from "../assets/img/icons/cubes-2.png";
+// import cubes2webp from "../assets/img/icons/cubes-2.webp";
 import judges from "../assets/img/icons/judgesIcon.svg";
-import cubes2webp from "../assets/img/icons/cubes-2.webp";
 import mentors from "../assets/img/icons/mentorsIcon.svg";
 import hackers from "../assets/img/icons/hackersIcon.svg";
 import schools from "../assets/img/icons/schoolsIcon.svg";
@@ -163,7 +163,7 @@ const Features = () => (
             />
           </div>
         </div>
-        <picture
+        {/* <picture
           css={{
             width: "400px",
             height: "246px",
@@ -196,7 +196,7 @@ const Features = () => (
             src={cubes2png}
             alt="Floating cubes"
           />
-        </picture>
+        </picture> */}
       </div>
     </ContentWrapper>
   </div>

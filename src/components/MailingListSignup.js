@@ -74,6 +74,9 @@ const MailingListSignup = (props) => {
                 top: "-120px",
                 left: "-50px"
               },
+              "@media(max-width: 450px)": {
+                display: "none"
+              },
               "@media(min-width: 1400px)": {
                 left: "20%"
               }

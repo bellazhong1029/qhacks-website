@@ -3,8 +3,8 @@ import { css } from "glamor";
 
 import ContentWrapper from "./ContentWrapper";
 
-import cubes1webp from "../assets/img/icons/cubes-1.webp";
-import cubes1png from "../assets/img/icons/cubes-1.png";
+// import cubes1webp from "../assets/img/icons/cubes-1.webp";
+// import cubes1png from "../assets/img/icons/cubes-1.png";
 
 const caretCSS = (backgroundColor) =>
   css({
@@ -17,8 +17,9 @@ const OpeningSummary = () => (
   <section
     id="about"
     css={{
-      backgroundImage:
-        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      // backgroundImage:
+      //   "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      background: "rgba(248, 248, 248, 1)",
       padding: "60px 0"
     }}
   >
@@ -107,7 +108,7 @@ const OpeningSummary = () => (
               }}
             />
           </div>
-          <picture
+          {/* <picture
             css={{
               width: "275px",
               height: "196px",
@@ -135,7 +136,7 @@ const OpeningSummary = () => (
               src={cubes1png}
               alt="Floating cubes"
             />
-          </picture>
+          </picture> */}
         </div>
       </ContentWrapper>
     </div>

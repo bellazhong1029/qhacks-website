@@ -68,8 +68,9 @@ class SellingPoints extends Component {
       <section
         id="testimonials"
         css={{
-          backgroundImage:
-            "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+          // backgroundImage:
+          //   "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+          background: "rgba(248, 248, 248, 1)",
           "@media(max-width:1000px)": {
             paddingTop: "50px",
             paddingBottom: "60px",

@@ -205,3 +205,17 @@ strong {
     transform: rotate(359deg);
   }
 }
+
+
+.back-to-top-btn img{
+  animation:scrollTop 0.5s alternate ease;
+}
+
+@keyframes scrollTop{
+  from {
+    transform: translateY(2px)
+  }
+  to{
+    transform: translateY(-1px)
+  }
+}

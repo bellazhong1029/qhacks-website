@@ -2,7 +2,6 @@ import React from "react";
 import ScrollSpy from "react-scrollspy";
 
 import colored from "../assets/img/logo/qhacksCrown-colored.svg";
-import coloredWordmark from "../assets/img/logo/qhacksWordmark-colored.svg";
 
 const Menu = (props) => {
   return (
@@ -14,7 +13,7 @@ const Menu = (props) => {
         height: "84px",
         "@media(max-width:820px)": {
           display: "none"
-        }
+        } 
       }}
     >
       <a

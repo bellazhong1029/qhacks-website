@@ -14,6 +14,7 @@ import sharingImage from "../assets/img/logo/sharingImage2021.png";
 import MailingListSignup from "../components/MailingListSignup";
 import Features from "../components/Features";
 import EventSchedule from "../components/EventSchedule";
+import ToTopButton from "../components/ToTopButton";
 
 export default () => {
   return (
@@ -84,6 +85,7 @@ export default () => {
         <Sponsors />
         <FAQs />
         <Footer />
+        <ToTopButton />
       </div>
     </div>
   );
