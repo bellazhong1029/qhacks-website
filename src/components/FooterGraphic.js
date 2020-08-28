@@ -7,8 +7,9 @@ import circuitGrey from "../assets/img/backgrounds/circuitsGrey.png";
 const FooterGraphic = () => (
   <div
     css={{
-      backgroundImage:
-        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))"
+      // backgroundImage:
+      //   "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))"
+      background: "rgba(248, 248, 248, 1)"
     }}
   >
     <div

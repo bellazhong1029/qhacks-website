@@ -139,6 +139,18 @@ function Landing() {
           </h2>
           <ActionButton
             dataCy="apply-button"
+            backgroundColor="#A0A0A0"
+            foregroundColor="#ffffff"
+            hoverBackgroundColor="#a0a0a0"
+            hoverForegroundColor="#ffffff"
+            style={applyButtonCSS}
+            link="/404"
+            type="rounded"
+          >
+            Application will be open soon
+          </ActionButton>
+          {/* <ActionButton
+            dataCy="apply-button"
             backgroundColor="#00205B"
             foregroundColor="#ffffff"
             hoverBackgroundColor="#16498c"
@@ -147,8 +159,8 @@ function Landing() {
             link="https://app.qhacks.io"
             type="rounded"
           >
-            Apply Now
-          </ActionButton>
+            Apply now
+          </ActionButton> */}
         </div>
       </ContentWrapper>
     </section>

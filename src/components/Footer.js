@@ -62,7 +62,7 @@ const socialLinks = [
   },
   {
     icon: instagram,
-    url: "https://www.instagram.com/q_hacks/",
+    url: "https://www.instagram.com/qhacks21/",
     label: "Follow us on Instagram",
     dataCy: "footer-instagram-link"
   }
@@ -76,10 +76,12 @@ const finePrint = {
 const Footer = () => (
   <footer>
     <FooterGraphic />
-    <div css={{
-      backgroundColor: "#070b34",
-      color: "#ffffff"
-    }}>
+    <div
+      css={{
+        backgroundColor: "#070b34",
+        color: "#ffffff"
+      }}
+    >
       <ContentWrapper>
         <div
           css={{
@@ -93,13 +95,21 @@ const Footer = () => (
           <img
             height="50px"
             src={logo}
-            css={{ marginBottom: "5px", paddingRight: "13px", [smallScreens]: { height: "35px" } }}
+            css={{
+              marginBottom: "5px",
+              paddingRight: "13px",
+              [smallScreens]: { height: "35px" }
+            }}
             alt="QHacks Crown"
           />
           <img
             height="50px"
             src={wordmark}
-            css={{ display: "inline-block", marginLeft: "0px", [smallScreens]: { height: "35px" } }}
+            css={{
+              display: "inline-block",
+              marginLeft: "0px",
+              [smallScreens]: { height: "35px" }
+            }}
             alt="QHacks Wordmark"
           />
           <p
@@ -118,12 +128,12 @@ const Footer = () => (
               }
             }}
           >
-            QHacks is Queen’s University’s annual hackathon! QHacks was founded in
-            2016 with a mission to advocate and incubate the tech community at
-            Queen’s University and throughout Canada. Going into our sixth year,
-            we have been aggressively growing to become one of the biggest and
-            most exciting hackathons in North America.
-        </p>
+            QHacks is Queen’s University’s annual hackathon! QHacks was founded
+            in 2016 with a mission to advocate and incubate the tech community
+            at Queen’s University and throughout Canada. Going into our sixth
+            year, we have been aggressively growing to become one of the biggest
+            and most exciting hackathons in North America.
+          </p>
           <div
             css={{
               marginLeft: "275px",
@@ -146,7 +156,7 @@ const Footer = () => (
               }}
             >
               Navigate
-          </p>
+            </p>
             <ul
               css={{
                 paddingTop: "15px",
@@ -194,7 +204,7 @@ const Footer = () => (
               }}
             >
               Get in Touch
-          </p>
+            </p>
             <div
               css={{
                 paddingTop: "15px",
@@ -281,7 +291,7 @@ const Footer = () => (
             }}
           >
             Queen&#39;s University | 99 University Ave, Kingston, ON
-        </p>
+          </p>
           <a
             data-cy="footer-dev-plug"
             css={{
@@ -294,13 +304,13 @@ const Footer = () => (
             rel="external noopener"
           >
             {"< />"} with ♡ by Queen&#39;s students
-        </a>
+          </a>
           <p
             data-cy="footer-copyright-notice"
             css={{ ...finePrint, marginTop: "6px", paddingBottom: "32px" }}
           >
             Copyright © {moment().year()} QHacks
-        </p>
+          </p>
         </div>
       </ContentWrapper>
     </div>

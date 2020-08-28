@@ -10,19 +10,36 @@ const linkCss = {
 
 const questionsAndAnswers = [
   {
-    question: "What is a hackathon?",
+    question: "Will QHacks 2021 be in-person or virtual?",
     answer:
-      "A hackathon is a sprint-like event where people from a variety of backgrounds come together to collaborate on software and hardware projects."
+      "QHacks 2021 will be a virtual event! Who doesn’t want to hack from bed?!"
+  },
+  {
+    question: "What is a Hackathon?",
+    answer:
+      "A hackathon is a sprint-like competition where people from a variety of backgrounds come together to collaborate on software and hardware projects!"
   },
   {
     question: "Who is invited?",
     answer:
-      "Any college or university student of any skill level! All you need is a passion for tech/data/design and a willingness to learn! We welcome applicants from all fields of study."
+      "Any college or university student at any skill level! All you need is a passion for tech/data/design and a willingness to learn! We welcome applicants from all fields of study."
   },
   {
     question: "Where is it?",
-    answer:
-      "QHacks will be taking place at Queen's University in the city of Kingston, Ontario. The event will be held in Mitchell Hall. Don’t worry about getting lost! We will have maps for you and volunteers all over campus to guide the way."
+    answer: (
+      <span>
+        QHacks is entirely virtual! Follow our{" "}
+        <a
+          css={linkCss}
+          href="https://linktr.ee/QHacks"
+          rel="social media links"
+          target="_blank"
+        >
+          social media{" "}
+        </a>
+        for announcements!
+      </span>
+    )
   },
   {
     question: "How much does it cost to attend?",
@@ -54,14 +71,49 @@ const questionsAndAnswers = [
     )
   },
   {
-    question: "What if I'm not from Kingston?",
-    answer:
-      "Encountering a 307 status? We'll be sending buses to Kingston from Ottawa and Toronto. If you can make it to either of those cities, we'll reimburse for your cost to get there (GO Buses preferred)."
+    question: "How do I apply?",
+    answer: (
+      <span>
+        Follow our{" "}
+        <a
+          css={linkCss}
+          href="https://linktr.ee/QHacks"
+          rel="social media links"
+          target="_blank"
+        >
+          social media{" "}
+        </a>
+        and check back here to see when applications will be released! Remember,
+        you don't need to be an expert hacker or to have been to a hackathon
+        before - we just want to see what makes you creative and unique!
+      </span>
+    )
   },
   {
-    question: "How do I apply?",
-    answer:
-      "Applications are out now! Click the button at the top of the page to apply. You don't need to be an expert hacker or to have been to a hackathon before - we just want to see what makes you creative and unique!"
+    question: "Have additional questions?",
+    answer: (
+      <span>
+        Feel free to reach out to us at{" "}
+        <a
+          rel="external noopener"
+          target="_blank"
+          css={linkCss}
+          href="mailto:hello@qhacks.io"
+        >
+          hello@qhacks.io
+        </a>{" "}
+        or on our{" "}
+        <a
+          css={linkCss}
+          href="https://linktr.ee/QHacks"
+          rel="social media links"
+          target="_blank"
+        >
+          social media{" "}
+        </a>
+        direct messages!
+      </span>
+    )
   }
 ];
 
@@ -69,8 +121,9 @@ const FAQs = () => (
   <section
     id="faq"
     css={{
-      backgroundImage:
-        "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      // backgroundImage:
+      //   "linear-gradient(to left, rgba(248,248,248,0), rgba(248,248,248,1))",
+      background: "rgba(248, 248, 248, 1)",
       padding: "60px 0 0 0"
     }}
   >
@@ -118,33 +171,6 @@ const FAQs = () => (
               <p css={{ fontSize: "14px", lineHeight: "20px" }}>{answer}</p>
             </div>
           ))}
-          <div css={{ paddingTop: "12px" }}>
-            <h2 css={{ paddingBottom: "10px", fontWeight: "500" }}>
-              Have additional questions?
-            </h2>
-            <p
-              css={{ fontSize: "14px", color: "#fffffff", lineHeight: "20px" }}
-            >
-              Feel free to reach out to us at{" "}
-              <a
-                rel="external noopener"
-                target="_blank"
-                css={linkCss}
-                href="mailto:hello@qhacks.io"
-              >
-                hello@qhacks.io
-              </a>
-              {" "}or on{" "}
-              <a
-                rel="external noopener"
-                target="_blank"
-                css={linkCss}
-                href="https://fb.com/qhacks"
-              >
-                Facebook
-              </a>
-            </p>
-          </div>
         </div>
       </div>
     </ContentWrapper>

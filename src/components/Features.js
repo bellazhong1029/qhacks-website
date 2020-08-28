@@ -9,10 +9,8 @@ import hackers from "../assets/img/icons/hackersIcon.svg";
 import schools from "../assets/img/icons/schoolsIcon.svg";
 import challenges from "../assets/img/icons/challengesIcon.svg";
 import applications from "../assets/img/icons/applicationsIcon.svg";
-import qhacksSellingPointOnejpg from "../assets/img/selling_points/qhacksSellingPointOne.jpg";
-import qhacksSellingPointTwojpg from "../assets/img/selling_points/qhacksSellingPointTwo.jpg";
-import qhacksSellingPointOnewebp from "../assets/img/selling_points/qhacksSellingPointOne.webp";
-import qhacksSellingPointTwowebp from "../assets/img/selling_points/qhacksSellingPointTwo.webp";
+import qhacksSellingPointOnejpg from "../assets/img/selling_points/sellingPointOne.jpg";
+import qhacksSellingPointTwojpg from "../assets/img/selling_points/sellingPointTwo.jpg";
 import ContentWrapper from "./ContentWrapper";
 
 const twoColumnStyle = {
@@ -42,7 +40,8 @@ const blurbStyle = {
   margin: "32px auto",
   fontSize: "15px",
   lineHeight: "24px",
-  maxWidth: "500px"
+  maxWidth: "500px",
+  textAlign: "left"
 };
 
 const imgStyle = {
@@ -104,7 +103,7 @@ const Features = () => (
           </div>
           <div css={flexChildStyle}>
             <picture css={imgStyle}>
-              <source srcSet={qhacksSellingPointOnewebp} type="image/webp" />
+              {/* <source srcSet={qhacksSellingPointOnewebp} type="image/webp" /> */}
               <source srcSet={qhacksSellingPointOnejpg} type="image/jpg" />
               <img
                 css={imgStyle}
@@ -123,7 +122,7 @@ const Features = () => (
         >
           <div css={flexChildStyle}>
             <picture css={imgStyle}>
-              <source srcSet={qhacksSellingPointTwowebp} type="image/webp" />
+              {/* <source srcSet={qhacksSellingPointTwowebp} type="image/webp" /> */}
               <source srcSet={qhacksSellingPointTwojpg} type="image/jpg" />
               <img
                 css={imgStyle}
@@ -135,12 +134,14 @@ const Features = () => (
           <div css={flexChildStyle}>
             <h1>Showcase to Experts.</h1>
             <p css={blurbStyle}>
-              This year, we’re bringing together a diverse group of mentors,
-              speakers, sponsors and other industry professionals. Chat
+              This year we’re virtually bringing together a diverse group of
+              mentors, speakers, sponsors and other industry professionals. Chat
               one-on-one, learn about current tech trends and opportunities, and
-              show off your skills! Looking for some inspiration? Encountering a
-              roadblock? Does python feel like it’s constricting you? Not to
-              worry, there will always be a helping hand at the ready.
+              show of your skills all from the comfort of your home!
+              <br />
+              Are you looking for some inspiration? Encountering a roadblock?
+              Does python feel like it’s constricting you? Not to worry, there
+              will always be a helping hand at the ready.
             </p>
             <FeaturesIcons
               list={[

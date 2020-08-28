@@ -1,11 +1,9 @@
 import React from "react";
 
 import SponsorLink from "./SponsorLink";
-import ActionButton from "./ActionButton";
 import ContentWrapper from "./ContentWrapper";
+import PartnerPackage from "./PartnerPackage";
 
-import partnershipPackage from "../assets/partnershipPackage2021.pdf";
-import contourlinegrey from "../assets/img/backgrounds/ContourLineGraphicFill0.2.png";
 import placeholder from "../assets/img/sponsors/placeholder.png";
 import sunlifeLogo from "../assets/img/sponsors/sunlife.png";
 import voiceflowLogo from "../assets/img/sponsors/voiceflow.jpeg";
@@ -36,8 +34,8 @@ const Sponsors = () => (
     css={{
       position: "relative",
       zIndex: "2",
-      color: "#FFFFFF",
       opacity: "1",
+      // background: "rgba(248, 248, 248, 1)",
       " img": {
         transition: "0.3s",
         ":hover": {
@@ -55,7 +53,7 @@ const Sponsors = () => (
         }}
       >
         <div>
-          <h1>Sponsors</h1>
+          <h1>Sponsors (2020)</h1>
           <div
             css={{
               marginTop: "50px",
@@ -382,7 +380,8 @@ const Sponsors = () => (
               paddingBottom: "60px"
             }}
           >
-            <h1>Our Partners</h1>
+            <h1>Our Partners (2020)</h1>
+            <PartnerPackage />
             <div css={{ marginTop: "50px" }}>
               <div
                 css={{
@@ -585,61 +584,7 @@ const Sponsors = () => (
         </div>
       </div>
     </ContentWrapper>
-
-    <div
-      css={{
-        backgroundColor: "#A0A0A0",
-      }}
-    >
-      <div
-        css={{
-          background: `url(${contourlinegrey}) center center`,
-          backgroundSize: "cover",
-          padding: "60px 30px",
-          textAlign: "center",
-        }}>
-        <p
-          css={{
-            color: "#F8F8F8",
-            paddingBottom: "24px",
-            fontSize: "20px",
-            fontWeight: "600",
-            ">a": {
-              color: "#c81c2e",
-              textDecoration: "underline",
-              ":hover": { textDecoration: "none" }
-            },
-            "@media(max-width: 460px)": {
-              fontSize: "16px"
-            }
-          }}
-        >
-          Interested in partnering? Contact us at{" "}
-          <a
-            data-cy="partners-email-prompt"
-            href="mailto:partnership@qhacks.io"
-            css={{
-              fontSize: "20px",
-              fontWeight: "bold",
-              "@media(max-width: 460px)": {
-                fontSize: "16px"
-              }
-            }}
-          >
-            partnership@qhacks.io
-        </a>
-        </p>
-        <ActionButton
-          backgroundColor="#ffffff"
-          foregroundColor="#c81c2e"
-          type="rounded"
-          link={partnershipPackage}
-        >
-          Partnership Package
-      </ActionButton>
-      </div>
-    </div>
-  </section >
+  </section>
 );
 
 export default Sponsors;

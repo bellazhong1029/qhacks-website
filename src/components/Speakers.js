@@ -50,7 +50,7 @@ const Speakers = () => (
           }
         }}
       >
-        Speakers
+        Speakers (2020)
       </h1>
       <div
         css={{

@@ -54,7 +54,7 @@ export default () => {
           {
             property: "og:description",
             content:
-              "QHacks is back for round six! We're bringing in students from all over North America to come together for a wild 36 hours - designing, developing, demoing, cup-stacking, and foosball-playing at our home base at Queen's University. Whether you're a first timer or a seasoned veteran, QHacks definitely has something to satisfy your interests. This weekend is about inclusiveness for all disciplines - students from any level of skill, from any field of study are encouraged to bring their innovative ideas for a weekend of creative problem solving! The only prerequisites for this weekend are a love for tech and drive to learn."
+              "QHacks is back for round six - entirely virtually! We’re bringing together students from all over North America for a wild 36 hours - designing, developing, demoing, game-playing, and yoga-doing from our home base at Queen’s University. Whether you’re a first-timer or a seasoned veteran, QHacks has something to satisfy your interests! This weekend is about inclusiveness for all disciplines - students from any level of skill, from any field of study, are encouraged to bring their innovative ideas for a weekend of virtual problem-solving! The only prerequisites for this weekend are a love for tech and drive to learn!"
           },
           {
             property: "og:site_name",

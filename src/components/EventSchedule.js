@@ -295,7 +295,7 @@ class EventSchedule extends Component {
                 position: "relative"
               }}
             >
-              Event Schedule
+              Event Schedule (2020)
               <sup>
                 <a css={{ color: "#bababa" }} href="/#*">
                   *

@@ -70,10 +70,11 @@ const OpeningSummary = () => (
             </div>
             <p css={{ lineHeight: "26px", fontColor: "#000000" }}>
               Join over 500 hackers, speakers and mentors to create, learn and
-              share your ideas. Attend workshops, play with hardware, take part
-              in hacker challenges, and meet some new friends. Out-of-the-box
-              thinkers, creatives, and innovators from all faculties and skill
-              levels are encouraged to attend. We can't wait to see you there!
+              share your ideas all virtually this year! Attend workshops, take
+              part in hacker challenges, meet industry professionals, and some
+              new friends. Out-of-the-box thinkers, creatives, and innovators
+              from all faculties and skill levels are encouraged to attend. We
+              can't wait to see you there!
             </p>
           </div>
           <div
@@ -88,10 +89,12 @@ const OpeningSummary = () => (
             }}
           >
             <iframe
-              title="2018 QHacks Hackathon Highlights"
-              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FQHacks%2Fvideos%2F346061232921670%2F&show_text=0&width=560"
-              frameBorder="0"
+              title="2021 QHacks Promo Video"
+              src="https://www.youtube.com/embed/PU4f5WU0cWw?rel=0&amp;controls=0&amp;showinfo=0"
               allow="autoplay; encrypted-media"
+              frameBorder="0"
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"
               allowFullScreen
               css={{
                 width: "500px",
