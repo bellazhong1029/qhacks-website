@@ -15,9 +15,9 @@ const [smallScreens] = ["@media(max-width: 1100px)"];
 
 const navigateLinks = [
   {
-    label: "QHacks 2019",
-    url: "https://2019.qhacks.io/",
-    dataCy: "footer-2018-link"
+    label: "QHacks 2020",
+    url: "https://2020.qhacks.io/",
+    dataCy: "footer-2020-link"
   },
   {
     label: "Local Hack Day",

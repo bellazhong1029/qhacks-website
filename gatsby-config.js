@@ -71,7 +71,7 @@ module.exports = {
       options: {
         // endpoint: process.env.MAILCHIMP_ENDPOINT,
         endpoint:
-          "https://queensu.us17.list-manage.com/subscribe/post?u=680b32c1599062c67ba40492f&amp;id=60921f58f0",
+          "https://qhacks.us14.list-manage.com/subscribe/post?u=f9a860635bf0e397ab5f86761&amp;id=56b784ad6b",
         timeout: 3500
       }
     },
