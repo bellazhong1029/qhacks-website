@@ -136,7 +136,7 @@ const schedule = [
     startDate: "2020-02-01T17:00:00",
     endDate: "2020-02-01T17:45:00",
     eventName: "Workshop | Resume Roast",
-    subtitle: "",
+    subtitle: "Hosted by Zack Harley from Ten Thousand Coffees",
     location: "John Orr Room, JDUC"
   },
   {
